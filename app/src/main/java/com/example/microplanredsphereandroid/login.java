@@ -19,7 +19,7 @@ Button login;
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(com.example.microplanredsphereandroid.login.this,MainActivity.class);
+                Intent i = new Intent(com.example.microplanredsphereandroid.login.this,new_application.class);
                 startActivity(i);
             }
         });

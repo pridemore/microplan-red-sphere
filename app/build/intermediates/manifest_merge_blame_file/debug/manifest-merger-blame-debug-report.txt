@@ -11,7 +11,7 @@
 9-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:6:5-46:19
+11-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:6:5-50:19
 12        android:allowBackup="true"
 12-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:7:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -33,72 +33,78 @@
 22        android:theme="@style/Theme.MicroPlanRedSphereAndroid" >
 22-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:14:9-63
 23        <activity
-23-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:16:9-24:20
-24            android:name="com.example.microplanredsphereandroid.login"
-24-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:17:13-34
-25            android:exported="true" >
-25-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:18:13-36
-26
-27            <!-- <intent-filter> -->
-28            <!-- <action android:name="android.intent.action.MAIN" /> -->
+23-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:16:9-18:40
+24            android:name="com.example.microplanredsphereandroid.new_application"
+24-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:17:13-44
+25            android:exported="false" />
+25-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:18:13-37
+26        <activity
+26-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:19:9-29:20
+27            android:name="com.example.microplanredsphereandroid.login"
+27-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:20:13-34
+28            android:exported="true" >
+28-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:21:13-36
 29
-30
-31            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-32            <!-- </intent-filter> -->
-33        </activity>
-34        <activity
-34-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:26:9-34:20
-35            android:name="com.example.microplanredsphereandroid.splash_screen"
-35-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:27:13-42
-36            android:exported="true" >
-36-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:28:13-36
-37            <intent-filter>
-37-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:29:13-33:29
-38                <action android:name="android.intent.action.MAIN" />
-38-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:30:17-69
-38-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:30:25-66
-39
-40                <category android:name="android.intent.category.LAUNCHER" />
-40-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:32:17-77
-40-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:32:27-74
-41            </intent-filter>
-42        </activity>
-43        <activity
-43-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:37:9-45:20
-44            android:name="com.example.microplanredsphereandroid.MainActivity"
-44-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:38:13-41
-45            android:exported="true" >
-45-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:39:13-36
-46
-47            <!-- <intent-filter> -->
-48            <!-- <action android:name="android.intent.action.MAIN" /> -->
+30            <!-- <intent-filter> -->
+31            <!-- <action android:name="android.intent.action.MAIN" /> -->
+32
+33
+34            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+35            <!-- </intent-filter> -->
+36        </activity>
+37        <activity
+37-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:30:9-38:20
+38            android:name="com.example.microplanredsphereandroid.splash_screen"
+38-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:31:13-42
+39            android:exported="true" >
+39-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:32:13-36
+40            <intent-filter>
+40-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:33:13-37:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:34:17-69
+41-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:34:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:36:17-77
+43-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:36:27-74
+44            </intent-filter>
+45        </activity>
+46        <activity
+46-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:39:9-49:20
+47            android:name="com.example.microplanredsphereandroid.MainActivity"
+47-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:40:13-41
+48            android:exported="true" >
+48-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:41:13-36
 49
-50
-51            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-52            <!-- </intent-filter> -->
-53        </activity>
-54
-55        <provider
-55-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-56            android:name="androidx.startup.InitializationProvider"
-56-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-57            android:authorities="com.example.microplanredsphereandroid.androidx-startup"
-57-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-58            android:exported="false" >
-58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-59            <meta-data
-59-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-60                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-60-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-61                android:value="androidx.startup" />
-61-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+50            <!-- <intent-filter> -->
+51            <!-- <action android:name="android.intent.action.MAIN" /> -->
+52
+53
+54            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+55            <!-- </intent-filter> -->
+56        </activity>
+57
+58        <provider
+58-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+59            android:name="androidx.startup.InitializationProvider"
+59-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+60            android:authorities="com.example.microplanredsphereandroid.androidx-startup"
+60-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+61            android:exported="false" >
+61-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
 62            <meta-data
-62-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\a68586d9ac6fc4872d4884a947d1c1d5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-63                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-63-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\a68586d9ac6fc4872d4884a947d1c1d5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+62-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+63                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+63-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
 64                android:value="androidx.startup" />
-64-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\a68586d9ac6fc4872d4884a947d1c1d5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-65        </provider>
-66    </application>
-67
-68</manifest>
+64-->[androidx.emoji2:emoji2:1.2.0] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\9f99c19470d8bf18ee15270d078c3173\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+65            <meta-data
+65-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\a68586d9ac6fc4872d4884a947d1c1d5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+66                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+66-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\a68586d9ac6fc4872d4884a947d1c1d5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+67                android:value="androidx.startup" />
+67-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\pridemore.vhiriri\.gradle\caches\transforms-3\a68586d9ac6fc4872d4884a947d1c1d5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+68        </provider>
+69    </application>
+70
+71</manifest>

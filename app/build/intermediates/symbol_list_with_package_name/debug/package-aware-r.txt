@@ -1295,6 +1295,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color grey
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color m3_appbar_overlay_color
@@ -2488,6 +2489,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable home_nav_image
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -2543,10 +2545,13 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable profile_nav_image
+drawable sync_nav_image
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable view_nav_image
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -2646,6 +2651,7 @@ id beginning
 id bestChoice
 id blocking
 id bottom
+id bottomNavigationView
 id bounce
 id bounceBoth
 id bounceEnd
@@ -2769,6 +2775,7 @@ id header_title
 id hideable
 id home
 id homeAsUp
+id home_nav
 id honorRequest
 id horizontal_only
 id icon
@@ -2895,6 +2902,7 @@ id percent
 id pin
 id position
 id postLayout
+id profile_nav
 id progress_circular
 id progress_horizontal
 id radio
@@ -2969,6 +2977,7 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
+id sync_nav
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -3026,6 +3035,7 @@ id up
 id useLogo
 id username
 id vertical_only
+id view_nav
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -3138,6 +3148,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_login
 layout activity_main
+layout activity_new_application
 layout activity_splash_screen
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -3229,6 +3240,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu bottome_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nav_graph

@@ -8,19 +8,15 @@
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-35:\\layout\\activity_splash_screen.xml"
     },
     {
-        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-32:/layout/activity_main.xml",
-        "source": "com.example.microplanredsphereandroid.app-main-35:/layout/activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-mergeDebugResources-32:\\layout\\activity_login.xml",
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-35:\\layout\\activity_login.xml"
     },
     {
-        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-32:/layout/activity_login.xml",
-        "source": "com.example.microplanredsphereandroid.app-main-35:/layout/activity_login.xml"
+        "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-mergeDebugResources-32:\\layout\\activity_new_application.xml",
+        "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-35:\\layout\\activity_new_application.xml"
     },
     {
-        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-32:/layout/activity_splash_screen.xml",
-        "source": "com.example.microplanredsphereandroid.app-main-35:/layout/activity_splash_screen.xml"
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-32:/layout/activity_new_application.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-35:/layout/activity_new_application.xml"
     }
 ]
