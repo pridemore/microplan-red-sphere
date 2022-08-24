@@ -11,8 +11,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class EmploymentFragment extends Fragment {
-    private static final String TAG = "Employment";
+public class LoanDetailsFragment extends Fragment {
+    private static final String TAG = "Loan Details";
     ImageView backIcon;
     ImageView menu;
     TextView title;
@@ -21,18 +21,18 @@ public class EmploymentFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_employment, container, false);
+        View view= inflater.inflate(R.layout.fragment_loan_details, container, false);
         backIcon=view.findViewById(R.id.left_icon);
         menu=view.findViewById(R.id.right_icon);
         title=view.findViewById(R.id.title);
         btn_previous=view.findViewById(R.id.btn_previous);
         btn_nxt=view.findViewById(R.id.btn_nxt);
-        title.setText("Employment");
+        title.setText("Loan Details");
 
         btn_previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((NewApplicationActivity)getActivity()).replaceFragment(new ContactDetailsFragment());
+                ((NewApplicationActivity)getActivity()).replaceFragment(new EmploymentFragment());
 //                Intent intent=new Intent(getActivity(),HomeActivity.class);
 //                startActivity(intent);
             }
@@ -41,7 +41,7 @@ public class EmploymentFragment extends Fragment {
         btn_nxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((NewApplicationActivity)getActivity()).replaceFragment(new LoanDetailsFragment());
+                ((NewApplicationActivity)getActivity()).replaceFragment(new BankDetailsFragment());
             }
         });
 
