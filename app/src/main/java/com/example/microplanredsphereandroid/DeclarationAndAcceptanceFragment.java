@@ -42,7 +42,7 @@ public class DeclarationAndAcceptanceFragment extends Fragment {
         btn_nxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((NewApplicationActivity)getActivity()).replaceFragment(new EmploymentFragment());
+                ((NewApplicationActivity)getActivity()).replaceFragment(new DeductionSsbFormFragment());
             }
         });
 

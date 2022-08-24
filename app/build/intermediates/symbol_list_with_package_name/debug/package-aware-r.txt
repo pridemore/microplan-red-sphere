@@ -3182,9 +3182,13 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_bank_details
+layout fragment_complete_application
 layout fragment_contact_details
+layout fragment_declaration_and_acceptance
+layout fragment_deduction_ssb_form
 layout fragment_employment
 layout fragment_home
+layout fragment_loan_details
 layout fragment_new_application
 layout fragment_nxt_of_kin1_details
 layout fragment_nxt_of_kin2_details

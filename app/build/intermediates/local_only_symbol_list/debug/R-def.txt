@@ -56,9 +56,13 @@ layout activity_new_application
 layout activity_splash_screen
 layout back_next
 layout fragment_bank_details
+layout fragment_complete_application
 layout fragment_contact_details
+layout fragment_declaration_and_acceptance
+layout fragment_deduction_ssb_form
 layout fragment_employment
 layout fragment_home
+layout fragment_loan_details
 layout fragment_new_application
 layout fragment_nxt_of_kin1_details
 layout fragment_nxt_of_kin2_details
