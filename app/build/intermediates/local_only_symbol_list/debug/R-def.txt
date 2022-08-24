@@ -55,6 +55,7 @@ layout activity_main
 layout activity_new_application
 layout activity_splash_screen
 layout back_next
+layout fragment_contact_details
 layout fragment_home
 layout fragment_new_application
 layout fragment_personal_details
