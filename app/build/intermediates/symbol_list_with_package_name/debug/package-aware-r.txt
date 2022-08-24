@@ -3181,9 +3181,13 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_bank_details
 layout fragment_contact_details
+layout fragment_employment
 layout fragment_home
 layout fragment_new_application
+layout fragment_nxt_of_kin1_details
+layout fragment_nxt_of_kin2_details
 layout fragment_personal_details
 layout fragment_profile
 layout fragment_sync

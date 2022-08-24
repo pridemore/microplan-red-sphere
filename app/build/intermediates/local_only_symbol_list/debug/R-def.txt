@@ -55,9 +55,13 @@ layout activity_main
 layout activity_new_application
 layout activity_splash_screen
 layout back_next
+layout fragment_bank_details
 layout fragment_contact_details
+layout fragment_employment
 layout fragment_home
 layout fragment_new_application
+layout fragment_nxt_of_kin1_details
+layout fragment_nxt_of_kin2_details
 layout fragment_personal_details
 layout fragment_profile
 layout fragment_sync

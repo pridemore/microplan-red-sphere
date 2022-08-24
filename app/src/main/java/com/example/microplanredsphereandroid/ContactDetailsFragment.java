@@ -38,6 +38,13 @@ public class ContactDetailsFragment extends Fragment {
             }
         });
 
+        btn_nxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((NewApplicationActivity)getActivity()).replaceFragment(new EmploymentFragment());
+            }
+        });
+
         return view;
     }
 }

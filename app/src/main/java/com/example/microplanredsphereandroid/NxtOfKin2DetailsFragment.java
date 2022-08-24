@@ -42,7 +42,7 @@ public class NxtOfKin2DetailsFragment extends Fragment {
         btn_nxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((NewApplicationActivity)getActivity()).replaceFragment(new NxtOfKin2DetailsFragment());
+                ((NewApplicationActivity)getActivity()).replaceFragment(new DeclarationAndAcceptanceFragment());
             }
         });
 
