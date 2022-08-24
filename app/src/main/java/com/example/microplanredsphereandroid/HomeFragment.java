@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -31,7 +30,7 @@ public class HomeFragment extends Fragment {
         backIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getActivity(),login.class);
+                Intent intent=new Intent(getActivity(), LoginActivity.class);
                 startActivity(intent);
             }
         });

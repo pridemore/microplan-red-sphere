@@ -104,24 +104,24 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\pr
 		ADDED from C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:14:9-63
 	android:dataExtractionRules
 		ADDED from C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:8:9-65
-activity#com.example.microplanredsphereandroid.Home
+activity#com.example.microplanredsphereandroid.HomeActivity
 ADDED from C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:16:9-18:40
 	android:exported
 		ADDED from C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:18:13-37
 	android:name
-		ADDED from C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:17:13-33
+		ADDED from C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:17:13-41
 activity#com.example.microplanredsphereandroid.NewApplicationActivity
 ADDED from C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:19:9-21:40
 	android:exported
 		ADDED from C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:21:13-37
 	android:name
 		ADDED from C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:20:13-51
-activity#com.example.microplanredsphereandroid.login
+activity#com.example.microplanredsphereandroid.LoginActivity
 ADDED from C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:22:9-32:20
 	android:exported
 		ADDED from C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:24:13-36
 	android:name
-		ADDED from C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:23:13-34
+		ADDED from C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:23:13-42
 activity#com.example.microplanredsphereandroid.splash_screen
 ADDED from C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:33:9-41:20
 	android:exported

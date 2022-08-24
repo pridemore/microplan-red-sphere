@@ -14,13 +14,13 @@
         android:theme="@style/Theme.MicroPlanRedSphereAndroid"
         tools:targetApi="31">
         <activity
-            android:name=".Home"
+            android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".NewApplicationActivity"
             android:exported="false" />
         <activity
-            android:name=".login"
+            android:name=".LoginActivity"
             android:exported="true">
 
             <!-- <intent-filter> -->

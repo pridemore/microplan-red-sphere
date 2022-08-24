@@ -1,12 +1,9 @@
 package com.example.microplanredsphereandroid;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.window.SplashScreen;
 
 
 public class splash_screen extends Activity {
@@ -21,7 +18,7 @@ public class splash_screen extends Activity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(splash_screen.this,login.class);
+                Intent intent=new Intent(splash_screen.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }

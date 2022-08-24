@@ -34,8 +34,8 @@
 22-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:14:9-63
 23        <activity
 23-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:16:9-18:40
-24            android:name="com.example.microplanredsphereandroid.Home"
-24-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:17:13-33
+24            android:name="com.example.microplanredsphereandroid.HomeActivity"
+24-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:17:13-41
 25            android:exported="false" />
 25-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:18:13-37
 26        <activity
@@ -46,8 +46,8 @@
 28-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:21:13-37
 29        <activity
 29-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:22:9-32:20
-30            android:name="com.example.microplanredsphereandroid.login"
-30-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:23:13-34
+30            android:name="com.example.microplanredsphereandroid.LoginActivity"
+30-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:23:13-42
 31            android:exported="true" >
 31-->C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\AndroidManifest.xml:24:13-36
 32

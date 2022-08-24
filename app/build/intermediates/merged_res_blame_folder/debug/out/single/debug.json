@@ -44,6 +44,14 @@
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-35:\\layout\\page_toolbar.xml"
     },
     {
+        "merged": "com.example.microplanredsphereandroid.app-merged_res-33:/layout_activity_login.xml.flat",
+        "source": "com.example.microplanredsphereandroid.app-main-35:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-merged_res-33:/layout_activity_home.xml.flat",
+        "source": "com.example.microplanredsphereandroid.app-main-35:/layout/activity_home.xml"
+    },
+    {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-33:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-35:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
@@ -106,10 +114,6 @@
     {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-33:\\navigation_nav_graph.xml.flat",
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-35:\\navigation\\nav_graph.xml"
-    },
-    {
-        "merged": "com.example.microplanredsphereandroid.app-merged_res-33:/layout_back_next.xml.flat",
-        "source": "com.example.microplanredsphereandroid.app-main-35:/layout/back_next.xml"
     },
     {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-33:\\xml_data_extraction_rules.xml.flat",
