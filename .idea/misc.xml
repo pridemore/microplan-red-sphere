@@ -7,11 +7,21 @@
         <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.132" />
         <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/drawable/ic_launcher_background.xml" value="0.154" />
         <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/drawable/mybutton.xml" value="0.154" />
+        <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/drawable/next_arrow.xml" value="0.177" />
+        <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/drawable/previous_arrrow.xml" value="0.177" />
+        <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/layout/activity_home.xml" value="0.24003623188405798" />
         <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/layout/activity_new_application.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/layout/activity_new_application.xml" value="0.2" />
         <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
-        <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/menu/bottome_nav_menu.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/layout/back_next.xml" value="0.264" />
+        <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
+        <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/layout/fragment_sync.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/layout/fragment_view.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/layout/page_toolbar.xml" value="0.264" />
+        <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/layout/toolbar.xml" value="0.264" />
+        <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/menu/bottome_nav_menu.xml" value="0.1" />
         <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1955" />
         <entry key="..\:/Users/pridemore.vhiriri/AndroidStudioProjects/MicroPlanRedSphereAndroid/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1955" />
       </map>

@@ -1,6 +1,8 @@
 package com.example.microplanredsphereandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,7 +21,8 @@ Button login;
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(com.example.microplanredsphereandroid.login.this,new_application.class);
+
+                Intent i = new Intent(com.example.microplanredsphereandroid.login.this,NewApplicationActivity.class);
                 startActivity(i);
             }
         });

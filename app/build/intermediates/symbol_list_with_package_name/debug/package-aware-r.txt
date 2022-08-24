@@ -2490,6 +2490,8 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable home_nav_image
+drawable ic_baseline_arrow_back_24
+drawable ic_baseline_menu_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -2533,6 +2535,7 @@ drawable mtrl_popupmenu_background_overlay
 drawable mtrl_tabs_default_indicator
 drawable mybutton
 drawable navigation_empty_icon
+drawable next_arrow
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -2545,6 +2548,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable previous_arrrow
 drawable profile_nav_image
 drawable sync_nav_image
 drawable test_custom_background
@@ -2656,6 +2660,8 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btn_nxt
+id btn_previous
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2760,6 +2766,7 @@ id flip
 id floating
 id forever
 id fragment_container_view_tag
+id frame_layout
 id frost
 id fullscreen_header
 id ghost_view
@@ -2797,12 +2804,14 @@ id labeled
 id layout
 id left
 id leftToRight
+id left_icon
 id legacy
 id line1
 id line3
 id linear
 id listMode
 id list_item
+id logimage
 id masked
 id match_constraint
 id match_parent
@@ -3146,10 +3155,12 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_home
 layout activity_login
 layout activity_main
 layout activity_new_application
 layout activity_splash_screen
+layout back_next
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3166,6 +3177,10 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_home
+layout fragment_profile
+layout fragment_sync
+layout fragment_view
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3220,6 +3235,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout page_toolbar
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -3240,6 +3256,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout toolbar
 menu bottome_nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -3287,6 +3304,7 @@ string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string first_fragment_label
+string hello_blank_fragment
 string hello_first_fragment
 string hello_second_fragment
 string hide_bottom_view_on_scroll_behavior

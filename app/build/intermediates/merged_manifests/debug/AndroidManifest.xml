@@ -21,7 +21,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.MicroPlanRedSphereAndroid" >
         <activity
-            android:name="com.example.microplanredsphereandroid.new_application"
+            android:name="com.example.microplanredsphereandroid.Home"
+            android:exported="false" />
+        <activity
+            android:name="com.example.microplanredsphereandroid.NewApplicationActivity"
             android:exported="false" />
         <activity
             android:name="com.example.microplanredsphereandroid.login"

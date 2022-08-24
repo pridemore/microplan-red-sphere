@@ -3,12 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".HomeFragment">
+    <include layout="@layout/toolbar"/>
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        <ImageView
+            android:id="@+id/logimage"
+            android:layout_width="305dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="80dp"
+            android:src="@drawable/logo_new"
+            android:background="@color/white"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="293dp" />
+
+
 
 </FrameLayout>
