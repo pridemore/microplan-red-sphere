@@ -3,20 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     tools:context=".HomeFragment">
-    <include layout="@layout/toolbar"/>
+<!--    <include layout="@layout/toolbar"/>-->
 
         <ImageView
             android:id="@+id/logimage"
             android:layout_width="305dp"
             android:layout_height="76dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/logo_new"
             android:background="@color/white"
-            tools:layout_editor_absoluteX="49dp"
-            tools:layout_editor_absoluteY="293dp" />
+
+            />
+
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/btn_new_application"
+    android:layout_gravity="end|bottom"
+    android:layout_margin="16dp"
+    app:fabSize="normal"
+    android:backgroundTint="@color/blue"
+    app:elevation="6dp"
+    android:src="@drawable/new_application_image"
+    />
 
 
 

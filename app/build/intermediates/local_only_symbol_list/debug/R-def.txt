@@ -19,6 +19,7 @@ drawable ic_launcher_foreground
 drawable logo_new
 drawable logo_new1
 drawable mybutton
+drawable new_application_image
 drawable next_arrow
 drawable previous_arrrow
 drawable profile_nav_image
@@ -30,10 +31,13 @@ id access_account
 id action_FirstFragment_to_SecondFragment
 id action_SecondFragment_to_FirstFragment
 id bottomNavigationView
+id btn_new_application
 id btn_nxt
 id btn_previous
 id frame_layout
 id home_nav
+id include
+id include2
 id left_icon
 id logimage
 id nav_graph
@@ -52,6 +56,8 @@ layout activity_new_application
 layout activity_splash_screen
 layout back_next
 layout fragment_home
+layout fragment_new_application
+layout fragment_personal_details
 layout fragment_profile
 layout fragment_sync
 layout fragment_view
