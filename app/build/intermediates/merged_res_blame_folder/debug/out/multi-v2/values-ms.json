@@ -1,8 +1,25 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-31:/values-ms/values-ms.xml",
+            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-39:/values-ms/values-ms.xml",
             "map": [
+                {
+                    "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\172d699a3cea385b2d3041d306f4ec45\\transformed\\navigation-ui-2.5.1\\res\\values-ms\\values-ms.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,166",
+                        "endColumns": "110,112",
+                        "endOffsets": "161,274"
+                    },
+                    "to": {
+                        "startLines": "86,87",
+                        "startColumns": "4,4",
+                        "startOffsets": "7202,7313",
+                        "endColumns": "110,112",
+                        "endOffsets": "7308,7421"
+                    }
+                },
                 {
                     "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\0638d9dacb5fd10604e28ec2b4d3c80b\\transformed\\core-1.8.0\\res\\values-ms\\values-ms.xml",
                     "from": {
@@ -54,23 +71,6 @@
                         "startOffsets": "284,395,500,608,695,799,910,989,1067,1158,1251,1346,1440,1538,1631,1726,1820,1911,2002,2082,2194,2302,2399,2508,2612,2719,2878,7512",
                         "endColumns": "110,104,107,86,103,110,78,77,90,92,94,93,97,92,94,93,90,90,79,111,107,96,108,103,106,158,100,80",
                         "endOffsets": "390,495,603,690,794,905,984,1062,1153,1246,1341,1435,1533,1626,1721,1815,1906,1997,2077,2189,2297,2394,2503,2607,2714,2873,2974,7588"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\dfaa223da9a2dec4716992408f2eb043\\transformed\\navigation-ui-2.3.5\\res\\values-ms\\values-ms.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,166",
-                        "endColumns": "110,112",
-                        "endOffsets": "161,274"
-                    },
-                    "to": {
-                        "startLines": "86,87",
-                        "startColumns": "4,4",
-                        "startOffsets": "7202,7313",
-                        "endColumns": "110,112",
-                        "endOffsets": "7308,7421"
                     }
                 }
             ]

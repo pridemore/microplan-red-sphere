@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-31:/values-gl/values-gl.xml",
+            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-39:/values-gl/values-gl.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\dfaa223da9a2dec4716992408f2eb043\\transformed\\navigation-ui-2.3.5\\res\\values-gl\\values-gl.xml",
+                    "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\172d699a3cea385b2d3041d306f4ec45\\transformed\\navigation-ui-2.5.1\\res\\values-gl\\values-gl.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-31:/values-it/values-it.xml",
+            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-39:/values-it/values-it.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\dfaa223da9a2dec4716992408f2eb043\\transformed\\navigation-ui-2.3.5\\res\\values-it\\values-it.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,164",
-                        "endColumns": "108,122",
-                        "endOffsets": "159,282"
-                    },
-                    "to": {
-                        "startLines": "86,87",
-                        "startColumns": "4,4",
-                        "startOffsets": "7321,7430",
-                        "endColumns": "108,122",
-                        "endOffsets": "7425,7548"
-                    }
-                },
                 {
                     "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\b6f52d92dea29c0a7f49d4078033a89a\\transformed\\material-1.6.1\\res\\values-it\\values-it.xml",
                     "from": {
@@ -71,6 +54,23 @@
                         "startOffsets": "7715",
                         "endColumns": "100",
                         "endOffsets": "7811"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\172d699a3cea385b2d3041d306f4ec45\\transformed\\navigation-ui-2.5.1\\res\\values-it\\values-it.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,164",
+                        "endColumns": "108,122",
+                        "endOffsets": "159,282"
+                    },
+                    "to": {
+                        "startLines": "86,87",
+                        "startColumns": "4,4",
+                        "startOffsets": "7321,7430",
+                        "endColumns": "108,122",
+                        "endOffsets": "7425,7548"
                     }
                 }
             ]

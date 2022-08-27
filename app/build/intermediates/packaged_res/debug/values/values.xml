@@ -22,7 +22,7 @@
     <string name="sign_in">Sign In</string>
     <string name="title_activity_splash_screen">splash_screen</string>
     <string name="username">Username</string>
-    <style name="Theme.MicroPlanRedSphereAndroid" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.MicroPlanRedSphereAndroid" parent="Theme.MaterialComponents.Light.NoActionBar">
         
         <item name="colorPrimary">@color/blue</item>
         <item name="colorPrimaryVariant">@color/blue</item>
