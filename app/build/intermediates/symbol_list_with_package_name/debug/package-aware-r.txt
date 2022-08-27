@@ -110,7 +110,9 @@ attr actionOverflowMenuStyle
 attr actionProviderClass
 attr actionTextColorAlpha
 attr actionViewClass
+attr activityAction
 attr activityChooserViewStyle
+attr activityName
 attr alertDialogButtonGroupStyle
 attr alertDialogCenterButtons
 attr alertDialogStyle
@@ -119,6 +121,7 @@ attr allowStacking
 attr alpha
 attr alphabeticModifiers
 attr altSrc
+attr alwaysExpand
 attr animateCircleAngleTo
 attr animateRelativeTo
 attr animationMode
@@ -265,6 +268,7 @@ attr circularflow_defaultAngle
 attr circularflow_defaultRadius
 attr circularflow_radiusInDP
 attr circularflow_viewCenter
+attr clearTop
 attr clearsTag
 attr clickAction
 attr clockFaceBackgroundColor
@@ -490,6 +494,8 @@ attr fastScrollHorizontalThumbDrawable
 attr fastScrollHorizontalTrackDrawable
 attr fastScrollVerticalThumbDrawable
 attr fastScrollVerticalTrackDrawable
+attr finishPrimaryWithSecondary
+attr finishSecondaryWithPrimary
 attr firstBaselineToTopHeight
 attr floatingActionButtonLargePrimaryStyle
 attr floatingActionButtonLargeSecondaryStyle
@@ -868,6 +874,7 @@ attr percentX
 attr percentY
 attr perpendicularPath_percent
 attr pivotAnchor
+attr placeholderActivityName
 attr placeholderText
 attr placeholderTextAppearance
 attr placeholderTextColor
@@ -877,6 +884,7 @@ attr popEnterAnim
 attr popExitAnim
 attr popUpTo
 attr popUpToInclusive
+attr popUpToSaveState
 attr popupMenuBackground
 attr popupMenuStyle
 attr popupTheme
@@ -886,6 +894,7 @@ attr prefixTextAppearance
 attr prefixTextColor
 attr preserveIconSpacing
 attr pressedTranslationZ
+attr primaryActivityName
 attr progressBarPadding
 attr progressBarStyle
 attr quantizeMotionInterpolator
@@ -908,11 +917,13 @@ attr region_heightLessThan
 attr region_heightMoreThan
 attr region_widthLessThan
 attr region_widthMoreThan
+attr restoreState
 attr reverseLayout
 attr rippleColor
 attr rotationCenterId
 attr round
 attr roundPercent
+attr route
 attr saturation
 attr scaleFromTextSize
 attr scrimAnimationDuration
@@ -921,6 +932,8 @@ attr scrimVisibleHeightTrigger
 attr searchHintIcon
 attr searchIcon
 attr searchViewStyle
+attr secondaryActivityAction
+attr secondaryActivityName
 attr seekBarStyle
 attr selectableItemBackground
 attr selectableItemBackgroundBorderless
@@ -956,6 +969,10 @@ attr spanCount
 attr spinBars
 attr spinnerDropDownItemStyle
 attr spinnerStyle
+attr splitLayoutDirection
+attr splitMinSmallestWidth
+attr splitMinWidth
+attr splitRatio
 attr splitTrack
 attr springBoundary
 attr springDamping
@@ -2373,6 +2390,7 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen sliding_pane_detail_pane_width
 dimen test_dimen
 dimen test_mtrl_calendar_day_cornerSize
 dimen test_navigation_bar_active_item_max_width
@@ -2638,6 +2656,7 @@ id aligned
 id all
 id allStates
 id always
+id androidx_window_activity_scope
 id animateToEnd
 id animateToStart
 id antiClockwise
@@ -2661,6 +2680,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnCheck
 id btn_new_application
 id btn_nxt
 id btn_previous
@@ -2703,10 +2723,12 @@ id continuousVelocity
 id coordinator
 id cos
 id counterclockwise
+id country_of_birth
 id currentState
 id custom
 id customPanel
 id cut
+id date_of_birth
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -2727,6 +2749,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id dob
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2758,6 +2781,8 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id firstName
+id first_name
 id fitCenter
 id fitEnd
 id fitStart
@@ -2815,7 +2840,10 @@ id line3
 id linear
 id listMode
 id list_item
+id locale
 id logimage
+id ltr
+id maiden_surname
 id masked
 id match_constraint
 id match_parent
@@ -2842,6 +2870,7 @@ id matrix
 id message
 id middle
 id mini
+id miss
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -2849,6 +2878,8 @@ id month_navigation_next
 id month_navigation_previous
 id month_title
 id motion_base
+id mr
+id mrs
 id mtrl_anchor_parent
 id mtrl_calendar_day_selector_frame
 id mtrl_calendar_days_of_week
@@ -2873,6 +2904,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id national_id
 id nav_controller_view_tag
 id nav_graph
 id nav_host_fragment_container
@@ -2883,6 +2915,7 @@ id navigation_bar_item_labels_group
 id navigation_bar_item_large_label_view
 id navigation_bar_item_small_label_view
 id navigation_header_container
+id netSalary
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
@@ -2897,6 +2930,7 @@ id notification_main_column_container
 id off
 id on
 id onInterceptTouchReturnSwipe
+id other
 id outline
 id outward
 id overshoot
@@ -2906,6 +2940,7 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id passport_number
 id password
 id password_toggle
 id path
@@ -2928,6 +2963,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id rtl
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2962,6 +2998,8 @@ id sin
 id skipCollapsed
 id skipped
 id slide
+id sliding_pane_detail_container
+id sliding_pane_layout
 id snackbar_action
 id snackbar_text
 id snap
@@ -2990,6 +3028,7 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
+id surname
 id sync_nav
 id tabMode
 id tag_accessibility_actions
@@ -3012,6 +3051,14 @@ id test_radiobutton_app_button_tint
 id text
 id text2
 id textEnd
+id textInputLayoutCountryOfBirth
+id textInputLayoutDateOfBirth
+id textInputLayoutFirstName
+id textInputLayoutMaidenSurname
+id textInputLayoutNationalId
+id textInputLayoutNetSalaryy
+id textInputLayoutPassportNumber
+id textInputLayoutSurname
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -3028,6 +3075,7 @@ id textinput_suffix_text
 id time
 id title
 id titleDividerNoCustom
+id titleGroup
 id title_template
 id toggle
 id top
@@ -3164,6 +3212,7 @@ layout activity_login
 layout activity_main
 layout activity_new_application
 layout activity_splash_screen
+layout activity_test
 layout back_next
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -3917,6 +3966,7 @@ style TextAppearance_Test_UsesSP
 style TextAppearance_Widget_AppCompat_ExpandedMenu_Item
 style TextAppearance_Widget_AppCompat_Toolbar_Subtitle
 style TextAppearance_Widget_AppCompat_Toolbar_Title
+style TextLabel
 style Theme_AppCompat
 style Theme_AppCompat_CompactMenu
 style Theme_AppCompat_DayNight
@@ -4476,7 +4526,9 @@ styleable ActionMenuItemView android_minWidth
 styleable ActionMenuView
 styleable ActionMode background backgroundSplit closeItemLayout height subtitleTextStyle titleTextStyle
 styleable ActivityChooserView expandActivityOverflowButtonDrawable initialActivityCount
+styleable ActivityFilter activityAction activityName
 styleable ActivityNavigator android_name action data dataPattern targetPackage
+styleable ActivityRule alwaysExpand
 styleable AlertDialog android_layout buttonIconDimen buttonPanelSideLayout listItemLayout listLayout multiChoiceItemLayout showTitle singleChoiceItemLayout
 styleable AnimatedStateListDrawableCompat android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable AnimatedStateListDrawableItem android_id android_drawable
@@ -4576,7 +4628,7 @@ styleable MotionLabel android_textSize android_typeface android_textStyle androi
 styleable MotionLayout applyMotionScene currentState layoutDescription motionDebug motionProgress showPaths
 styleable MotionScene defaultDuration layoutDuringTransition
 styleable MotionTelltales telltales_tailColor telltales_tailScale telltales_velocityMode
-styleable NavAction android_id destination enterAnim exitAnim launchSingleTop popEnterAnim popExitAnim popUpTo popUpToInclusive
+styleable NavAction android_id destination enterAnim exitAnim launchSingleTop popEnterAnim popExitAnim popUpTo popUpToInclusive popUpToSaveState restoreState
 styleable NavArgument android_name android_defaultValue argType nullable
 styleable NavDeepLink android_autoVerify action mimeType uri
 styleable NavGraphNavigator startDestination
@@ -4587,7 +4639,7 @@ styleable NavigationBarActiveIndicator android_height android_width android_colo
 styleable NavigationBarView backgroundTint elevation itemActiveIndicatorStyle itemBackground itemIconSize itemIconTint itemPaddingBottom itemPaddingTop itemRippleColor itemTextAppearanceActive itemTextAppearanceInactive itemTextColor labelVisibilityMode menu
 styleable NavigationRailView headerLayout itemMinHeight menuGravity paddingBottomSystemWindowInsets paddingTopSystemWindowInsets
 styleable NavigationView android_layout_gravity android_background android_fitsSystemWindows android_maxWidth bottomInsetScrimEnabled dividerInsetEnd dividerInsetStart drawerLayoutCornerSize elevation headerLayout itemBackground itemHorizontalPadding itemIconPadding itemIconSize itemIconTint itemMaxLines itemRippleColor itemShapeAppearance itemShapeAppearanceOverlay itemShapeFillColor itemShapeInsetBottom itemShapeInsetEnd itemShapeInsetStart itemShapeInsetTop itemTextAppearance itemTextColor itemVerticalPadding menu shapeAppearance shapeAppearanceOverlay subheaderColor subheaderInsetEnd subheaderInsetStart subheaderTextAppearance topInsetScrimEnabled
-styleable Navigator android_label android_id
+styleable Navigator android_label android_id route
 styleable OnClick clickAction targetId
 styleable OnSwipe autoCompleteMode dragDirection dragScale dragThreshold limitBoundsTo maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp rotationCenterId springBoundary springDamping springMass springStiffness springStopThreshold touchAnchorId touchAnchorSide touchRegionId
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
@@ -4606,6 +4658,9 @@ styleable Slider android_enabled android_value android_stepSize android_valueFro
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha backgroundTint backgroundTintMode elevation maxActionInlineWidth
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme
+styleable SplitPairFilter primaryActivityName secondaryActivityAction secondaryActivityName
+styleable SplitPairRule clearTop finishPrimaryWithSecondary finishSecondaryWithPrimary splitLayoutDirection splitMinSmallestWidth splitMinWidth splitRatio
+styleable SplitPlaceholderRule placeholderActivityName splitLayoutDirection splitMinSmallestWidth splitMinWidth splitRatio
 styleable State android_id constraints
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable

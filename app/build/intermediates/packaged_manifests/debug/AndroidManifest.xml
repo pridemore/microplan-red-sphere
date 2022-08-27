@@ -21,6 +21,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.MicroPlanRedSphereAndroid" >
         <activity
+            android:name="com.example.microplanredsphereandroid.TestActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.microplanredsphereandroid.HomeActivity"
             android:exported="false" />
         <activity
@@ -69,6 +72,13 @@
                 android:name="androidx.lifecycle.ProcessLifecycleInitializer"
                 android:value="androidx.startup" />
         </provider>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
     </application>
 
 </manifest>
