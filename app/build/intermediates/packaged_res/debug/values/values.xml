@@ -84,6 +84,10 @@
         <item>Ministry of Youth Affairs</item>
         <item>Other (Specify)</item>
     </string-array>
+    <string-array name="facility_type">
+        <item>Short Term USD Loan</item>
+        <item>Other (Specify)</item>
+    </string-array>
     <string-array name="relationship">
         <item>Father</item>
         <item>Mother</item>
@@ -101,6 +105,11 @@
         <item>Grandfather</item>
         <item>Grandmother</item>
         <item>Workmate</item>
+        <item>Other (Specify)</item>
+    </string-array>
+    <string-array name="repayment_period">
+        <item>3 Months</item>
+        <item>9 Months</item>
         <item>Other (Specify)</item>
     </string-array>
     <color name="black">#FF000000</color>

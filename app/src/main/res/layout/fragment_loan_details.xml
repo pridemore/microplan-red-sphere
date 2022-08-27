@@ -1,19 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".LoanDetailsFragment">
-    <include
-        android:id="@+id/include"
-        layout="@layout/page_toolbar" />
-    <include
-        android:id="@+id/include2"
-        layout="@layout/back_next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/include"
+            layout="@layout/page_toolbar"
+            />
+
+        <include
+            android:id="@+id/include2"
+            layout="@layout/back_next" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutCreditFacilityAmountRequired"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Credit Facility Amount Required(in USD)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/amountRequired"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:inputType="numberDecimal"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/textInputLayoutRepaymentPeriodRequired"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Repayment Period Required"/>
+        <Spinner
+            android:id="@+id/repaymentPeriodRequired"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutOtherRepaymentPeriodRequired"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Other Repayment Period Required(if not above)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/otherPaymentPeriod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:inputType="number"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textInputLayoutFacilityType"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Facility Type"/>
+        <Spinner
+            android:id="@+id/facilityType"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutOtherFacilityType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Other Facility Type(if not on the list above)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/otherFacilityType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:inputType="textCapWords"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -74,7 +74,9 @@ int array account_types 0x7f140000
 int array bank_names 0x7f140001
 int array city_names 0x7f140002
 int array employers 0x7f140003
+int array facility_type 0x7f140005
 int array relationship 0x7f140004
+int array repayment_period 0x7f140006
 int attr SharedValue 0x7f030000
 int attr SharedValueId 0x7f030001
 int attr action 0x7f030002
@@ -2664,6 +2666,7 @@ int id aligned 0x7f08004d
 int id all 0x7f08004e
 int id allStates 0x7f08004f
 int id always 0x7f080050
+int id amountRequired 0x7f080267
 int id androidx_window_activity_scope 0x7f080051
 int id animateToEnd 0x7f080052
 int id animateToStart 0x7f080053
@@ -2791,6 +2794,7 @@ int id enterAlwaysCollapsed 0x7f0800c5
 int id exitUntilCollapsed 0x7f0800c6
 int id expand_activities_button 0x7f0800c7
 int id expanded_menu 0x7f0800c8
+int id facilityType 0x7f080268
 int id fade 0x7f0800c9
 int id fill 0x7f0800ca
 int id fill_horizontal 0x7f0800cb
@@ -2967,6 +2971,8 @@ int id off 0x7f080160
 int id on 0x7f080161
 int id onInterceptTouchReturnSwipe 0x7f080162
 int id other 0x7f080163
+int id otherFacilityType 0x7f080269
+int id otherPaymentPeriod 0x7f08026a
 int id other_account_type 0x7f08023f
 int id other_bank_name 0x7f080240
 int id outline 0x7f080164
@@ -2999,6 +3005,7 @@ int id radioGroupAddressType 0x7f080229
 int id ratio 0x7f08017b
 int id rectangles 0x7f08017c
 int id rented 0x7f08022a
+int id repaymentPeriodRequired 0x7f08026b
 int id residential_address 0x7f08022b
 int id reverseSawtooth 0x7f08017d
 int id right 0x7f08017e
@@ -3102,6 +3109,7 @@ int id textInputLayoutAccountNumber 0x7f080242
 int id textInputLayoutAccountType 0x7f080247
 int id textInputLayoutBranchName 0x7f080243
 int id textInputLayoutCountryOfBirth 0x7f0801dc
+int id textInputLayoutCreditFacilityAmountRequired 0x7f08026c
 int id textInputLayoutCurrentCitizenship 0x7f08022e
 int id textInputLayoutDOB 0x7f080248
 int id textInputLayoutDateOfBirth 0x7f0801dd
@@ -3109,6 +3117,7 @@ int id textInputLayoutDateOfEmployment 0x7f08022f
 int id textInputLayoutECNumber 0x7f080230
 int id textInputLayoutEmailAddress 0x7f080231
 int id textInputLayoutEmployerEmailAddress 0x7f080232
+int id textInputLayoutFacilityType 0x7f08026d
 int id textInputLayoutFirstName 0x7f0801de
 int id textInputLayoutGrossMonthlySalary 0x7f080233
 int id textInputLayoutMaidenSurname 0x7f0801df
@@ -3133,10 +3142,13 @@ int id textInputLayoutNxtOfKin2ResidentialAddress 0x7f080265
 int id textInputLayoutNxtOfKin2Surname 0x7f080266
 int id textInputLayoutOtherAccountType 0x7f080244
 int id textInputLayoutOtherBankName 0x7f080245
+int id textInputLayoutOtherFacilityType 0x7f08026e
+int id textInputLayoutOtherRepaymentPeriodRequired 0x7f08026f
 int id textInputLayoutPassportNumber 0x7f0801e2
 int id textInputLayoutPhysicalAddressOfEmployer 0x7f080237
 int id textInputLayoutPositionHeld 0x7f080238
 int id textInputLayoutProfession 0x7f080239
+int id textInputLayoutRepaymentPeriodRequired 0x7f080270
 int id textInputLayoutResidentialAddress 0x7f08023a
 int id textInputLayoutSurname 0x7f0801e3
 int id textSpacerNoButtons 0x7f0801e4

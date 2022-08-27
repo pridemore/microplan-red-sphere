@@ -122,4 +122,16 @@
         <item>Lite</item>
         <item>Other (Specify)</item>
     </string-array>
+
+    <string-array name="repayment_period">
+        <item>3 Months</item>
+        <item>9 Months</item>
+        <item>Other (Specify)</item>
+    </string-array>
+
+    <string-array name="facility_type">
+        <item>Short Term USD Loan</item>
+        <item>Other (Specify)</item>
+    </string-array>
+
 </resources>

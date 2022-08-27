@@ -97,6 +97,13 @@
         <item>Ministry for Women and Equalities</item>
         <item>Ministry of Youth Affairs</item>
         <item>Other (Specify)</item>
+    </string-array><string-array name="repayment_period">
+        <item>3 Months</item>
+        <item>9 Months</item>
+        <item>Other (Specify)</item>
+    </string-array><string-array name="facility_type">
+        <item>Short Term USD Loan</item>
+        <item>Other (Specify)</item>
     </string-array></file><file path="C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\res\values\themes.xml" qualifiers=""><style name="Theme.MicroPlanRedSphereAndroid" parent="Theme.MaterialComponents.Light.NoActionBar">
         
         <item name="colorPrimary">@color/blue</item>

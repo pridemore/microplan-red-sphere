@@ -4,7 +4,9 @@ array account_types
 array bank_names
 array city_names
 array employers
+array facility_type
 array relationship
+array repayment_period
 color black
 color blue
 color grey
@@ -39,6 +41,7 @@ id account_number
 id action_FirstFragment_to_SecondFragment
 id action_SecondFragment_to_FirstFragment
 id address_of_employer
+id amountRequired
 id bankName
 id bottomNavigationView
 id branch_name
@@ -54,6 +57,7 @@ id dob
 id ec_number
 id email_address
 id employer_email_address
+id facilityType
 id firstName
 id first_name
 id frame_layout
@@ -91,6 +95,8 @@ id nxtOfKin2ResidentialAddress
 id nxtOfKin2Surname
 id nxtOfKin2TitleGroup
 id other
+id otherFacilityType
+id otherPaymentPeriod
 id other_account_type
 id other_bank_name
 id owned
@@ -101,6 +107,7 @@ id profession
 id profile_nav
 id radioGroupAddressType
 id rented
+id repaymentPeriodRequired
 id residential_address
 id right_icon
 id sign_in
@@ -113,6 +120,7 @@ id textInputLayoutAccountNumber
 id textInputLayoutAccountType
 id textInputLayoutBranchName
 id textInputLayoutCountryOfBirth
+id textInputLayoutCreditFacilityAmountRequired
 id textInputLayoutCurrentCitizenship
 id textInputLayoutDOB
 id textInputLayoutDateOfBirth
@@ -120,6 +128,7 @@ id textInputLayoutDateOfEmployment
 id textInputLayoutECNumber
 id textInputLayoutEmailAddress
 id textInputLayoutEmployerEmailAddress
+id textInputLayoutFacilityType
 id textInputLayoutFirstName
 id textInputLayoutGrossMonthlySalary
 id textInputLayoutMaidenSurname
@@ -144,10 +153,13 @@ id textInputLayoutNxtOfKin2ResidentialAddress
 id textInputLayoutNxtOfKin2Surname
 id textInputLayoutOtherAccountType
 id textInputLayoutOtherBankName
+id textInputLayoutOtherFacilityType
+id textInputLayoutOtherRepaymentPeriodRequired
 id textInputLayoutPassportNumber
 id textInputLayoutPhysicalAddressOfEmployer
 id textInputLayoutPositionHeld
 id textInputLayoutProfession
+id textInputLayoutRepaymentPeriodRequired
 id textInputLayoutResidentialAddress
 id textInputLayoutSurname
 id title
