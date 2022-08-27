@@ -45,8 +45,7 @@ public class PersonalDetailsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 ((NewApplicationActivity)getActivity()).replaceFragment(new NewApplicationFragment());
-//                Intent intent=new Intent(getActivity(),HomeActivity.class);
-//                startActivity(intent);
+
             }
         });
 

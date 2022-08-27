@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class ContactDetailsFragment extends Fragment {
@@ -17,6 +19,8 @@ public class ContactDetailsFragment extends Fragment {
     ImageView menu;
     TextView title;
     Button btn_previous, btn_nxt;
+    RadioGroup residentialAddressType;
+    RadioButton selectedAddressType;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -33,8 +37,8 @@ public class ContactDetailsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 ((NewApplicationActivity)getActivity()).replaceFragment(new PersonalDetailsFragment());
-//                Intent intent=new Intent(getActivity(),HomeActivity.class);
-//                startActivity(intent);
+
+
             }
         });
 
@@ -44,6 +48,10 @@ public class ContactDetailsFragment extends Fragment {
                 ((NewApplicationActivity)getActivity()).replaceFragment(new EmploymentFragment());
             }
         });
+
+
+
+
 
         return view;
     }
