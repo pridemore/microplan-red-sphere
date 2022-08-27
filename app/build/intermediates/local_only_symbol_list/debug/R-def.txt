@@ -30,6 +30,7 @@ drawable new_application_image
 drawable next_arrow
 drawable previous_arrrow
 drawable profile_nav_image
+drawable round_edge
 drawable sync_nav_image
 drawable view_nav_image
 id FirstFragment
@@ -118,6 +119,7 @@ id sync_nav
 id textInputLayoutAccountHolderName
 id textInputLayoutAccountNumber
 id textInputLayoutAccountType
+id textInputLayoutApplication
 id textInputLayoutBranchName
 id textInputLayoutCountryOfBirth
 id textInputLayoutCreditFacilityAmountRequired
@@ -129,9 +131,11 @@ id textInputLayoutECNumber
 id textInputLayoutEmailAddress
 id textInputLayoutEmployerEmailAddress
 id textInputLayoutFacilityType
+id textInputLayoutFinancialServices
 id textInputLayoutFirstName
 id textInputLayoutGrossMonthlySalary
 id textInputLayoutMaidenSurname
+id textInputLayoutMicroPlan
 id textInputLayoutMobileNumber
 id textInputLayoutNameOfEmployer
 id textInputLayoutNationalId

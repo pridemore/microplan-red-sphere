@@ -16,6 +16,10 @@
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-43:\\xml\\backup_rules.xml"
     },
     {
+        "merged": "com.example.microplanredsphereandroid.app-merged_res-41:/drawable-v24_round_edge.xml.flat",
+        "source": "com.example.microplanredsphereandroid.app-main-43:/drawable-v24/round_edge.xml"
+    },
+    {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-41:\\drawable-v24_view_nav_image.png.flat",
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-43:\\drawable-v24\\view_nav_image.png"
     },
@@ -156,6 +160,10 @@
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-43:\\drawable-v24\\logo_new.JPG"
     },
     {
+        "merged": "com.example.microplanredsphereandroid.app-merged_res-41:/layout_fragment_new_application.xml.flat",
+        "source": "com.example.microplanredsphereandroid.app-main-43:/layout/fragment_new_application.xml"
+    },
+    {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-41:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-43:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
@@ -174,10 +182,6 @@
     {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-41:\\drawable_mybutton.xml.flat",
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-43:\\drawable\\mybutton.xml"
-    },
-    {
-        "merged": "com.example.microplanredsphereandroid.app-merged_res-41:/layout_fragment_loan_details.xml.flat",
-        "source": "com.example.microplanredsphereandroid.app-main-43:/layout/fragment_loan_details.xml"
     },
     {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-41:\\drawable_ic_launcher_background.xml.flat",

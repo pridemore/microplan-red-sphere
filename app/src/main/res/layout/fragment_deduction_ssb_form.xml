@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".DeductionSsbFormFragment">
-    <include
-        android:id="@+id/include"
-        layout="@layout/page_toolbar" />
-    <include
-        android:id="@+id/include2"
-        layout="@layout/back_next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/include"
+            layout="@layout/page_toolbar"
+            />
 
-</FrameLayout>
+        <include
+            android:id="@+id/include2"
+            layout="@layout/back_next" />
+
+
+
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>

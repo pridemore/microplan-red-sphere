@@ -1,20 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue"
     tools:context=".NewApplicationFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
     <include
         android:id="@+id/include"
-        layout="@layout/page_toolbar" />
-
+        layout="@layout/page_toolbar"
+        />
     <include
         android:id="@+id/include2"
-        layout="@layout/back_next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include" />
+        layout="@layout/back_next" />
+  <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        >
+        <TextView
+            android:id="@+id/textInputLayoutMicroPlan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="MicroPlan"
+            android:textColorHint="@color/white"
+            android:textSize="50sp" />
+        <TextView
+            android:id="@+id/textInputLayoutFinancialServices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Financial Services(Pvt) Limited"
+            android:textColorHint="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textInputLayoutApplication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Application"
+            android:textColorHint="@color/white"
+            android:textSize="50sp" />
+
+    </LinearLayout>
 
 
-</FrameLayout>
+
+
+
+
+</LinearLayout>
+
+</ScrollView>

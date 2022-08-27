@@ -2576,6 +2576,7 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable previous_arrrow
 drawable profile_nav_image
+drawable round_edge
 drawable sync_nav_image
 drawable test_custom_background
 drawable test_level_drawable
@@ -3108,6 +3109,7 @@ id textEnd
 id textInputLayoutAccountHolderName
 id textInputLayoutAccountNumber
 id textInputLayoutAccountType
+id textInputLayoutApplication
 id textInputLayoutBranchName
 id textInputLayoutCountryOfBirth
 id textInputLayoutCreditFacilityAmountRequired
@@ -3119,9 +3121,11 @@ id textInputLayoutECNumber
 id textInputLayoutEmailAddress
 id textInputLayoutEmployerEmailAddress
 id textInputLayoutFacilityType
+id textInputLayoutFinancialServices
 id textInputLayoutFirstName
 id textInputLayoutGrossMonthlySalary
 id textInputLayoutMaidenSurname
+id textInputLayoutMicroPlan
 id textInputLayoutMobileNumber
 id textInputLayoutNameOfEmployer
 id textInputLayoutNationalId
