@@ -1,5 +1,10 @@
 R_DEF: Internal format may change without notice
 local
+array account_types
+array bank_names
+array city_names
+array employers
+array relationship
 color black
 color blue
 color grey
@@ -28,10 +33,15 @@ drawable view_nav_image
 id FirstFragment
 id SecondFragment
 id access_account
+id accountType
+id account_holder_name
+id account_number
 id action_FirstFragment_to_SecondFragment
 id action_SecondFragment_to_FirstFragment
 id address_of_employer
+id bankName
 id bottomNavigationView
+id branch_name
 id btnCheck
 id btn_new_application
 id btn_nxt
@@ -65,6 +75,8 @@ id nav_graph
 id netSalary
 id net_salary
 id other
+id other_account_type
+id other_bank_name
 id owned
 id passport_number
 id password
@@ -80,8 +92,13 @@ id staff_quarters
 id stay_with_parents
 id surname
 id sync_nav
+id textInputLayoutAccountHolderName
+id textInputLayoutAccountNumber
+id textInputLayoutAccountType
+id textInputLayoutBranchName
 id textInputLayoutCountryOfBirth
 id textInputLayoutCurrentCitizenship
+id textInputLayoutDOB
 id textInputLayoutDateOfBirth
 id textInputLayoutDateOfEmployment
 id textInputLayoutECNumber
@@ -95,6 +112,8 @@ id textInputLayoutNameOfEmployer
 id textInputLayoutNationalId
 id textInputLayoutNetSalary
 id textInputLayoutNetSalaryy
+id textInputLayoutOtherAccountType
+id textInputLayoutOtherBankName
 id textInputLayoutPassportNumber
 id textInputLayoutPhysicalAddressOfEmployer
 id textInputLayoutPositionHeld

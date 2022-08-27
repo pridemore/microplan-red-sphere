@@ -32,8 +32,8 @@
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-43:\\layout\\activity_new_application.xml"
     },
     {
-        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-40:/layout/fragment_employment.xml",
-        "source": "com.example.microplanredsphereandroid.app-main-43:/layout/fragment_employment.xml"
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-40:/layout/fragment_bank_details.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-43:/layout/fragment_bank_details.xml"
     },
     {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-mergeDebugResources-40:\\layout\\activity_test.xml",

@@ -71,6 +71,11 @@ animator nav_default_enter_anim
 animator nav_default_exit_anim
 animator nav_default_pop_enter_anim
 animator nav_default_pop_exit_anim
+array account_types
+array bank_names
+array city_names
+array employers
+array relationship
 attr SharedValue
 attr SharedValueId
 attr action
@@ -2626,6 +2631,9 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id accountType
+id account_holder_name
+id account_number
 id actionDown
 id actionDownUp
 id actionUp
@@ -2669,6 +2677,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id bankName
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -2681,6 +2690,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id branch_name
 id btnCheck
 id btn_new_application
 id btn_nxt
@@ -2942,6 +2952,8 @@ id off
 id on
 id onInterceptTouchReturnSwipe
 id other
+id other_account_type
+id other_bank_name
 id outline
 id outward
 id overshoot
@@ -3070,8 +3082,13 @@ id test_radiobutton_app_button_tint
 id text
 id text2
 id textEnd
+id textInputLayoutAccountHolderName
+id textInputLayoutAccountNumber
+id textInputLayoutAccountType
+id textInputLayoutBranchName
 id textInputLayoutCountryOfBirth
 id textInputLayoutCurrentCitizenship
+id textInputLayoutDOB
 id textInputLayoutDateOfBirth
 id textInputLayoutDateOfEmployment
 id textInputLayoutECNumber
@@ -3085,6 +3102,8 @@ id textInputLayoutNameOfEmployer
 id textInputLayoutNationalId
 id textInputLayoutNetSalary
 id textInputLayoutNetSalaryy
+id textInputLayoutOtherAccountType
+id textInputLayoutOtherBankName
 id textInputLayoutPassportNumber
 id textInputLayoutPhysicalAddressOfEmployer
 id textInputLayoutPositionHeld
