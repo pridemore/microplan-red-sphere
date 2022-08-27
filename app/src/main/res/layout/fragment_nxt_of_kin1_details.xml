@@ -1,18 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".NxtOfKin1DetailsFragment">
-    <include
-        android:id="@+id/include"
-        layout="@layout/page_toolbar" />
-    <include
-        android:id="@+id/include2"
-        layout="@layout/back_next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/include"
+            layout="@layout/page_toolbar"
+            />
 
-</FrameLayout>
+        <include
+            android:id="@+id/include2"
+            layout="@layout/back_next" />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nxtOfKin1TitleGroup"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/mr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/blue"
+                android:gravity="center"
+                android:text="MR"
+                android:minHeight="48dp"
+                android:textColor="@color/blue"
+                android:textSize="18sp"
+                />
+            <RadioButton
+                android:id="@+id/mrs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MRS"
+                android:minHeight="48dp"
+                android:layout_marginStart="15dp"
+                android:buttonTint="@color/blue"
+                android:textColor="@color/blue"
+                android:gravity="center"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:id="@+id/miss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MISS"
+                android:minHeight="48dp"
+                android:layout_marginStart="15dp"
+                android:buttonTint="@color/blue"
+                android:textColor="@color/blue"
+                android:gravity="center"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:id="@+id/other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OTHER"
+                android:minHeight="48dp"
+                android:layout_marginStart="15dp"
+                android:buttonTint="@color/blue"
+                android:textColor="@color/blue"
+                android:gravity="center"
+                android:textSize="18sp"/>
+        </RadioGroup>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutNxtOfKin1FirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:hint="First Name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nxtOfKin1FirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:inputType="textCapWords"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutNxtOfKin1Surname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Last Name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nxtOfKin1Surname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:inputType="textCapWords"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutNxtOfKin1ResidentialAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Residential Address">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nxtOfKin1ResidentialAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:inputType="textCapWords"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutNxtOfKin1PhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Phone Number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nxtOfKin1PhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:inputType="number"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textInputLayoutNxtOfKin1Relationship"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Relationship"/>
+        <Spinner
+            android:id="@+id/nxtOfKin1Relationship"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutNxtOfKin1NameOfEmployer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Name Of Employer">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nxtOfKin1NameOfEmployer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:inputType="textCapWords"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutNxtOfKin1EmployerAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Employers Address">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nxtOfKin1EmployerAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:inputType="textCapWords"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+</ScrollView>
