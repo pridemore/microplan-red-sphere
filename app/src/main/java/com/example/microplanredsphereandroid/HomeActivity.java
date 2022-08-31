@@ -46,7 +46,7 @@ public class HomeActivity extends AppCompatActivity {
             return true;
         });
     }
-    private void replaceFragment(Fragment fragment){
+    public void replaceFragment(Fragment fragment){
         Log.d(TAG,"Replace calld");
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();

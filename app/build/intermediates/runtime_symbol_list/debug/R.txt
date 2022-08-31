@@ -2761,6 +2761,7 @@ int id customPanel 0x7f0900a7
 int id customerName 0x7f0902a4
 int id cut 0x7f0900a8
 int id dateAuthorised 0x7f0900a9
+int id dateOfBirth 0x7f0902b2
 int id dateOfBorrowerSignature 0x7f0900aa
 int id dateOfWitness1Signature 0x7f0900ab
 int id dateOfWitness2Signature 0x7f0900ac
@@ -2804,10 +2805,12 @@ int id easeOut 0x7f0900d1
 int id east 0x7f0900d2
 int id ecNumber 0x7f0902a5
 int id ec_number 0x7f0900d3
+int id editProfile 0x7f0902b3
 int id edit_query 0x7f0900d4
 int id edittext_dropdown_editable 0x7f0900d5
 int id edittext_dropdown_noneditable 0x7f0900d6
 int id elastic 0x7f0900d7
+int id emailAddress 0x7f0902b4
 int id email_address 0x7f0900d8
 int id employeeCode 0x7f0900d9
 int id employer_email_address 0x7f0900da
@@ -2840,6 +2843,7 @@ int id frame_layout 0x7f0900f4
 int id fromDate 0x7f0900f5
 int id frost 0x7f0900f6
 int id fullscreen_header 0x7f0900f7
+int id gender 0x7f0902b5
 int id ghost_view 0x7f0900f8
 int id ghost_view_holder 0x7f0900f9
 int id gone 0x7f0900fa
@@ -2952,6 +2956,7 @@ int id mtrl_picker_text_input_range_start 0x7f090164
 int id mtrl_picker_title_text 0x7f090165
 int id mtrl_view_tag_bottom_padding 0x7f090166
 int id multiply 0x7f090167
+int id name 0x7f0902b6
 int id name_of_employer 0x7f090168
 int id national_id 0x7f090169
 int id nav_controller_view_tag 0x7f09016a
@@ -3019,6 +3024,8 @@ int id pathRelative 0x7f0901a7
 int id payeeCode 0x7f0901a8
 int id peekHeight 0x7f0901a9
 int id percent 0x7f0901aa
+int id phoneNumber 0x7f0902b7
+int id physicalAddress 0x7f0902b8
 int id pin 0x7f0901ab
 int id placeOfBorrowerSignature 0x7f0901ac
 int id placeOfWitness1Signature 0x7f0901ad
@@ -3046,6 +3053,7 @@ int id right_side 0x7f0901c1
 int id rounded 0x7f0901c2
 int id row_index_key 0x7f0901c3
 int id rtl 0x7f0901c4
+int id saveProfile 0x7f0902b9
 int id saveSignature 0x7f0901c5
 int id save_non_transition_alpha 0x7f0901c6
 int id save_overlay_view 0x7f0901c7
@@ -3158,6 +3166,7 @@ int id textInputLayoutDateOfEmployment 0x7f09022f
 int id textInputLayoutDateOfWitness1Signature 0x7f090230
 int id textInputLayoutDateOfWitness2Signature 0x7f090231
 int id textInputLayoutECNumber 0x7f090232
+int id textInputLayoutEditProfile 0x7f0902ba
 int id textInputLayoutEmailAddress 0x7f090233
 int id textInputLayoutEmployeeNumber 0x7f090234
 int id textInputLayoutEmployerEmailAddress 0x7f090235
@@ -3166,11 +3175,13 @@ int id textInputLayoutFinancialServices 0x7f090237
 int id textInputLayoutFirstName 0x7f090238
 int id textInputLayoutFistName 0x7f090239
 int id textInputLayoutFromDate 0x7f09023a
+int id textInputLayoutGender 0x7f0902bb
 int id textInputLayoutGrossMonthlySalary 0x7f09023b
 int id textInputLayoutMaidenSurname 0x7f09023c
 int id textInputLayoutMicroPlan 0x7f09023d
 int id textInputLayoutMobileNumber 0x7f09023e
 int id textInputLayoutMonthlyRate 0x7f09023f
+int id textInputLayoutName 0x7f0902bc
 int id textInputLayoutNameOfEmployer 0x7f090240
 int id textInputLayoutNationalId 0x7f090241
 int id textInputLayoutNetSalary 0x7f090242
@@ -3195,6 +3206,8 @@ int id textInputLayoutOtherFacilityType 0x7f090254
 int id textInputLayoutOtherRepaymentPeriodRequired 0x7f090255
 int id textInputLayoutPassportNumber 0x7f090256
 int id textInputLayoutPayeeCode 0x7f090257
+int id textInputLayoutPhoneNumber 0x7f0902bd
+int id textInputLayoutPhysicalAddress 0x7f0902be
 int id textInputLayoutPhysicalAddressOfEmployer 0x7f090258
 int id textInputLayoutPlaceOfBorrowerSignature 0x7f090259
 int id textInputLayoutPlaceOfWitness1Signature 0x7f09025a
@@ -3217,9 +3230,16 @@ int id textStart 0x7f090268
 int id textTop 0x7f090269
 int id textViewClientName 0x7f0902ab
 int id textViewClientSignature 0x7f0902ac
+int id textViewDateOfBirth 0x7f0902bf
 int id textViewEcNumber 0x7f0902ad
+int id textViewEmailAddress 0x7f0902c0
 int id textViewFullNameOfApplicant 0x7f0902ae
+int id textViewGender 0x7f0902c1
+int id textViewName 0x7f0902c2
+int id textViewPhoneNumber 0x7f0902c3
+int id textViewPhysicalAddress 0x7f0902c4
 int id textViewReference 0x7f0902af
+int id textViewSurname 0x7f0902c5
 int id textViewType 0x7f0902b0
 int id text_input_end_icon 0x7f09026a
 int id text_input_error_icon 0x7f09026b
