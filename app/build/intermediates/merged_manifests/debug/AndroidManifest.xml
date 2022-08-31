@@ -21,6 +21,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.MicroPlanRedSphereAndroid" >
         <activity
+            android:name="com.example.microplanredsphereandroid.Signature"
+            android:exported="false" />
+        <activity
             android:name="com.example.microplanredsphereandroid.TestActivity"
             android:exported="false" />
         <activity
