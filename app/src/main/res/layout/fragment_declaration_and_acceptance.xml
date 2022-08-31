@@ -54,6 +54,34 @@
                 android:inputType="textCapWords"/>
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/textInputLayoutBorroweSignature"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Signature">
+
+            <ImageView
+                android:id="@+id/borrowerSignature"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/buttonBorrowerSign"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Sign"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutDateOfBorrowerSignature"
             android:layout_width="match_parent"
@@ -111,6 +139,33 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/textInputLayoutWitness1Signature"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Signature">
+
+            <ImageView
+                android:id="@+id/witness1Signature"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/buttonWitness1Sign"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Sign"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutDateOfWitness1Signature"
             android:layout_width="match_parent"
@@ -167,7 +222,32 @@
                 android:inputType="textCapWords"/>
 
         </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/textInputLayoutWitness2Signature"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Signature">
 
+            <ImageView
+                android:id="@+id/witness2Signature"
+                android:layout_width="0dp"
+                android:background="@color/grey"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/buttonWitness2Sign"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Sign"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutDateOfWitness2Signature"
             android:layout_width="match_parent"

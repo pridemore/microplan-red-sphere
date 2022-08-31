@@ -275,6 +275,7 @@ attr circularflow_defaultAngle
 attr circularflow_defaultRadius
 attr circularflow_radiusInDP
 attr circularflow_viewCenter
+attr clearOnDoubleClick
 attr clearTop
 attr clearsTag
 attr clickAction
@@ -875,6 +876,9 @@ attr passwordToggleTint
 attr passwordToggleTintMode
 attr pathMotionArc
 attr path_percent
+attr penColor
+attr penMaxWidth
+attr penMinWidth
 attr percentHeight
 attr percentWidth
 attr percentX
@@ -1193,6 +1197,7 @@ attr uri
 attr useCompatPadding
 attr useMaterialThemeColors
 attr values
+attr velocityFilterWeight
 attr verticalOffset
 attr verticalOffsetWithText
 attr viewInflaterClass
@@ -2674,6 +2679,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id approverName
 id arc
 id asConfigured
 id async
@@ -2688,6 +2694,8 @@ id beginOnFirstDraw
 id beginning
 id bestChoice
 id blocking
+id borrowerName
+id borrowerSignature
 id bottom
 id bottomNavigationView
 id bounce
@@ -2699,9 +2707,14 @@ id btnCheck
 id btn_new_application
 id btn_nxt
 id btn_previous
+id buttonBorrowerSign
 id buttonPanel
+id buttonSign
+id buttonWitness1Sign
+id buttonWitness2Sign
 id cache_measures
 id callMeasure
+id cancelSignature
 id cancel_button
 id carryVelocity
 id center
@@ -2744,6 +2757,10 @@ id current_citizenship
 id custom
 id customPanel
 id cut
+id dateAuthorised
+id dateOfBorrowerSignature
+id dateOfWitness1Signature
+id dateOfWitness2Signature
 id date_of_birth
 id date_of_employment
 id date_picker_actions
@@ -2788,6 +2805,7 @@ id edittext_dropdown_editable
 id edittext_dropdown_noneditable
 id elastic
 id email_address
+id employeeCode
 id employer_email_address
 id end
 id endToStart
@@ -2815,6 +2833,7 @@ id floating
 id forever
 id fragment_container_view_tag
 id frame_layout
+id fromDate
 id frost
 id fullscreen_header
 id ghost_view
@@ -2901,6 +2920,7 @@ id month_navigation_fragment_toggle
 id month_navigation_next
 id month_navigation_previous
 id month_title
+id monthlyRate
 id motion_base
 id mr
 id mrs
@@ -2992,9 +3012,13 @@ id password
 id password_toggle
 id path
 id pathRelative
+id payeeCode
 id peekHeight
 id percent
 id pin
+id placeOfBorrowerSignature
+id placeOfWitness1Signature
+id placeOfWitness2Signature
 id position
 id position_held
 id postLayout
@@ -3017,6 +3041,7 @@ id right_side
 id rounded
 id row_index_key
 id rtl
+id saveSignature
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3047,6 +3072,7 @@ id showCustom
 id showHome
 id showTitle
 id sign_in
+id signature_pad
 id sin
 id skipCollapsed
 id skipped
@@ -3110,23 +3136,34 @@ id textInputLayoutAccountHolderName
 id textInputLayoutAccountNumber
 id textInputLayoutAccountType
 id textInputLayoutApplication
+id textInputLayoutApproverName
+id textInputLayoutBorroweSignature
+id textInputLayoutBorrowerName
 id textInputLayoutBranchName
 id textInputLayoutCountryOfBirth
 id textInputLayoutCreditFacilityAmountRequired
 id textInputLayoutCurrentCitizenship
 id textInputLayoutDOB
+id textInputLayoutDateAuthorised
 id textInputLayoutDateOfBirth
+id textInputLayoutDateOfBorrowerSignature
 id textInputLayoutDateOfEmployment
+id textInputLayoutDateOfWitness1Signature
+id textInputLayoutDateOfWitness2Signature
 id textInputLayoutECNumber
 id textInputLayoutEmailAddress
+id textInputLayoutEmployeeNumber
 id textInputLayoutEmployerEmailAddress
 id textInputLayoutFacilityType
 id textInputLayoutFinancialServices
 id textInputLayoutFirstName
+id textInputLayoutFistName
+id textInputLayoutFromDate
 id textInputLayoutGrossMonthlySalary
 id textInputLayoutMaidenSurname
 id textInputLayoutMicroPlan
 id textInputLayoutMobileNumber
+id textInputLayoutMonthlyRate
 id textInputLayoutNameOfEmployer
 id textInputLayoutNationalId
 id textInputLayoutNetSalary
@@ -3150,12 +3187,21 @@ id textInputLayoutOtherBankName
 id textInputLayoutOtherFacilityType
 id textInputLayoutOtherRepaymentPeriodRequired
 id textInputLayoutPassportNumber
+id textInputLayoutPayeeCode
 id textInputLayoutPhysicalAddressOfEmployer
+id textInputLayoutPlaceOfBorrowerSignature
+id textInputLayoutPlaceOfWitness1Signature
+id textInputLayoutPlaceOfWitness2Signature
 id textInputLayoutPositionHeld
 id textInputLayoutProfession
 id textInputLayoutRepaymentPeriodRequired
 id textInputLayoutResidentialAddress
 id textInputLayoutSurname
+id textInputLayoutToDate
+id textInputLayoutWitness1FullName
+id textInputLayoutWitness1Signature
+id textInputLayoutWitness2FullName
+id textInputLayoutWitness2Signature
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -3174,6 +3220,7 @@ id title
 id titleDividerNoCustom
 id titleGroup
 id title_template
+id toDate
 id toggle
 id top
 id topPanel
@@ -3205,6 +3252,10 @@ id visible_removing_fragment_view_tag
 id west
 id withText
 id withinBounds
+id witness1FullName
+id witness1Signature
+id witness2FullName
+id witness2Signature
 id wrap
 id wrap_content
 id wrap_content_constrained
@@ -3308,6 +3359,7 @@ layout activity_home
 layout activity_login
 layout activity_main
 layout activity_new_application
+layout activity_signature
 layout activity_splash_screen
 layout activity_test
 layout back_next
@@ -4751,6 +4803,7 @@ styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
 styleable ShapeableImageView contentPadding contentPaddingBottom contentPaddingEnd contentPaddingLeft contentPaddingRight contentPaddingStart contentPaddingTop shapeAppearance shapeAppearanceOverlay strokeColor strokeWidth
+styleable SignaturePad clearOnDoubleClick penColor penMaxWidth penMinWidth velocityFilterWeight
 styleable Slider android_enabled android_value android_stepSize android_valueFrom android_valueTo haloColor haloRadius labelBehavior labelStyle thumbColor thumbElevation thumbRadius thumbStrokeColor thumbStrokeWidth tickColor tickColorActive tickColorInactive tickVisible trackColor trackColorActive trackColorInactive trackHeight
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha backgroundTint backgroundTintMode elevation maxActionInlineWidth
