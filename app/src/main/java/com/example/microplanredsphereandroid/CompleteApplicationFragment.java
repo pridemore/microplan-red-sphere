@@ -16,7 +16,7 @@ public class CompleteApplicationFragment extends Fragment {
     ImageView backIcon;
     ImageView menu;
     TextView title;
-    Button btn_previous, btn_nxt;
+    Button btn_previous, complete;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class CompleteApplicationFragment extends Fragment {
         menu=view.findViewById(R.id.right_icon);
         title=view.findViewById(R.id.title);
         btn_previous=view.findViewById(R.id.btn_previous);
-        btn_nxt=view.findViewById(R.id.btn_nxt);
+        complete=view.findViewById(R.id.complete);
         title.setText("Complete Application");
 
         btn_previous.setOnClickListener(new View.OnClickListener() {
@@ -37,13 +37,14 @@ public class CompleteApplicationFragment extends Fragment {
 //                startActivity(intent);
             }
         });
-
-        btn_nxt.setOnClickListener(new View.OnClickListener() {
+        complete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ((NewApplicationActivity)getActivity()).replaceFragment(new HomeFragment());
             }
         });
+
+
 
 
 

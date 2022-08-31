@@ -2678,6 +2678,7 @@ int id animateToEnd 0x7f090057
 int id animateToStart 0x7f090058
 int id antiClockwise 0x7f090059
 int id anticipate 0x7f09005a
+int id applicantFullName 0x7f0902a2
 int id approverName 0x7f09005b
 int id arc 0x7f09005c
 int id asConfigured 0x7f09005d
@@ -2734,11 +2735,13 @@ int id chip_group 0x7f09008f
 int id chronometer 0x7f090090
 int id circle_center 0x7f090091
 int id clear_text 0x7f090092
+int id clientName 0x7f0902a3
 int id clip_horizontal 0x7f090093
 int id clip_vertical 0x7f090094
 int id clockwise 0x7f090095
 int id closest 0x7f090096
 int id collapseActionView 0x7f090097
+int id complete 0x7f0902b1
 int id compress 0x7f090098
 int id confirm_button 0x7f090099
 int id constraint 0x7f09009a
@@ -2755,6 +2758,7 @@ int id currentState 0x7f0900a4
 int id current_citizenship 0x7f0900a5
 int id custom 0x7f0900a6
 int id customPanel 0x7f0900a7
+int id customerName 0x7f0902a4
 int id cut 0x7f0900a8
 int id dateAuthorised 0x7f0900a9
 int id dateOfBorrowerSignature 0x7f0900aa
@@ -2798,6 +2802,7 @@ int id easeIn 0x7f0900cf
 int id easeInOut 0x7f0900d0
 int id easeOut 0x7f0900d1
 int id east 0x7f0900d2
+int id ecNumber 0x7f0902a5
 int id ec_number 0x7f0900d3
 int id edit_query 0x7f0900d4
 int id edittext_dropdown_editable 0x7f0900d5
@@ -3029,6 +3034,7 @@ int id radio 0x7f0901b6
 int id radioGroupAddressType 0x7f0901b7
 int id ratio 0x7f0901b8
 int id rectangles 0x7f0901b9
+int id reference 0x7f0902a6
 int id rented 0x7f0901ba
 int id repaymentPeriodRequired 0x7f0901bb
 int id residential_address 0x7f0901bc
@@ -3134,11 +3140,13 @@ int id textEnd 0x7f09021f
 int id textInputLayoutAccountHolderName 0x7f090220
 int id textInputLayoutAccountNumber 0x7f090221
 int id textInputLayoutAccountType 0x7f090222
+int id textInputLayoutApplicantFullName 0x7f0902a7
 int id textInputLayoutApplication 0x7f090223
 int id textInputLayoutApproverName 0x7f090224
 int id textInputLayoutBorroweSignature 0x7f090225
 int id textInputLayoutBorrowerName 0x7f090226
 int id textInputLayoutBranchName 0x7f090227
+int id textInputLayoutClientName 0x7f0902a8
 int id textInputLayoutCountryOfBirth 0x7f090228
 int id textInputLayoutCreditFacilityAmountRequired 0x7f090229
 int id textInputLayoutCurrentCitizenship 0x7f09022a
@@ -3193,10 +3201,12 @@ int id textInputLayoutPlaceOfWitness1Signature 0x7f09025a
 int id textInputLayoutPlaceOfWitness2Signature 0x7f09025b
 int id textInputLayoutPositionHeld 0x7f09025c
 int id textInputLayoutProfession 0x7f09025d
+int id textInputLayoutReference 0x7f0902a9
 int id textInputLayoutRepaymentPeriodRequired 0x7f09025e
 int id textInputLayoutResidentialAddress 0x7f09025f
 int id textInputLayoutSurname 0x7f090260
 int id textInputLayoutToDate 0x7f090261
+int id textInputLayoutType 0x7f0902aa
 int id textInputLayoutWitness1FullName 0x7f090262
 int id textInputLayoutWitness1Signature 0x7f090263
 int id textInputLayoutWitness2FullName 0x7f090264
@@ -3205,6 +3215,12 @@ int id textSpacerNoButtons 0x7f090266
 int id textSpacerNoTitle 0x7f090267
 int id textStart 0x7f090268
 int id textTop 0x7f090269
+int id textViewClientName 0x7f0902ab
+int id textViewClientSignature 0x7f0902ac
+int id textViewEcNumber 0x7f0902ad
+int id textViewFullNameOfApplicant 0x7f0902ae
+int id textViewReference 0x7f0902af
+int id textViewType 0x7f0902b0
 int id text_input_end_icon 0x7f09026a
 int id text_input_error_icon 0x7f09026b
 int id text_input_start_icon 0x7f09026c

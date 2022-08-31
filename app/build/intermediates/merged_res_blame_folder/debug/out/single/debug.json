@@ -148,6 +148,10 @@
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-44:\\layout\\page_toolbar.xml"
     },
     {
+        "merged": "com.example.microplanredsphereandroid.app-merged_res-42:/layout_fragment_complete_application.xml.flat",
+        "source": "com.example.microplanredsphereandroid.app-main-44:/layout/fragment_complete_application.xml"
+    },
+    {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-42:\\layout_activity_signature.xml.flat",
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-44:\\layout\\activity_signature.xml"
     },
@@ -206,10 +210,6 @@
     {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-42:\\layout_fragment_view.xml.flat",
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-44:\\layout\\fragment_view.xml"
-    },
-    {
-        "merged": "com.example.microplanredsphereandroid.app-merged_res-42:/layout_activity_signature.xml.flat",
-        "source": "com.example.microplanredsphereandroid.app-main-44:/layout/activity_signature.xml"
     },
     {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-42:\\mipmap-xhdpi_ic_launcher.webp.flat",

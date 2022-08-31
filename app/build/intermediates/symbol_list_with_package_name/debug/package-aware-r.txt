@@ -2679,6 +2679,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id applicantFullName
 id approverName
 id arc
 id asConfigured
@@ -2735,11 +2736,13 @@ id chip_group
 id chronometer
 id circle_center
 id clear_text
+id clientName
 id clip_horizontal
 id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id complete
 id compress
 id confirm_button
 id constraint
@@ -2756,6 +2759,7 @@ id currentState
 id current_citizenship
 id custom
 id customPanel
+id customerName
 id cut
 id dateAuthorised
 id dateOfBorrowerSignature
@@ -2799,6 +2803,7 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id ecNumber
 id ec_number
 id edit_query
 id edittext_dropdown_editable
@@ -3030,6 +3035,7 @@ id radio
 id radioGroupAddressType
 id ratio
 id rectangles
+id reference
 id rented
 id repaymentPeriodRequired
 id residential_address
@@ -3135,11 +3141,13 @@ id textEnd
 id textInputLayoutAccountHolderName
 id textInputLayoutAccountNumber
 id textInputLayoutAccountType
+id textInputLayoutApplicantFullName
 id textInputLayoutApplication
 id textInputLayoutApproverName
 id textInputLayoutBorroweSignature
 id textInputLayoutBorrowerName
 id textInputLayoutBranchName
+id textInputLayoutClientName
 id textInputLayoutCountryOfBirth
 id textInputLayoutCreditFacilityAmountRequired
 id textInputLayoutCurrentCitizenship
@@ -3194,10 +3202,12 @@ id textInputLayoutPlaceOfWitness1Signature
 id textInputLayoutPlaceOfWitness2Signature
 id textInputLayoutPositionHeld
 id textInputLayoutProfession
+id textInputLayoutReference
 id textInputLayoutRepaymentPeriodRequired
 id textInputLayoutResidentialAddress
 id textInputLayoutSurname
 id textInputLayoutToDate
+id textInputLayoutType
 id textInputLayoutWitness1FullName
 id textInputLayoutWitness1Signature
 id textInputLayoutWitness2FullName
@@ -3206,6 +3216,12 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textViewClientName
+id textViewClientSignature
+id textViewEcNumber
+id textViewFullNameOfApplicant
+id textViewReference
+id textViewType
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
