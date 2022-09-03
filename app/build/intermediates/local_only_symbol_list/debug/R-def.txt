@@ -44,6 +44,7 @@ id action_SecondFragment_to_FirstFragment
 id address_of_employer
 id amountRequired
 id applicantFullName
+id applicationDate
 id approverName
 id bankName
 id borrowerName
@@ -64,6 +65,7 @@ id complete
 id country_of_birth
 id current_citizenship
 id customerName
+id date
 id dateAuthorised
 id dateOfBirth
 id dateOfBorrowerSignature
@@ -90,6 +92,7 @@ id home_nav
 id include
 id include2
 id is_permanent
+id lastName
 id left_icon
 id logimage
 id maiden_surname
@@ -138,6 +141,7 @@ id position_held
 id profession
 id profile_nav
 id radioGroupAddressType
+id recyclerView
 id reference
 id rented
 id repaymentPeriodRequired
@@ -183,6 +187,7 @@ id textInputLayoutFistName
 id textInputLayoutFromDate
 id textInputLayoutGender
 id textInputLayoutGrossMonthlySalary
+id textInputLayoutListView
 id textInputLayoutMaidenSurname
 id textInputLayoutMicroPlan
 id textInputLayoutMobileNumber
@@ -230,6 +235,12 @@ id textInputLayoutWitness1FullName
 id textInputLayoutWitness1Signature
 id textInputLayoutWitness2FullName
 id textInputLayoutWitness2Signature
+id textSyncedToServer
+id textTotalApplications
+id textView
+id textView1
+id textView2
+id textView4
 id textViewClientName
 id textViewClientSignature
 id textViewDateOfBirth
@@ -275,6 +286,7 @@ layout fragment_personal_details
 layout fragment_profile
 layout fragment_sync
 layout fragment_view
+layout list_items
 layout page_toolbar
 layout toolbar
 menu bottome_nav_menu
