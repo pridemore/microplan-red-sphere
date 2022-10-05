@@ -15,9 +15,9 @@
             layout="@layout/page_toolbar"
             />
 
-        <include
-            android:id="@+id/include2"
-            layout="@layout/back_next" />
+<!--        <include-->
+<!--            android:id="@+id/include2"-->
+<!--            layout="@layout/back_next" />-->
         <LinearLayout
             android:id="@+id/textInputLayoutListView"
             android:layout_width="match_parent"

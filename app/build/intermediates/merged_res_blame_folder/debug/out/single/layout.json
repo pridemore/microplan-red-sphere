@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-mergeDebugResources-41:\\layout\\list_items.xml",
+        "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-44:\\layout\\list_items.xml"
+    },
+    {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-mergeDebugResources-41:\\layout\\fragment_contact_details.xml",
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-44:\\layout\\fragment_contact_details.xml"
     },
@@ -48,16 +52,12 @@
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-44:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-mergeDebugResources-41:\\layout\\activity_new_application.xml",
-        "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-44:\\layout\\activity_new_application.xml"
-    },
-    {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-mergeDebugResources-41:\\layout\\fragment_sync.xml",
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-44:\\layout\\fragment_sync.xml"
     },
     {
-        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-41:/layout/list_items.xml",
-        "source": "com.example.microplanredsphereandroid.app-main-44:/layout/list_items.xml"
+        "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-mergeDebugResources-41:\\layout\\activity_new_application.xml",
+        "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-44:\\layout\\activity_new_application.xml"
     },
     {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-mergeDebugResources-41:\\layout\\page_toolbar.xml",
@@ -76,12 +76,12 @@
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-44:\\layout\\fragment_new_application.xml"
     },
     {
-        "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-mergeDebugResources-41:\\layout\\fragment_bank_details.xml",
-        "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-44:\\layout\\fragment_bank_details.xml"
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-41:/layout/fragment_view.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-44:/layout/fragment_view.xml"
     },
     {
-        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-41:/layout/fragment_home.xml",
-        "source": "com.example.microplanredsphereandroid.app-main-44:/layout/fragment_home.xml"
+        "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-mergeDebugResources-41:\\layout\\fragment_bank_details.xml",
+        "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-44:\\layout\\fragment_bank_details.xml"
     },
     {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-mergeDebugResources-41:\\layout\\activity_splash_screen.xml",
