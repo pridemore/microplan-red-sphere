@@ -18,6 +18,17 @@
 <!--        <include-->
 <!--            android:id="@+id/include2"-->
 <!--            layout="@layout/back_next" />-->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="@color/blue"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/previous_arrrow"
+            android:id="@+id/btn_previous"
+            android:layout_centerVertical="true"
+            />
         <LinearLayout
             android:id="@+id/textInputLayoutListView"
             android:layout_width="match_parent"

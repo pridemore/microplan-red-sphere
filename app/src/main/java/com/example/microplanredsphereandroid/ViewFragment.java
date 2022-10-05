@@ -1,5 +1,6 @@
 package com.example.microplanredsphereandroid;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,6 +22,9 @@ import java.util.ArrayList;
 
 
 public class ViewFragment extends Fragment {
+    private ImageView backIcon, menu;
+    private TextView title;
+    private Button btn_previous;
     private ArrayList<LoanApplications> applicationsList;
     private RecyclerView recyclerView;
 
@@ -29,15 +34,23 @@ public class ViewFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_view, container, false);
-        ImageView backIcon = view.findViewById(R.id.left_icon);
-        ImageView menu = view.findViewById(R.id.right_icon);
-        TextView title = view.findViewById(R.id.title);
+        backIcon = view.findViewById(R.id.left_icon);
+        menu = view.findViewById(R.id.right_icon);
+        title = view.findViewById(R.id.title);
+        btn_previous=view.findViewById(R.id.btn_previous);
         recyclerView = view.findViewById(R.id.recyclerView);
         applicationsList = new ArrayList<>();
         title.setText("View Applications");
 
         setViewLoanApplicationsList();//load data to our arraylist
         setAdapter();//load recycler view with applications list
+
+        btn_previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((HomeActivity)getActivity()).replaceFragment(new HomeFragment());
+            }
+        });
 
         return view;
     }

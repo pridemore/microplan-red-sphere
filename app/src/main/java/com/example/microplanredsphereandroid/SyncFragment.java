@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,6 +22,7 @@ import java.util.ArrayList;
 public class SyncFragment extends Fragment {
     private ImageView backIcon, menu;
     private TextView title;
+    private Button btn_previous;
     private RecyclerView recyclerView;
     private ArrayList<LoanApplications> applicationsList;
 
@@ -32,6 +34,7 @@ public class SyncFragment extends Fragment {
         backIcon = view.findViewById(R.id.left_icon);
         menu = view.findViewById(R.id.right_icon);
         title = view.findViewById(R.id.title);
+        btn_previous=view.findViewById(R.id.btn_previous);
         recyclerView = view.findViewById(R.id.recyclerView);
         applicationsList = new ArrayList<>();
         title.setText("Sync Applications");
@@ -39,6 +42,12 @@ public class SyncFragment extends Fragment {
         setSyncLoanApplicationsList();//loading loan applications to our list
         setAdapter();//load the list to adapter
 
+        btn_previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((HomeActivity)getActivity()).replaceFragment(new HomeFragment());
+            }
+        });
 
         return view;
     }

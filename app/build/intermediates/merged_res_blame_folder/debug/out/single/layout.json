@@ -16,6 +16,10 @@
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-44:\\layout\\activity_main.xml"
     },
     {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-41:/layout/fragment_sync.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-44:/layout/fragment_sync.xml"
+    },
+    {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-mergeDebugResources-41:\\layout\\back_next.xml",
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-44:\\layout\\back_next.xml"
     },
