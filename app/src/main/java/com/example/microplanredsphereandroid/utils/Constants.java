@@ -1,7 +1,8 @@
 package com.example.microplanredsphereandroid.utils;
 
 public class Constants {
-
+    public static int FAILURE_INT_VALUE = 400;
+    public static int SUCCESS_INT_VALUE = 200;
     public static final String CURRENT_LOAN_APP = "currentLoanApp";
     public static final String PREFS_KEY = "loanAppPrefs";
     public static final String LATEST_SIGNATURE = "latestSignature";

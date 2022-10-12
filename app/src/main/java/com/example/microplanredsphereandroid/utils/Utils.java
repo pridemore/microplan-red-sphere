@@ -2,6 +2,7 @@ package com.example.microplanredsphereandroid.utils;
 
 import static com.example.microplanredsphereandroid.utils.Constants.LATEST_SIGNATURE;
 import static com.example.microplanredsphereandroid.utils.Constants.PREFS_KEY;
+import static com.example.microplanredsphereandroid.utils.Constants.USER;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -9,6 +10,9 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
+
+import com.example.microplanredsphereandroid.models.UserModel;
+import com.google.gson.Gson;
 
 import java.io.ByteArrayOutputStream;
 
@@ -29,5 +33,13 @@ public class Utils {
         SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
         byte[] imageAsBytes = Base64.decode(preferences.getString(LATEST_SIGNATURE, "").getBytes(), Base64.DEFAULT);
         return BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length);
+    }
+
+    @SuppressLint("ApplySharedPref")
+    public static void saveUserModel(Context context, Object model) {
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(USER, new Gson().toJson(model));
+        editor.commit();
     }
 }

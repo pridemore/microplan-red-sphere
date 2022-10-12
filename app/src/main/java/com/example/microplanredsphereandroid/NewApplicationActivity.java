@@ -44,10 +44,10 @@ public class NewApplicationActivity extends AppCompatActivity {
                     Log.d(TAG,"Sync Fragment called");
                     replaceFragment(new SyncFragment());
                     break;
-                case R.id.profile_nav:
-                    Log.d(TAG,"Profile Fragment called");
-                    replaceFragment(new ProfileFragment());
-                    break;
+//                case R.id.profile_nav:
+//                    Log.d(TAG,"Profile Fragment called");
+//                    replaceFragment(new ProfileFragment());
+//                    break;
 
             }
             return true;
