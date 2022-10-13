@@ -1,5 +1,6 @@
 package com.example.microplanredsphereandroid.utils;
 
+import static com.example.microplanredsphereandroid.utils.Constants.CURRENT_LOAN_APP;
 import static com.example.microplanredsphereandroid.utils.Constants.LATEST_SIGNATURE;
 import static com.example.microplanredsphereandroid.utils.Constants.PREFS_KEY;
 import static com.example.microplanredsphereandroid.utils.Constants.USER;
@@ -11,6 +12,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
 
+import com.example.microplanredsphereandroid.models.LoanApplicationModel;
 import com.example.microplanredsphereandroid.models.UserModel;
 import com.google.gson.Gson;
 
@@ -41,5 +43,14 @@ public class Utils {
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(USER, new Gson().toJson(model));
         editor.commit();
+    }
+
+    public static LoanApplicationModel getApplicationModel(Context context) {
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        if (preferences.getString(CURRENT_LOAN_APP, "").isEmpty()) {
+            return new LoanApplicationModel();
+        } else {
+            return new Gson().fromJson(preferences.getString(CURRENT_LOAN_APP, ""), LoanApplicationModel.class);
+        }
     }
 }

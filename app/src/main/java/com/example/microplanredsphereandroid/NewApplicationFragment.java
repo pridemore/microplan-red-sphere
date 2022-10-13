@@ -42,7 +42,8 @@ public class NewApplicationFragment extends Fragment {
         btn_nxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((NewApplicationActivity)getActivity()).replaceFragment(new PersonalDetailsFragment());
+                //((NewApplicationActivity)getActivity()).replaceFragment(new PersonalDetailsFragment());
+                ((NewApplicationActivity)getActivity()).replaceFragment(new Products());
             }
         });
 

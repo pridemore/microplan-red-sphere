@@ -27,6 +27,7 @@
             android:exported="false" />
         <activity
             android:name=".NewApplicationActivity"
+            android:windowSoftInputMode="adjustPan"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
