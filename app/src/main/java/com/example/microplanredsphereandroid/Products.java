@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.microplanredsphereandroid.adapter.ProductsAdapter;
 import com.example.microplanredsphereandroid.models.LoanApplicationModel;
@@ -26,8 +27,9 @@ public class Products extends Fragment {
     private RecyclerView recycler;
     private LoanApplicationModel model;
     private View view;
+    TextView title;
     private EditText editTextTopup;
-    Button btn_next;
+    Button btn_next,btn_prev;
 
 
     public static Products newInstance() {
@@ -41,7 +43,10 @@ public class Products extends Fragment {
         editTextTopup = view.findViewById(R.id.editTextTopup);
         model = Utils.getApplicationModel(requireContext());
         btn_next=view.findViewById(R.id.btn_nxt);
+        btn_prev=view.findViewById(R.id.btn_previous);
         recycler = view.findViewById(R.id.recycler);
+        title=view.findViewById(R.id.title);
+        title.setText("Product");
         ArrayList<ProductEntry> products = new ArrayList<>(Arrays.asList(
                 new ProductEntry(new Product("ITEL LAPTOP", 120600.00)),
                 new ProductEntry(new Product("UNIVESAL 4 PLATE STOVE", 64800.00)),
@@ -115,8 +120,13 @@ public class Products extends Fragment {
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((NewApplicationActivity)getActivity()).replaceFragment(new PersonalDetailsFragment());
-                //((NewApplicationActivity)getActivity()).replaceFragment(new Products());
+                ((NewApplicationActivity)getActivity()).replaceFragment(new LoanDetailsFragment());
+            }
+        });
+        btn_prev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((NewApplicationActivity)getActivity()).replaceFragment(new NewApplicationFragment());
             }
         });
 

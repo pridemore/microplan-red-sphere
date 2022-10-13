@@ -2674,7 +2674,6 @@ id aligned
 id all
 id allStates
 id always
-id amountRequired
 id androidx_window_activity_scope
 id animateToEnd
 id animateToStart
@@ -2827,7 +2826,6 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id facilityType
 id fade
 id fill
 id fill_horizontal
@@ -2898,6 +2896,8 @@ id line3
 id linear
 id listMode
 id list_item
+id loanPeriod
+id loanPurpose
 id locale
 id logimage
 id ltr
@@ -2978,7 +2978,6 @@ id navigation_bar_item_large_label_view
 id navigation_bar_item_small_label_view
 id navigation_header_container
 id netSalary
-id net_salary
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
@@ -3010,8 +3009,6 @@ id off
 id on
 id onInterceptTouchReturnSwipe
 id other
-id otherFacilityType
-id otherPaymentPeriod
 id other_account_type
 id other_bank_name
 id outline
@@ -3053,7 +3050,6 @@ id recycler
 id recyclerView
 id reference
 id rented
-id repaymentPeriodRequired
 id residential_address
 id reverseSawtooth
 id right
@@ -3167,7 +3163,6 @@ id textInputLayoutBorrowerName
 id textInputLayoutBranchName
 id textInputLayoutClientName
 id textInputLayoutCountryOfBirth
-id textInputLayoutCreditFacilityAmountRequired
 id textInputLayoutCurrentCitizenship
 id textInputLayoutDOB
 id textInputLayoutDateAuthorised
@@ -3181,7 +3176,6 @@ id textInputLayoutEditProfile
 id textInputLayoutEmailAddress
 id textInputLayoutEmployeeNumber
 id textInputLayoutEmployerEmailAddress
-id textInputLayoutFacilityType
 id textInputLayoutFinancialServices
 id textInputLayoutFirstName
 id textInputLayoutFistName
@@ -3189,6 +3183,7 @@ id textInputLayoutFromDate
 id textInputLayoutGender
 id textInputLayoutGrossMonthlySalary
 id textInputLayoutListView
+id textInputLayoutLoanPurpose
 id textInputLayoutMaidenSurname
 id textInputLayoutMicroPlan
 id textInputLayoutMobileNumber
@@ -3214,10 +3209,9 @@ id textInputLayoutNxtOfKin2ResidentialAddress
 id textInputLayoutNxtOfKin2Surname
 id textInputLayoutOtherAccountType
 id textInputLayoutOtherBankName
-id textInputLayoutOtherFacilityType
-id textInputLayoutOtherRepaymentPeriodRequired
 id textInputLayoutPassportNumber
 id textInputLayoutPayeeCode
+id textInputLayoutPeriod
 id textInputLayoutPhoneNumber
 id textInputLayoutPhysicalAddress
 id textInputLayoutPhysicalAddressOfEmployer
@@ -3227,7 +3221,6 @@ id textInputLayoutPlaceOfWitness2Signature
 id textInputLayoutPositionHeld
 id textInputLayoutProfession
 id textInputLayoutReference
-id textInputLayoutRepaymentPeriodRequired
 id textInputLayoutResidentialAddress
 id textInputLayoutSurname
 id textInputLayoutToDate

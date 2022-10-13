@@ -2673,7 +2673,6 @@ int id aligned 0x7f090051
 int id all 0x7f090052
 int id allStates 0x7f090053
 int id always 0x7f090054
-int id amountRequired 0x7f090055
 int id androidx_window_activity_scope 0x7f090056
 int id animateToEnd 0x7f090057
 int id animateToStart 0x7f090058
@@ -2826,7 +2825,6 @@ int id enterAlwaysCollapsed 0x7f0900ea
 int id exitUntilCollapsed 0x7f0900eb
 int id expand_activities_button 0x7f0900ec
 int id expanded_menu 0x7f0900ed
-int id facilityType 0x7f0900ee
 int id fade 0x7f0900ef
 int id fill 0x7f0900f0
 int id fill_horizontal 0x7f0900f1
@@ -2897,6 +2895,8 @@ int id line3 0x7f090131
 int id linear 0x7f090132
 int id listMode 0x7f090133
 int id list_item 0x7f090134
+int id loanPeriod 0x7f0902da
+int id loanPurpose 0x7f0902db
 int id locale 0x7f090135
 int id logimage 0x7f090136
 int id ltr 0x7f090137
@@ -2977,7 +2977,6 @@ int id navigation_bar_item_large_label_view 0x7f090181
 int id navigation_bar_item_small_label_view 0x7f090182
 int id navigation_header_container 0x7f090183
 int id netSalary 0x7f090184
-int id net_salary 0x7f090185
 int id never 0x7f090186
 int id neverCompleteToEnd 0x7f090187
 int id neverCompleteToStart 0x7f090188
@@ -3009,8 +3008,6 @@ int id off 0x7f0901a1
 int id on 0x7f0901a2
 int id onInterceptTouchReturnSwipe 0x7f0901a3
 int id other 0x7f0901a4
-int id otherFacilityType 0x7f0901a5
-int id otherPaymentPeriod 0x7f0901a6
 int id other_account_type 0x7f0901a7
 int id other_bank_name 0x7f0901a8
 int id outline 0x7f0901a9
@@ -3052,7 +3049,6 @@ int id recycler 0x7f0901cc
 int id recyclerView 0x7f0901cd
 int id reference 0x7f0901ce
 int id rented 0x7f0901cf
-int id repaymentPeriodRequired 0x7f0901d0
 int id residential_address 0x7f0901d1
 int id reverseSawtooth 0x7f0901d2
 int id right 0x7f0901d3
@@ -3166,7 +3162,6 @@ int id textInputLayoutBorrowerName 0x7f09023e
 int id textInputLayoutBranchName 0x7f09023f
 int id textInputLayoutClientName 0x7f090240
 int id textInputLayoutCountryOfBirth 0x7f090241
-int id textInputLayoutCreditFacilityAmountRequired 0x7f090242
 int id textInputLayoutCurrentCitizenship 0x7f090243
 int id textInputLayoutDOB 0x7f090244
 int id textInputLayoutDateAuthorised 0x7f090245
@@ -3180,7 +3175,6 @@ int id textInputLayoutEditProfile 0x7f09024c
 int id textInputLayoutEmailAddress 0x7f09024d
 int id textInputLayoutEmployeeNumber 0x7f09024e
 int id textInputLayoutEmployerEmailAddress 0x7f09024f
-int id textInputLayoutFacilityType 0x7f090250
 int id textInputLayoutFinancialServices 0x7f090251
 int id textInputLayoutFirstName 0x7f090252
 int id textInputLayoutFistName 0x7f090253
@@ -3188,6 +3182,7 @@ int id textInputLayoutFromDate 0x7f090254
 int id textInputLayoutGender 0x7f090255
 int id textInputLayoutGrossMonthlySalary 0x7f090256
 int id textInputLayoutListView 0x7f090257
+int id textInputLayoutLoanPurpose 0x7f0902dc
 int id textInputLayoutMaidenSurname 0x7f090258
 int id textInputLayoutMicroPlan 0x7f090259
 int id textInputLayoutMobileNumber 0x7f09025a
@@ -3213,10 +3208,9 @@ int id textInputLayoutNxtOfKin2ResidentialAddress 0x7f09026d
 int id textInputLayoutNxtOfKin2Surname 0x7f09026e
 int id textInputLayoutOtherAccountType 0x7f09026f
 int id textInputLayoutOtherBankName 0x7f090270
-int id textInputLayoutOtherFacilityType 0x7f090271
-int id textInputLayoutOtherRepaymentPeriodRequired 0x7f090272
 int id textInputLayoutPassportNumber 0x7f090273
 int id textInputLayoutPayeeCode 0x7f090274
+int id textInputLayoutPeriod 0x7f0902dd
 int id textInputLayoutPhoneNumber 0x7f090275
 int id textInputLayoutPhysicalAddress 0x7f090276
 int id textInputLayoutPhysicalAddressOfEmployer 0x7f090277
@@ -3226,7 +3220,6 @@ int id textInputLayoutPlaceOfWitness2Signature 0x7f09027a
 int id textInputLayoutPositionHeld 0x7f09027b
 int id textInputLayoutProfession 0x7f09027c
 int id textInputLayoutReference 0x7f09027d
-int id textInputLayoutRepaymentPeriodRequired 0x7f09027e
 int id textInputLayoutResidentialAddress 0x7f09027f
 int id textInputLayoutSurname 0x7f090280
 int id textInputLayoutToDate 0x7f090281

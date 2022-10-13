@@ -41,7 +41,7 @@ public class EmploymentFragment extends Fragment {
         btn_nxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((NewApplicationActivity)getActivity()).replaceFragment(new LoanDetailsFragment());
+                ((NewApplicationActivity)getActivity()).replaceFragment(new BankDetailsFragment());
             }
         });
 

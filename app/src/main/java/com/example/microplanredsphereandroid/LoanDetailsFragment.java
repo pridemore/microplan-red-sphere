@@ -19,7 +19,6 @@ public class LoanDetailsFragment extends Fragment {
     ImageView menu;
     TextView title;
     Button btn_previous, btn_nxt;
-    Spinner repaymentPeriodRequired,facilityType;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -30,14 +29,12 @@ public class LoanDetailsFragment extends Fragment {
         title=view.findViewById(R.id.title);
         btn_previous=view.findViewById(R.id.btn_previous);
         btn_nxt=view.findViewById(R.id.btn_nxt);
-        repaymentPeriodRequired=view.findViewById(R.id.repaymentPeriodRequired);
-        facilityType=view.findViewById(R.id.facilityType);
         title.setText("Loan Details");
 
         btn_previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((NewApplicationActivity)getActivity()).replaceFragment(new EmploymentFragment());
+                ((NewApplicationActivity)getActivity()).replaceFragment(new Products());
 //                Intent intent=new Intent(getActivity(),HomeActivity.class);
 //                startActivity(intent);
             }
@@ -46,19 +43,9 @@ public class LoanDetailsFragment extends Fragment {
         btn_nxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((NewApplicationActivity)getActivity()).replaceFragment(new BankDetailsFragment());
+                ((NewApplicationActivity)getActivity()).replaceFragment(new PersonalDetailsFragment());
             }
         });
-
-        ArrayAdapter<CharSequence>adapterRepaymentPeriod=ArrayAdapter.createFromResource(getActivity(),
-                R.array.repayment_period, android.R.layout.simple_spinner_item);
-        adapterRepaymentPeriod.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        repaymentPeriodRequired.setAdapter(adapterRepaymentPeriod);
-
-        ArrayAdapter<CharSequence>adapterFacilityType=ArrayAdapter.createFromResource(getActivity(),
-                R.array.facility_type, android.R.layout.simple_spinner_item);
-        adapterFacilityType.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        facilityType.setAdapter(adapterFacilityType);
 
 
 

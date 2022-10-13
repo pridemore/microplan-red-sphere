@@ -44,7 +44,6 @@ id action_FirstFragment_to_SecondFragment
 id action_SecondFragment_to_FirstFragment
 id add
 id address_of_employer
-id amountRequired
 id applicantFullName
 id applicationDate
 id approverName
@@ -85,7 +84,6 @@ id emailAddress
 id email_address
 id employeeCode
 id employer_email_address
-id facilityType
 id firstName
 id first_name
 id frame_layout
@@ -99,6 +97,8 @@ id include2
 id is_permanent
 id lastName
 id left_icon
+id loanPeriod
+id loanPurpose
 id logimage
 id maiden_surname
 id miss
@@ -111,7 +111,6 @@ id name_of_employer
 id national_id
 id nav_graph
 id netSalary
-id net_salary
 id nxtOfKin1EmployerAddress
 id nxtOfKin1FirstName
 id nxtOfKin1NameOfEmployer
@@ -129,8 +128,6 @@ id nxtOfKin2ResidentialAddress
 id nxtOfKin2Surname
 id nxtOfKin2TitleGroup
 id other
-id otherFacilityType
-id otherPaymentPeriod
 id other_account_type
 id other_bank_name
 id owned
@@ -150,7 +147,6 @@ id recycler
 id recyclerView
 id reference
 id rented
-id repaymentPeriodRequired
 id residential_address
 id right_icon
 id saveProfile
@@ -173,7 +169,6 @@ id textInputLayoutBorrowerName
 id textInputLayoutBranchName
 id textInputLayoutClientName
 id textInputLayoutCountryOfBirth
-id textInputLayoutCreditFacilityAmountRequired
 id textInputLayoutCurrentCitizenship
 id textInputLayoutDOB
 id textInputLayoutDateAuthorised
@@ -187,7 +182,6 @@ id textInputLayoutEditProfile
 id textInputLayoutEmailAddress
 id textInputLayoutEmployeeNumber
 id textInputLayoutEmployerEmailAddress
-id textInputLayoutFacilityType
 id textInputLayoutFinancialServices
 id textInputLayoutFirstName
 id textInputLayoutFistName
@@ -195,6 +189,7 @@ id textInputLayoutFromDate
 id textInputLayoutGender
 id textInputLayoutGrossMonthlySalary
 id textInputLayoutListView
+id textInputLayoutLoanPurpose
 id textInputLayoutMaidenSurname
 id textInputLayoutMicroPlan
 id textInputLayoutMobileNumber
@@ -220,10 +215,9 @@ id textInputLayoutNxtOfKin2ResidentialAddress
 id textInputLayoutNxtOfKin2Surname
 id textInputLayoutOtherAccountType
 id textInputLayoutOtherBankName
-id textInputLayoutOtherFacilityType
-id textInputLayoutOtherRepaymentPeriodRequired
 id textInputLayoutPassportNumber
 id textInputLayoutPayeeCode
+id textInputLayoutPeriod
 id textInputLayoutPhoneNumber
 id textInputLayoutPhysicalAddress
 id textInputLayoutPhysicalAddressOfEmployer
@@ -233,7 +227,6 @@ id textInputLayoutPlaceOfWitness2Signature
 id textInputLayoutPositionHeld
 id textInputLayoutProfession
 id textInputLayoutReference
-id textInputLayoutRepaymentPeriodRequired
 id textInputLayoutResidentialAddress
 id textInputLayoutSurname
 id textInputLayoutToDate

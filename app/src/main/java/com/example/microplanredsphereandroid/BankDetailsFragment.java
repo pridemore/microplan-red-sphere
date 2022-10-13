@@ -38,7 +38,7 @@ public class BankDetailsFragment extends Fragment {
         btn_previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((NewApplicationActivity) getActivity()).replaceFragment(new LoanDetailsFragment());
+                ((NewApplicationActivity) getActivity()).replaceFragment(new EmploymentFragment());
 //                Intent intent=new Intent(getActivity(),HomeActivity.class);
 //                startActivity(intent);
             }
