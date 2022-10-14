@@ -118,6 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:backgroundTint="@color/blue"
+            android:id="@+id/isEmployeePermanent"
             android:orientation="horizontal">
             <CheckBox
                 android:id="@+id/is_permanent"
