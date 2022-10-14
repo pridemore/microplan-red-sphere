@@ -837,6 +837,52 @@ attr motionTarget
 attr motion_postLayoutCollision
 attr motion_triggerOnCollision
 attr moveWhenScrollAtTop
+attr ms_activeStepColor
+attr ms_backButtonBackground
+attr ms_backButtonColor
+attr ms_backButtonText
+attr ms_backNavigationButtonStyle
+attr ms_bottomNavigationBackground
+attr ms_bottomNavigationStyle
+attr ms_colorableProgressBarStyle
+attr ms_completeButtonBackground
+attr ms_completeButtonColor
+attr ms_completeButtonText
+attr ms_completeNavigationButtonStyle
+attr ms_errorColor
+attr ms_inactiveStepColor
+attr ms_nextButtonBackground
+attr ms_nextButtonColor
+attr ms_nextButtonText
+attr ms_nextNavigationButtonStyle
+attr ms_showBackButtonOnFirstStep
+attr ms_showBottomNavigation
+attr ms_showErrorMessageEnabled
+attr ms_showErrorState
+attr ms_showErrorStateEnabled
+attr ms_showErrorStateOnBack
+attr ms_showErrorStateOnBackEnabled
+attr ms_stepPagerOverlayStyle
+attr ms_stepPagerProgressBarStyle
+attr ms_stepTabContainerStyle
+attr ms_stepTabDividerStyle
+attr ms_stepTabDoneIndicatorStyle
+attr ms_stepTabIconBackgroundStyle
+attr ms_stepTabNumberStyle
+attr ms_stepTabSubtitleStyle
+attr ms_stepTabTitleStyle
+attr ms_stepTabsInnerContainerStyle
+attr ms_stepTabsProgressMessageStyle
+attr ms_stepTabsScrollViewStyle
+attr ms_stepperFeedbackType
+attr ms_stepperFeedback_contentFadeAlpha
+attr ms_stepperFeedback_contentOverlayBackground
+attr ms_stepperLayoutTheme
+attr ms_stepperStyle
+attr ms_stepperType
+attr ms_tabNavigationEnabled
+attr ms_tabStepDividerWidth
+attr ms_tabsContainerStyle
 attr multiChoiceItemLayout
 attr navGraph
 attr navigationContentDescription
@@ -1007,6 +1053,7 @@ attr state_collapsible
 attr state_dragged
 attr state_liftable
 attr state_lifted
+attr state_verification_failed
 attr statusBarBackground
 attr statusBarForeground
 attr statusBarScrim
@@ -1247,6 +1294,7 @@ attr yearStyle
 attr yearTodayStyle
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
+bool ms_rtlEnabled
 bool mtrl_btn_textappearance_all_caps
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
@@ -1767,6 +1815,20 @@ color material_timepicker_button_stroke
 color material_timepicker_clock_text_color
 color material_timepicker_clockface
 color material_timepicker_modebutton_tint
+color ms_black
+color ms_black_38_opacity
+color ms_black_87_opacity
+color ms_bottomNavigationBackgroundColor
+color ms_bottomNavigationButtonTextColor
+color ms_defaultButtonBackgroundColor
+color ms_defaultContentOverlayColor
+color ms_errorColor
+color ms_material_blue_500
+color ms_material_grey_400
+color ms_selectedColor
+color ms_unselectedColor
+color ms_white
+color ms_white_54_opacity
 color mtrl_btn_bg_color_selector
 color mtrl_btn_ripple_color
 color mtrl_btn_stroke_color_selector
@@ -2236,6 +2298,27 @@ dimen material_textinput_min_width
 dimen material_time_picker_minimum_screen_height
 dimen material_time_picker_minimum_screen_width
 dimen material_timepicker_dialog_buttons_margin_top
+dimen ms_bottom_navigation_bar_height
+dimen ms_dotted_progress_bar_dot_size
+dimen ms_material_button_corner_radius
+dimen ms_material_button_padding_horizontal
+dimen ms_material_button_padding_vertical
+dimen ms_nav_bar_button_margin
+dimen ms_navigation_button_text_size
+dimen ms_progress_bar_height
+dimen ms_progress_bar_width
+dimen ms_progress_message_font_size
+dimen ms_progress_message_lateral_padding
+dimen ms_progress_message_translation_when_hidden
+dimen ms_step_tab_circle_font_size
+dimen ms_step_tab_counter_size
+dimen ms_step_tab_divider_length
+dimen ms_step_tab_divider_thickness
+dimen ms_step_tab_height
+dimen ms_step_tab_subtitle_font_size
+dimen ms_step_tab_text_lateral_padding
+dimen ms_step_tab_title_font_size
+dimen ms_tabs_container_lateral_padding
 dimen mtrl_alert_dialog_background_inset_bottom
 dimen mtrl_alert_dialog_background_inset_end
 dimen mtrl_alert_dialog_background_inset_start
@@ -2620,6 +2703,20 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable ms_animated_vector_circle_to_warning_24dp
+drawable ms_animated_vector_warning_to_circle_24dp
+drawable ms_circle
+drawable ms_colorable_progress_bar
+drawable ms_default_button_background
+drawable ms_ic_check
+drawable ms_ic_chevron_end
+drawable ms_ic_chevron_left
+drawable ms_ic_chevron_right
+drawable ms_ic_chevron_start
+drawable ms_tab_container_pre_lollipop_background
+drawable ms_vector_circle_24dp
+drawable ms_vector_warning_24dp
+drawable ms_vertical_tab_divider
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -2848,6 +2945,9 @@ id constraint
 id container
 id content
 id contentPanel
+id content_fade
+id content_overlay
+id content_progress
 id contiguous
 id continuousVelocity
 id controls_shadow
@@ -2887,8 +2987,11 @@ id disableHome
 id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
+id disabled_bottom_navigation
+id disabled_content_interaction
 id disjoint
 id dob
+id dots
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -3050,6 +3153,27 @@ id monthlyRate
 id motion_base
 id mr
 id mrs
+id ms_bottomNavigation
+id ms_iconContainer
+id ms_stepCompleteButton
+id ms_stepDivider
+id ms_stepDoneIndicator
+id ms_stepDottedProgressBar
+id ms_stepIconBackground
+id ms_stepNextButton
+id ms_stepNumber
+id ms_stepPager
+id ms_stepPagerOverlay
+id ms_stepPagerProgressBar
+id ms_stepPrevButton
+id ms_stepProgressBar
+id ms_stepSubtitle
+id ms_stepTabsContainer
+id ms_stepTabsInnerContainer
+id ms_stepTabsProgressMessage
+id ms_stepTabsScrollView
+id ms_stepTextContainer
+id ms_stepTitle
 id mtrl_anchor_parent
 id mtrl_calendar_day_selector_frame
 id mtrl_calendar_days_of_week
@@ -3153,6 +3277,7 @@ id position
 id position_held
 id postLayout
 id profession
+id progress_bar
 id progress_circular
 id progress_horizontal
 id proofOfEmployment
@@ -3253,6 +3378,7 @@ id supportScrollUp
 id surname
 id sync_nav
 id tabMode
+id tabs
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -3487,6 +3613,8 @@ integer material_motion_duration_medium_2
 integer material_motion_duration_short_1
 integer material_motion_duration_short_2
 integer material_motion_path
+integer ms_default_error_tab_animation_duration
+integer ms_warning_end_translate_y
 integer mtrl_badge_max_character_count
 integer mtrl_btn_anim_delay_ms
 integer mtrl_btn_anim_duration_ms
@@ -3604,6 +3732,11 @@ layout material_time_input
 layout material_timepicker
 layout material_timepicker_dialog
 layout material_timepicker_textinput_display
+layout ms_dot
+layout ms_step_tab
+layout ms_step_tab_container
+layout ms_stepper_layout
+layout ms_tabs_container
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -3760,6 +3893,11 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string ms_back
+string ms_circle_path
+string ms_complete
+string ms_next
+string ms_warning_path
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_content_description
@@ -3836,6 +3974,7 @@ style Base_Animation_AppCompat_Tooltip
 style Base_CardView
 style Base_DialogWindowTitle_AppCompat
 style Base_DialogWindowTitleBackground_AppCompat
+style Base_MSStepTabsContainer
 style Base_MaterialAlertDialog_MaterialComponents_Title_Icon
 style Base_MaterialAlertDialog_MaterialComponents_Title_Panel
 style Base_MaterialAlertDialog_MaterialComponents_Title_Text
@@ -4093,6 +4232,26 @@ style CardView
 style CardView_Dark
 style CardView_Light
 style EmptyTheme
+style MSBottomNavigation
+style MSColorableProgressBar
+style MSDefaultStepperLayoutTheme
+style MSNavBarButton
+style MSNavBarButton_Back
+style MSNavBarButton_Complete
+style MSNavBarButton_Next
+style MSStepPagerOverlayStyle
+style MSStepPagerProgressBarStyle
+style MSStepTabContainer
+style MSStepTabDivider
+style MSStepTabDoneIndicator
+style MSStepTabIconBackground
+style MSStepTabNumber
+style MSStepTabSubtitle
+style MSStepTabTitle
+style MSStepTabsContainer
+style MSStepTabsInnerContainer
+style MSStepTabsProgressMessage
+style MSStepTabsScrollView
 style MaterialAlertDialog_Material3
 style MaterialAlertDialog_Material3_Body_Text
 style MaterialAlertDialog_Material3_Body_Text_CenterStacked
@@ -5013,6 +5172,7 @@ styleable RadialViewGroup materialCircleRadius
 styleable RangeSlider minSeparation values
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
 styleable RecyclerView android_orientation android_clipToPadding android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
+styleable RightNavigationButton state_verification_failed
 styleable ScrimInsetsFrameLayout insetForeground
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
@@ -5030,6 +5190,8 @@ styleable State android_id constraints
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable
 styleable StateSet defaultState
+styleable StepperLayout ms_activeStepColor ms_backButtonBackground ms_backButtonColor ms_backButtonText ms_bottomNavigationBackground ms_completeButtonBackground ms_completeButtonColor ms_completeButtonText ms_errorColor ms_inactiveStepColor ms_nextButtonBackground ms_nextButtonColor ms_nextButtonText ms_showBackButtonOnFirstStep ms_showBottomNavigation ms_showErrorMessageEnabled ms_showErrorState ms_showErrorStateEnabled ms_showErrorStateOnBack ms_showErrorStateOnBackEnabled ms_stepperFeedbackType ms_stepperFeedback_contentFadeAlpha ms_stepperFeedback_contentOverlayBackground ms_stepperLayoutTheme ms_stepperType ms_tabNavigationEnabled ms_tabStepDividerWidth
+styleable StepperLayoutTheme ms_backNavigationButtonStyle ms_bottomNavigationStyle ms_colorableProgressBarStyle ms_completeNavigationButtonStyle ms_nextNavigationButtonStyle ms_stepPagerOverlayStyle ms_stepPagerProgressBarStyle ms_stepTabContainerStyle ms_stepTabDividerStyle ms_stepTabDoneIndicatorStyle ms_stepTabIconBackgroundStyle ms_stepTabNumberStyle ms_stepTabSubtitleStyle ms_stepTabTitleStyle ms_stepTabsInnerContainerStyle ms_stepTabsProgressMessageStyle ms_stepTabsScrollViewStyle ms_tabsContainerStyle
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
 styleable SwitchMaterial useMaterialThemeColors
 styleable TabItem android_icon android_layout android_text

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-41:/values-ja/values-ja.xml",
+            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-42:/values-ja/values-ja.xml",
             "map": [
                 {
                     "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\0a1e1205a4ad55603e56c0d69f6f4244\\transformed\\appcompat-1.5.0\\res\\values-ja\\values-ja.xml",
@@ -38,23 +38,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\03f1c8f0893845f14f3b9230e669a43d\\transformed\\ucrop-2.2.6-native\\res\\values-ja\\values-ja.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,97,153,208,257,301",
-                        "endColumns": "41,55,54,48,43,42",
-                        "endOffsets": "92,148,203,252,296,339"
-                    },
-                    "to": {
-                        "startLines": "91,92,93,94,95,96",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "7081,7123,7179,7234,7283,7327",
-                        "endColumns": "41,55,54,48,43,42",
-                        "endOffsets": "7118,7174,7229,7278,7322,7365"
-                    }
-                },
-                {
                     "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\172d699a3cea385b2d3041d306f4ec45\\transformed\\navigation-ui-2.5.1\\res\\values-ja\\values-ja.xml",
                     "from": {
                         "startLines": "2,3",
@@ -69,6 +52,23 @@
                         "startOffsets": "6619,6718",
                         "endColumns": "98,109",
                         "endOffsets": "6713,6823"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\e7e3afdf55f2ec8f7b42abb226c8a98e\\transformed\\jetified-ucrop-2.2.6-native\\res\\values-ja\\values-ja.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,97,153,208,257,301",
+                        "endColumns": "41,55,54,48,43,42",
+                        "endOffsets": "92,148,203,252,296,339"
+                    },
+                    "to": {
+                        "startLines": "91,92,93,94,95,96",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "7081,7123,7179,7234,7283,7327",
+                        "endColumns": "41,55,54,48,43,42",
+                        "endOffsets": "7118,7174,7229,7278,7322,7365"
                     }
                 },
                 {

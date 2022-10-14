@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-41:/values-fr/values-fr.xml",
+            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-42:/values-fr/values-fr.xml",
             "map": [
                 {
                     "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\0638d9dacb5fd10604e28ec2b4d3c80b\\transformed\\core-1.8.0\\res\\values-fr\\values-fr.xml",
@@ -57,23 +57,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\03f1c8f0893845f14f3b9230e669a43d\\transformed\\ucrop-2.2.6-native\\res\\values-fr\\values-fr.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,124,182",
-                        "endColumns": "68,57,52",
-                        "endOffsets": "119,177,230"
-                    },
-                    "to": {
-                        "startLines": "91,92,93",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "7899,7968,8026",
-                        "endColumns": "68,57,52",
-                        "endOffsets": "7963,8021,8074"
-                    }
-                },
-                {
                     "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\172d699a3cea385b2d3041d306f4ec45\\transformed\\navigation-ui-2.5.1\\res\\values-fr\\values-fr.xml",
                     "from": {
                         "startLines": "2,3",
@@ -88,6 +71,23 @@
                         "startOffsets": "7393,7496",
                         "endColumns": "102,125",
                         "endOffsets": "7491,7617"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\e7e3afdf55f2ec8f7b42abb226c8a98e\\transformed\\jetified-ucrop-2.2.6-native\\res\\values-fr\\values-fr.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,124,182",
+                        "endColumns": "68,57,52",
+                        "endOffsets": "119,177,230"
+                    },
+                    "to": {
+                        "startLines": "91,92,93",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "7899,7968,8026",
+                        "endColumns": "68,57,52",
+                        "endOffsets": "7963,8021,8074"
                     }
                 }
             ]

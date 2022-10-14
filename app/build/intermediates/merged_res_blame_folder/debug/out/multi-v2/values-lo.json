@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-41:/values-lo/values-lo.xml",
+            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-42:/values-lo/values-lo.xml",
             "map": [
                 {
                     "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\172d699a3cea385b2d3041d306f4ec45\\transformed\\navigation-ui-2.5.1\\res\\values-lo\\values-lo.xml",

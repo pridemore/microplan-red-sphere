@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-41:/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-42:/values-zh-rTW/values-zh-rTW.xml",
             "map": [
                 {
                     "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\172d699a3cea385b2d3041d306f4ec45\\transformed\\navigation-ui-2.5.1\\res\\values-zh-rTW\\values-zh-rTW.xml",
@@ -18,23 +18,6 @@
                         "startOffsets": "6531,6630",
                         "endColumns": "98,99",
                         "endOffsets": "6625,6725"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\03f1c8f0893845f14f3b9230e669a43d\\transformed\\ucrop-2.2.6-native\\res\\values-zh-rTW\\values-zh-rTW.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "55,132,186,240,287",
-                        "endColumns": "76,53,53,46,116",
-                        "endOffsets": "127,181,235,282,399"
-                    },
-                    "to": {
-                        "startLines": "91,92,93,94,95",
-                        "startColumns": "4,4,4,4,4",
-                        "startOffsets": "6979,7056,7110,7164,7211",
-                        "endColumns": "76,53,53,46,116",
-                        "endOffsets": "7051,7105,7159,7206,7323"
                     }
                 },
                 {
@@ -88,6 +71,23 @@
                         "startOffsets": "252,347,440,540,622,719,827,904,979,1071,1165,1262,1358,1453,1547,1643,1735,1827,1919,1997,2093,2188,2283,2380,2476,2574,2724,6799",
                         "endColumns": "94,92,99,81,96,107,76,74,91,93,96,95,94,93,95,91,91,91,77,95,94,94,96,95,97,149,93,78",
                         "endOffsets": "342,435,535,617,714,822,899,974,1066,1160,1257,1353,1448,1542,1638,1730,1822,1914,1992,2088,2183,2278,2375,2471,2569,2719,2813,6873"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\e7e3afdf55f2ec8f7b42abb226c8a98e\\transformed\\jetified-ucrop-2.2.6-native\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,132,186,240,287",
+                        "endColumns": "76,53,53,46,116",
+                        "endOffsets": "127,181,235,282,399"
+                    },
+                    "to": {
+                        "startLines": "91,92,93,94,95",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "6979,7056,7110,7164,7211",
+                        "endColumns": "76,53,53,46,116",
+                        "endOffsets": "7051,7105,7159,7206,7323"
                     }
                 }
             ]

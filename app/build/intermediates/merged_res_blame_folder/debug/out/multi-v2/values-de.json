@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-41:/values-de/values-de.xml",
+            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-42:/values-de/values-de.xml",
             "map": [
                 {
                     "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\b6f52d92dea29c0a7f49d4078033a89a\\transformed\\material-1.6.1\\res\\values-de\\values-de.xml",
@@ -74,7 +74,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\03f1c8f0893845f14f3b9230e669a43d\\transformed\\ucrop-2.2.6-native\\res\\values-de\\values-de.xml",
+                    "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\e7e3afdf55f2ec8f7b42abb226c8a98e\\transformed\\jetified-ucrop-2.2.6-native\\res\\values-de\\values-de.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

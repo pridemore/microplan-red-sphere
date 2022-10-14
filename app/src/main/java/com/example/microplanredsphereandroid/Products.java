@@ -1,12 +1,15 @@
 package com.example.microplanredsphereandroid;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,19 +19,20 @@ import com.example.microplanredsphereandroid.models.LoanApplicationModel;
 import com.example.microplanredsphereandroid.models.Product;
 import com.example.microplanredsphereandroid.models.ProductEntry;
 import com.example.microplanredsphereandroid.utils.Utils;
+import com.stepstone.stepper.VerificationError;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class Products extends Fragment {
+public class Products extends Fragment  {
     private RecyclerView recycler;
     private LoanApplicationModel model;
     private View view;
     TextView title;
     private EditText editTextTopup;
     Button btn_next,btn_prev;
-
+    private static final String TAG = "Products";
 
     public static Products newInstance() {
         return new Products();
@@ -39,13 +43,41 @@ public class Products extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
        view= inflater.inflate(R.layout.fragment_products, container, false);
-        editTextTopup = view.findViewById(R.id.editTextTopup);
+
+       //instantiating views
+       editTextTopup = view.findViewById(R.id.editTextTopup);
         model = Utils.getApplicationModel(requireContext());
         btn_next=view.findViewById(R.id.btn_nxt);
         btn_prev=view.findViewById(R.id.btn_previous);
         recycler = view.findViewById(R.id.recycler);
         title=view.findViewById(R.id.title);
+
+        //setting static text
         title.setText("Product");
+
+        //Buttons logic
+        btn_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                VerificationError verificationError = productFormValidation();
+                if(verificationError==null) {
+                    editTextTopup.setText("" + model.topUp);
+                    Log.d(TAG,"Top up value-------------"+model.topUp);
+                    ((NewApplicationActivity) getActivity()).replaceFragment(new LoanDetailsFragment());
+                }else {
+                    String errorMessage = verificationError.getErrorMessage();
+                    Toast.makeText((NewApplicationActivity)getActivity(), errorMessage, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        btn_prev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((NewApplicationActivity)getActivity()).replaceFragment(new NewApplicationFragment());
+            }
+        });
+
+
         ArrayList<ProductEntry> products = new ArrayList<>(Arrays.asList(
                 new ProductEntry(new Product("ITEL LAPTOP", 120600.00)),
                 new ProductEntry(new Product("UNIVESAL 4 PLATE STOVE", 64800.00)),
@@ -116,18 +148,7 @@ public class Products extends Fragment {
         Collections.sort(model.products);
         recycler.setAdapter(new ProductsAdapter(model.products));
 
-        btn_next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ((NewApplicationActivity)getActivity()).replaceFragment(new LoanDetailsFragment());
-            }
-        });
-        btn_prev.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ((NewApplicationActivity)getActivity()).replaceFragment(new NewApplicationFragment());
-            }
-        });
+
 
         return view;
     }
@@ -163,14 +184,44 @@ public class Products extends Fragment {
 //        }
 //        return null;
 //    }
-//
+
 //    @Override
 //    public void onSelected() {
 //        editTextTopup.setText("" + model.topUp);
 //    }
-//
+
 //    @Override
 //    public void onError(@NonNull VerificationError error) {
 //        Snackbar.make(view, error.getErrorMessage(), BaseTransientBottomBar.LENGTH_LONG).show();
 //    }
+
+    private VerificationError productFormValidation(){
+        try {
+            boolean isProductsSelected = model.products != null && !model.products.isEmpty();
+            if (isProductsSelected) {
+                isProductsSelected = false;
+                for (ProductEntry entry : model.products) {
+                    if (entry.getQuantity() > 0) {
+                        isProductsSelected = true;
+                        break;
+                    }
+                }
+            }
+            boolean isTopupSelected = editTextTopup.getText().length() != 0 && Double.parseDouble(editTextTopup.getText().toString()) != 0;
+            if (!isProductsSelected && !isTopupSelected) {
+                return new VerificationError("Please select at least one product");
+            } else if (isTopupSelected && isProductsSelected) {
+                return new VerificationError("You cant select both top-up and products");
+            }
+            model.topUp = Double.parseDouble(editTextTopup.getText().toString());
+            model.agent_id = Utils.getUserModel(getContext()).getId();
+            Utils.saveApplicationModel(requireContext(), model);
+        } catch (Exception e) {
+            new AlertDialog.Builder(getActivity())
+                    .setTitle("Error")
+                    .setMessage(e.getMessage())
+                    .show();
+        }
+        return null;
+    }
 }

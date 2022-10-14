@@ -53,4 +53,30 @@ public class Utils {
             return new Gson().fromJson(preferences.getString(CURRENT_LOAN_APP, ""), LoanApplicationModel.class);
         }
     }
+
+    @SuppressLint("ApplySharedPref")
+    public static void saveUserModel(Context context, UserModel model) {
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(USER, new Gson().toJson(model));
+        editor.commit();
+    }
+
+    public static UserModel getUserModel(Context context) {
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        return new Gson().fromJson(preferences.getString(USER, "{}"), UserModel.class);
+    }
+
+    @SuppressLint("ApplySharedPref")
+    public static void saveApplicationModel(Context context, LoanApplicationModel model) {
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(CURRENT_LOAN_APP, new Gson().toJson(model));
+        editor.commit();
+    }
+
+    public static boolean isLoanInProgress(Context context) {
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        return preferences.contains(CURRENT_LOAN_APP);
+    }
 }

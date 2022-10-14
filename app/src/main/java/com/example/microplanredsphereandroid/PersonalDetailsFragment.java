@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.microplanredsphereandroid.models.LoanApplicationModel;
+import com.example.microplanredsphereandroid.utils.Utils;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class PersonalDetailsFragment extends Fragment {
@@ -20,6 +22,7 @@ public class PersonalDetailsFragment extends Fragment {
     TextView title;
     Button btn_previous, btn_nxt;
     RadioGroup radioGroupTitle;
+    private LoanApplicationModel model;
     TextInputEditText firstName,surname,national_id,passport_number,maiden_surname,
             country_of_birth;
     @Override
@@ -27,6 +30,7 @@ public class PersonalDetailsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_personal_details, container, false);
+        model = Utils.getApplicationModel(requireContext());
 
         //instantiating Views
         backIcon=view.findViewById(R.id.left_icon);
@@ -59,9 +63,26 @@ public class PersonalDetailsFragment extends Fragment {
                 ((NewApplicationActivity)getActivity()).replaceFragment(new ContactDetailsFragment());
             }
         });
+        radioGroupTitle.setOnCheckedChangeListener((group,checkedId)->{
+            switch (checkedId) {
+                case R.id.mr:
+                    model.title = "Mr";
+                    break;
+                case R.id.mrs:
+                    model.title = "Mrs";
+                    break;
+                case R.id.miss:
+                    model.title = "Miss";
+                    break;
+                case R.id.other:
+                    model.title = "Other";
+            }
+        });
 
 
         return view;
     }
+
+
 
 }
