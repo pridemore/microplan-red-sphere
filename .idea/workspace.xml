@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5969ec-deed-47c8-b62e-94ca91d59916" name="Changes" comment="Added code cleaning on LoanDetails">
+    <list default="true" id="bb5969ec-deed-47c8-b62e-94ca91d59916" name="Changes" comment="Added code cleaning on PersonalDetails">
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/ContactDetailsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/ContactDetailsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/LoanDetailsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/LoanDetailsFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/PersonalDetailsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/PersonalDetailsFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -454,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665725974310</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Added code cleaning on PersonalDetails">
+      <created>1665726456826</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1665726456826</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -470,7 +479,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Modifying logic fo CompleteApplication fragment to include the layout." />
     <MESSAGE value="personal details page interface done." />
     <MESSAGE value="contact details page interface done." />
     <MESSAGE value="contact details adding the variables for radioButtons." />
@@ -495,6 +503,7 @@
     <MESSAGE value="Addedb loadDetals stuff and updated the flow of the app" />
     <MESSAGE value="Addedb DocumetFragment and update the flow" />
     <MESSAGE value="Added code cleaning on LoanDetails" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added code cleaning on LoanDetails" />
+    <MESSAGE value="Added code cleaning on PersonalDetails" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added code cleaning on PersonalDetails" />
   </component>
 </project>

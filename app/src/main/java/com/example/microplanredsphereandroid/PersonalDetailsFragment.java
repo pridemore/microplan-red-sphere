@@ -19,8 +19,8 @@ public class PersonalDetailsFragment extends Fragment {
     ImageView menu;
     TextView title;
     Button btn_previous, btn_nxt;
-    private RadioGroup radioGroupTitle;
-    private TextInputEditText firstName,surname,national_id,passport_number,maiden_surname,
+    RadioGroup radioGroupTitle;
+    TextInputEditText firstName,surname,national_id,passport_number,maiden_surname,
             country_of_birth;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

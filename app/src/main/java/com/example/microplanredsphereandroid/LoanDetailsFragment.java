@@ -20,7 +20,7 @@ public class LoanDetailsFragment extends Fragment {
     ImageView menu;
     TextView title;
     Button btn_previous, btn_nxt;
-    private TextInputEditText dob, netSalary, loanPurpose, loanPeriod;
+    TextInputEditText dob, netSalary, loanPurpose, loanPeriod;
     final Calendar myCalendar = Calendar.getInstance();
 
     @Override
