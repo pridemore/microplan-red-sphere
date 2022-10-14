@@ -100,8 +100,6 @@ public class ContactDetailsFragment extends Fragment {
             public void onClick(View view) {
                 VerificationError verificationError=contactDetailsValidation();
                 if(verificationError==null){
-
-
                     ((NewApplicationActivity)getActivity()).replaceFragment(new EmploymentFragment());
                 }else{
                     String errorMessage = verificationError.getErrorMessage();
