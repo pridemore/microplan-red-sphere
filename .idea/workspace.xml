@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5969ec-deed-47c8-b62e-94ca91d59916" name="Changes" comment="Added code cleaning on DeclarationAndAcceptance">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/DeductionSsbFormFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/DeductionSsbFormFragment.java" afterDir="false" />
+    <list default="true" id="bb5969ec-deed-47c8-b62e-94ca91d59916" name="Changes" comment="Added code cleaning on DeductionSsbForm">
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/CompleteApplicationFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/CompleteApplicationFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_complete_application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_complete_application.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -518,7 +518,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665735113990</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Added code cleaning on DeductionSsbForm">
+      <created>1665736373920</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1665736373920</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -534,7 +541,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="New Application page interface done." />
     <MESSAGE value="Declaration and Acceptance page done on TextEditFields" />
     <MESSAGE value="Adding signature buttons and adding signature activity" />
     <MESSAGE value="Complete Application interface done." />
@@ -559,6 +565,7 @@
     <MESSAGE value="Added code cleaning on NextOfKin1Details" />
     <MESSAGE value="Added code cleaning on NextOfKin2Details" />
     <MESSAGE value="Added code cleaning on DeclarationAndAcceptance" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added code cleaning on DeclarationAndAcceptance" />
+    <MESSAGE value="Added code cleaning on DeductionSsbForm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added code cleaning on DeductionSsbForm" />
   </component>
 </project>
