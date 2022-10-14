@@ -3,6 +3,7 @@ package com.example.microplanredsphereandroid;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +25,7 @@ import org.apache.poi.ss.formula.functions.FinanceLib;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 public class LoanDetailsFragment extends Fragment {
@@ -56,6 +58,7 @@ public class LoanDetailsFragment extends Fragment {
 
         if (Utils.isLoanInProgress(requireContext())) {
             dob.setText(model.dateOfBirth);
+            loanPurpose.setText(model.loanPurpose);
             netSalary.setText(String.valueOf(model.netSalary));
             loanPeriod.setText(String.valueOf(model.loanPeriod));
         }
@@ -88,7 +91,37 @@ public class LoanDetailsFragment extends Fragment {
             public void onClick(View view) {
                 VerificationError verificationError =loanDetailsValidation();
                 if(verificationError==null) {
+
+                    //on success validation
+                    model = Utils.getApplicationModel(requireContext());
+                    if (model.products==null || model.products.size()==0) {
+                        loanPurpose.setText("Top-Up");
+                    } else {
+                        StringBuilder builder = new StringBuilder();
+                        for (ProductEntry productEntry : model.products) {
+                            if (productEntry.getQuantity()>0) builder.append(productEntry.getQuantity()).append(" X ").append(productEntry.getProduct().getName()).append("; ");
+                        }
+                        if (builder.length()==0){
+                            loanPurpose.setText("Top-Up");
+                        }else {
+                            loanPurpose.setText(builder.toString());
+                        }
+                    }
+                    //logging
+                    Log.d(TAG,"LoanApplication Topup ---:"+model.topUp);
+                    List<ProductEntry> products = model.products;
+                    for (ProductEntry product:products
+                    ) {
+                        Log.d(TAG,"LoanApplication Products ---:"+product.getProduct().getName());
+                    }
+                    Log.d(TAG,"LoanApplication DateOfBirth ---:"+model.dateOfBirth);
+                    Log.d(TAG,"LoanApplication Loan Purpose ---:"+model.loanPurpose);
+                    Log.d(TAG,"LoanApplication NetSalary ---:"+model.netSalary);
+                    Log.d(TAG,"LoanApplication Loan Period ---:"+model.loanPeriod);
+
+                    //moving to next fragment
                     ((NewApplicationActivity) getActivity()).replaceFragment(new PersonalDetailsFragment());
+
                 }else {
                     String errorMessage = verificationError.getErrorMessage();
                     Toast.makeText((NewApplicationActivity)getActivity(), errorMessage, Toast.LENGTH_SHORT).show();
