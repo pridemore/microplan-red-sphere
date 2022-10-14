@@ -9,8 +9,24 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5969ec-deed-47c8-b62e-94ca91d59916" name="Changes" comment="Added code cleaning on EmploymentDetails">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/BankDetailsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/BankDetailsFragment.java" afterDir="false" />
+    <list default="true" id="bb5969ec-deed-47c8-b62e-94ca91d59916" name="Changes" comment="Added code cleaning on BankDetails">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/ImageCaptureActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_image_capture.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/MicroPlan_Red_Sphere_Android.app.androidTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/MicroPlan_Red_Sphere_Android.app.androidTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/MicroPlan_Red_Sphere_Android.app.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/MicroPlan_Red_Sphere_Android.app.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/MicroPlan_Red_Sphere_Android.app.unitTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/MicroPlan_Red_Sphere_Android.app.unitTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/DocumentsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/DocumentsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +76,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="2" />
+  </component>
   <component name="ProjectId" id="2DX7xnyR997N9rg5O4ldM2E9pMQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -78,7 +97,7 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="kotlin.migration.detection.enabled" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -94,8 +113,9 @@
       <recent name="com.example.microplanredsphereandroid" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\res\drawable" />
+      <recent name="C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\res\xml" />
       <recent name="C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\res\layout" />
+      <recent name="C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\res\drawable" />
       <recent name="C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\java\com\example\microplanredsphereandroid\models" />
       <recent name="C:\Users\pridemore.vhiriri\AndroidStudioProjects\MicroPlanRedSphereAndroid\app\src\main\res\drawable-v24" />
     </key>
@@ -111,13 +131,16 @@
     <key name="android.template.1396010089">
       <recent name="com.example.microplanredsphereandroid" />
     </key>
+    <key name="android.template.-79475582">
+      <recent name="com.example.microplanredsphereandroid" />
+    </key>
     <key name="android.template.2010429703">
       <recent name="com.example.microplanredsphereandroid" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.microplanredsphereandroid" />
       <recent name="com.example.microplanredsphereandroid.adapter" />
       <recent name="com.example.microplanredsphereandroid.models" />
-      <recent name="com.example.microplanredsphereandroid" />
     </key>
   </component>
   <component name="RunManager">
@@ -475,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665727320175</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Added code cleaning on BankDetails">
+      <created>1665727755594</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1665727755594</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -491,7 +521,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="contact details adding the variables for radioButtons." />
     <MESSAGE value="Employment details page interface done." />
     <MESSAGE value="Bank details page interface done." />
     <MESSAGE value="NxtOfKin1 and NxtOfKin2 details pages interface done." />
@@ -516,6 +545,7 @@
     <MESSAGE value="Added code cleaning on PersonalDetails" />
     <MESSAGE value="Added code cleaning on ContactDetails" />
     <MESSAGE value="Added code cleaning on EmploymentDetails" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added code cleaning on EmploymentDetails" />
+    <MESSAGE value="Added code cleaning on BankDetails" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added code cleaning on BankDetails" />
   </component>
 </project>
