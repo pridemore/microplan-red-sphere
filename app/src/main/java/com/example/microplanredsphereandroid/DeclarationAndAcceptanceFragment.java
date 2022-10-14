@@ -6,12 +6,6 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import com.example.microplanredsphereandroid.utils.Constants.*;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,9 +14,10 @@ import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 import com.example.microplanredsphereandroid.utils.Utils;
-import com.google.android.material.snackbar.BaseTransientBottomBar;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.text.SimpleDateFormat;
@@ -42,12 +37,16 @@ public class DeclarationAndAcceptanceFragment extends Fragment {
     private Bitmap bitmapBorrowerSignature, bitmapWitnessSignature, bitmapWitnessSignature2;
     private ImageView borrowerSignature, witness1Signature, witness2Signature;
     Button btn_previous, btn_nxt,buttonBorrowerSignature,buttonWitness1Signature,buttonWitness2Signature;
-    private TextInputEditText dateOfBorrowerSignature,dateOfWitness1Signature,dateOfWitness2Signature;
+    private TextInputEditText dateOfBorrowerSignature,dateOfWitness1Signature,dateOfWitness2Signature,
+            borrowerName,placeOfBorrowerSignature,witness1FullName, placeOfWitness1Signature,
+            witness2FullName,placeOfWitness2Signature;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_declaration_and_acceptance, container, false);
+
+        //instantiating views
         backIcon=view.findViewById(R.id.left_icon);
         menu=view.findViewById(R.id.right_icon);
         title=view.findViewById(R.id.title);
@@ -62,33 +61,29 @@ public class DeclarationAndAcceptanceFragment extends Fragment {
         borrowerSignature=view.findViewById(R.id.borrowerSignature);
         witness1Signature=view.findViewById(R.id.witness1Signature);
         witness2Signature=view.findViewById(R.id.witness2Signature);
+        borrowerName=view.findViewById(R.id.borrowerName);
+        placeOfBorrowerSignature=view.findViewById(R.id.placeOfBorrowerSignature);
+        witness1FullName=view.findViewById(R.id.witness1FullName);
+        placeOfWitness1Signature=view.findViewById(R.id.placeOfWitness1Signature);
+        witness2FullName=view.findViewById(R.id.witness2FullName);
+        placeOfWitness2Signature=view.findViewById(R.id.placeOfWitness2Signature);
+
+        //setting static text
         title.setText("Declaration and Acceptance");
 
+        //Buttons logic
         btn_previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ((NewApplicationActivity)getActivity()).replaceFragment(new NxtOfKin2DetailsFragment());
-//                Intent intent=new Intent(getActivity(),HomeActivity.class);
-//                startActivity(intent);
             }
         });
-
         btn_nxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ((NewApplicationActivity)getActivity()).replaceFragment(new DeductionSsbFormFragment());
             }
         });
-
-        DatePickerDialog.OnDateSetListener date =new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int day) {
-                myCalendar.set(Calendar.YEAR, year);
-                myCalendar.set(Calendar.MONTH,month);
-                myCalendar.set(Calendar.DAY_OF_MONTH,day);
-                //updateLabel();
-            }
-        };
         dateOfBorrowerSignature.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -104,7 +99,6 @@ public class DeclarationAndAcceptanceFragment extends Fragment {
 
             }
         });
-
         dateOfWitness2Signature.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,27 +106,33 @@ public class DeclarationAndAcceptanceFragment extends Fragment {
 
             }
         });
-
         buttonBorrowerSignature.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivityForResult(new Intent(requireContext(), Signature.class), REQ_CODE);
             }
         });
-
         buttonWitness1Signature.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivityForResult(new Intent(requireContext(), Signature.class), REQ_CODE_2);
             }
         });
-
         buttonWitness2Signature.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivityForResult(new Intent(requireContext(), Signature.class), REQ_CODE_3);
             }
         });
+
+//        DatePickerDialog.OnDateSetListener date =new DatePickerDialog.OnDateSetListener() {
+//            @Override
+//            public void onDateSet(DatePicker view, int year, int month, int day) {
+//                myCalendar.set(Calendar.YEAR, year);
+//                myCalendar.set(Calendar.MONTH,month);
+//                myCalendar.set(Calendar.DAY_OF_MONTH,day);
+//            }
+//        };
 
 
 
@@ -154,9 +154,6 @@ public class DeclarationAndAcceptanceFragment extends Fragment {
         };
         return date;
     }
-
-
-
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
