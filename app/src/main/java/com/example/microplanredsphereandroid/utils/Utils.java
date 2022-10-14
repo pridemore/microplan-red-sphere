@@ -89,4 +89,12 @@ public class Utils {
         Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(emailStr);
         return matcher.find();
     }
+
+    public static int find(Context context, int resourceId, String target) {
+        String[] a = context.getResources().getStringArray(resourceId);
+        for (int i = 0; i < a.length; i++)
+            if (a[i].equals(target))
+                return i;
+        return 0;
+    }
 }

@@ -3019,6 +3019,7 @@ id emailAddress
 id email_address
 id employeeCode
 id employer_email_address
+id employer_phone_number
 id end
 id endToStart
 id enterAlways
@@ -3086,7 +3087,6 @@ id invisible
 id invoice
 id inward
 id isEmployeePermanent
-id is_permanent
 id italic
 id item_touch_helper_previous_elevation
 id jumpToEnd
@@ -3247,6 +3247,7 @@ id onInterceptTouchReturnSwipe
 id other
 id other_account_type
 id other_bank_name
+id other_name_of_employer
 id outline
 id outward
 id overshoot
@@ -3423,6 +3424,7 @@ id textInputLayoutEditProfile
 id textInputLayoutEmailAddress
 id textInputLayoutEmployeeNumber
 id textInputLayoutEmployerEmailAddress
+id textInputLayoutEmployerPhoneNumber
 id textInputLayoutFinancialServices
 id textInputLayoutFirstName
 id textInputLayoutFistName
@@ -3436,7 +3438,6 @@ id textInputLayoutMicroPlan
 id textInputLayoutMobileNumber
 id textInputLayoutMonthlyRate
 id textInputLayoutName
-id textInputLayoutNameOfEmployer
 id textInputLayoutNationalId
 id textInputLayoutNetSalary
 id textInputLayoutNetSalaryy
@@ -3456,6 +3457,7 @@ id textInputLayoutNxtOfKin2ResidentialAddress
 id textInputLayoutNxtOfKin2Surname
 id textInputLayoutOtherAccountType
 id textInputLayoutOtherBankName
+id textInputLayoutOtherNameOfEmployer
 id textInputLayoutPassportNumber
 id textInputLayoutPayeeCode
 id textInputLayoutPeriod

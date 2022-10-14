@@ -3018,6 +3018,7 @@ int id emailAddress 0x7f0900ef
 int id email_address 0x7f0900f0
 int id employeeCode 0x7f0900f1
 int id employer_email_address 0x7f0900f2
+int id employer_phone_number 0x7f09032d
 int id end 0x7f0900f3
 int id endToStart 0x7f0900f4
 int id enterAlways 0x7f0900f5
@@ -3085,7 +3086,6 @@ int id invisible 0x7f090132
 int id invoice 0x7f090133
 int id inward 0x7f090134
 int id isEmployeePermanent 0x7f090135
-int id is_permanent 0x7f090136
 int id italic 0x7f090137
 int id item_touch_helper_previous_elevation 0x7f090138
 int id jumpToEnd 0x7f090139
@@ -3246,6 +3246,7 @@ int id onInterceptTouchReturnSwipe 0x7f0901bf
 int id other 0x7f0901c0
 int id other_account_type 0x7f0901c1
 int id other_bank_name 0x7f0901c2
+int id other_name_of_employer 0x7f09032e
 int id outline 0x7f0901c3
 int id outward 0x7f0901c4
 int id overshoot 0x7f0901c5
@@ -3422,6 +3423,7 @@ int id textInputLayoutEditProfile 0x7f09026d
 int id textInputLayoutEmailAddress 0x7f09026e
 int id textInputLayoutEmployeeNumber 0x7f09026f
 int id textInputLayoutEmployerEmailAddress 0x7f090270
+int id textInputLayoutEmployerPhoneNumber 0x7f09032f
 int id textInputLayoutFinancialServices 0x7f090271
 int id textInputLayoutFirstName 0x7f090272
 int id textInputLayoutFistName 0x7f090273
@@ -3435,7 +3437,6 @@ int id textInputLayoutMicroPlan 0x7f09027a
 int id textInputLayoutMobileNumber 0x7f09027b
 int id textInputLayoutMonthlyRate 0x7f09027c
 int id textInputLayoutName 0x7f09027d
-int id textInputLayoutNameOfEmployer 0x7f09027e
 int id textInputLayoutNationalId 0x7f09027f
 int id textInputLayoutNetSalary 0x7f090280
 int id textInputLayoutNetSalaryy 0x7f090281
@@ -3455,6 +3456,7 @@ int id textInputLayoutNxtOfKin2ResidentialAddress 0x7f09028e
 int id textInputLayoutNxtOfKin2Surname 0x7f09028f
 int id textInputLayoutOtherAccountType 0x7f090290
 int id textInputLayoutOtherBankName 0x7f090291
+int id textInputLayoutOtherNameOfEmployer 0x7f090330
 int id textInputLayoutPassportNumber 0x7f090292
 int id textInputLayoutPayeeCode 0x7f090293
 int id textInputLayoutPeriod 0x7f090294

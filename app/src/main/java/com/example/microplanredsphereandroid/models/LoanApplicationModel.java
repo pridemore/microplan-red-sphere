@@ -33,7 +33,7 @@ public class LoanApplicationModel {
 
     public double grossSalary, currentNetSalary;
     //public boolean employerMailingSameAsPhysical;
-    public String nameOfEmployer, employeeContactPerson, employeeNumber, dateJoined, employerTelNumber,
+    public String nameOfEmployer,employerPhysicalAddress,positionHeld,employersEmail,employersPhoneNumber, employeeContactPerson, employeeNumber, dateJoined, employerTelNumber,
             districtAndPayrollCode, profession, expiryOfEmployment, employerPhysicalStreetName,
             employerPhysicalTownOrCity, employerPhysicalCountry, employerMailingSameAsPhysical, employerMailingStreetName,
             employerMailingTownOrCity, employerMailingCountry, otherNameOfEmployer, otherEmployerTownOrCity, otherEmployerMilAddressTownOrCity;

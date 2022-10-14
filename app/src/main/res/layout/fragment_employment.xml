@@ -37,17 +37,34 @@
                 android:inputType="textCapWords"/>
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textInputLayoutDOB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Name of Employer"/>
+
+        <Spinner
+            android:id="@+id/name_of_employer"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutNameOfEmployer"
+            android:id="@+id/textInputLayoutOtherNameOfEmployer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            android:hint="Name Of Employer">
+            android:hint="Other Name Of Employer(Optional)">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/name_of_employer"
+                android:id="@+id/other_name_of_employer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lines="1"
@@ -69,7 +86,8 @@
                 android:id="@+id/address_of_employer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:focusable="false"
+                android:lines="1"
+                android:maxLines="1"
                 android:inputType="textCapWords" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -112,22 +130,16 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:backgroundTint="@color/blue"
+        <CheckBox
             android:id="@+id/isEmployeePermanent"
-            android:orientation="horizontal">
-            <CheckBox
-                android:id="@+id/is_permanent"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Is Permanent Employee"
-                android:textColor="@color/blue"
-           />
-        </RadioGroup>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/blue"
+            android:text="Is Permanent Employee"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"/>
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutDateOfEmployment"
@@ -183,6 +195,25 @@
                 android:lines="1"
                 android:maxLines="1"
                 android:inputType="textEmailAddress"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutEmployerPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Employers Phone Number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/employer_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:inputType="phone"/>
 
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>

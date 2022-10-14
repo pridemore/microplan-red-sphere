@@ -95,6 +95,7 @@ id emailAddress
 id email_address
 id employeeCode
 id employer_email_address
+id employer_phone_number
 id firstName
 id first_name
 id frame_layout
@@ -107,7 +108,6 @@ id include
 id include2
 id invoice
 id isEmployeePermanent
-id is_permanent
 id left_icon
 id loanPeriod
 id loanPurpose
@@ -146,6 +146,7 @@ id officeStamp
 id other
 id other_account_type
 id other_bank_name
+id other_name_of_employer
 id owned
 id passport_number
 id password
@@ -202,6 +203,7 @@ id textInputLayoutEditProfile
 id textInputLayoutEmailAddress
 id textInputLayoutEmployeeNumber
 id textInputLayoutEmployerEmailAddress
+id textInputLayoutEmployerPhoneNumber
 id textInputLayoutFinancialServices
 id textInputLayoutFirstName
 id textInputLayoutFistName
@@ -215,7 +217,6 @@ id textInputLayoutMicroPlan
 id textInputLayoutMobileNumber
 id textInputLayoutMonthlyRate
 id textInputLayoutName
-id textInputLayoutNameOfEmployer
 id textInputLayoutNationalId
 id textInputLayoutNetSalary
 id textInputLayoutNetSalaryy
@@ -235,6 +236,7 @@ id textInputLayoutNxtOfKin2ResidentialAddress
 id textInputLayoutNxtOfKin2Surname
 id textInputLayoutOtherAccountType
 id textInputLayoutOtherBankName
+id textInputLayoutOtherNameOfEmployer
 id textInputLayoutPassportNumber
 id textInputLayoutPayeeCode
 id textInputLayoutPeriod
