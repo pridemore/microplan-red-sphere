@@ -99,40 +99,40 @@ public class PersonalDetailsFragment extends Fragment {
             public void onClick(View view) {
                 VerificationError verificationError = personalDetailsValidation();
                 if (verificationError == null) {
-                    if (model.title != null && !model.title.isEmpty()) {
-                        switch (model.title) {
-                            case "Mr":
-                                radioGroupTitle.check(R.id.mr);
-                                break;
-                            case "Mrs":
-                                radioGroupTitle.check(R.id.mrs);
-                                break;
-                            case "Miss":
-                                radioGroupTitle.check(R.id.miss);
-                                break;
-                            case "Other":
-                                radioGroupTitle.check(R.id.other);
-                                break;
-                        }
-                    }
-                    if (model.firstName != null) {
-                        first_name.setText(model.firstName);
-                    }
-                    if (model.lastName != null) {
-                        surname.setText(model.lastName);
-                    }
-                    if (model.maidenName != null) {
-                        maiden_surname.setText(model.maidenName);
-                    }
-                    if (model.nationalId != null) {
-                        national_id.setText(model.nationalId);
-                    }
-                    if (model.passportNumber != null) {
-                        passport_number.setText(model.passportNumber);
-                    }
-                    if (model.countryOfBirth != null) {
-                        country_of_birth.setText(model.countryOfBirth);
-                    }
+//                    if (model.title != null && !model.title.isEmpty()) {
+//                        switch (model.title) {
+//                            case "Mr":
+//                                radioGroupTitle.check(R.id.mr);
+//                                break;
+//                            case "Mrs":
+//                                radioGroupTitle.check(R.id.mrs);
+//                                break;
+//                            case "Miss":
+//                                radioGroupTitle.check(R.id.miss);
+//                                break;
+//                            case "Other":
+//                                radioGroupTitle.check(R.id.other);
+//                                break;
+//                        }
+//                    }
+//                    if (model.firstName != null) {
+//                        first_name.setText(model.firstName);
+//                    }
+//                    if (model.lastName != null) {
+//                        surname.setText(model.lastName);
+//                    }
+//                    if (model.maidenName != null) {
+//                        maiden_surname.setText(model.maidenName);
+//                    }
+//                    if (model.nationalId != null) {
+//                        national_id.setText(model.nationalId);
+//                    }
+//                    if (model.passportNumber != null) {
+//                        passport_number.setText(model.passportNumber);
+//                    }
+//                    if (model.countryOfBirth != null) {
+//                        country_of_birth.setText(model.countryOfBirth);
+//                    }
                     ((NewApplicationActivity) getActivity()).replaceFragment(new ContactDetailsFragment());
                 } else {
                     String errorMessage = verificationError.getErrorMessage();
@@ -150,6 +150,10 @@ public class PersonalDetailsFragment extends Fragment {
             if (model.title == null || model.title.isEmpty() || first_name.length() == 0
                     || surname.length() == 0 || national_id.length() == 0 || country_of_birth.length() == 0) {
                 return new VerificationError("Please fill in all fields");
+            }
+
+            if (passport_number.length() > 0 && !passport_number.getText().toString().matches("[A-Z][A-Z]\\d{6}")) {
+                return new VerificationError("Please enter valid passport number");
             }
         /*if (!nationalId.getText().toString().matches("\\d{2}\\-\\d{7}[ ][A-Z]\\d{2}")) {
             return new VerificationError("Please check ID Number");

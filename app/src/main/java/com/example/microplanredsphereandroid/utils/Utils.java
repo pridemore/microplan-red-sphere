@@ -17,6 +17,8 @@ import com.example.microplanredsphereandroid.models.UserModel;
 import com.google.gson.Gson;
 
 import java.io.ByteArrayOutputStream;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Utils {
     @SuppressLint("ApplySharedPref")
@@ -78,5 +80,13 @@ public class Utils {
     public static boolean isLoanInProgress(Context context) {
         SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
         return preferences.contains(CURRENT_LOAN_APP);
+    }
+
+    public static final Pattern VALID_EMAIL_ADDRESS_REGEX =
+            Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
+
+    public static boolean validEmail(String emailStr) {
+        Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(emailStr);
+        return matcher.find();
     }
 }

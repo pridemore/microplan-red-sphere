@@ -26,7 +26,7 @@ public class LoanApplicationModel {
 
     public String bankName, otherBankName, branchName, branchCode, accountName, accountNo, accountType, otherAccountType;
 
-    public String addressType, addressOther, houseNumber, streetName, addressTownOrCity, addressCountry,
+    public String addressType,residentialAddress, addressOther, houseNumber, streetName, addressTownOrCity, addressCountry,
             yearsAtAddress, postalPhysicalAddress, prevHouseNumber, prevStreetName,
             prevAddressTownOrCity, prevAddressCountry, prevYearsAtAddress, prevPostalPhysicalAddress,
             otherAddressTownOrCity, otherPreviousAddressTownOrCity;
