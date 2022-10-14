@@ -57,6 +57,14 @@ id btn_new_application
 id btn_nxt
 id btn_previous
 id buttonBorrowerSign
+id buttonInvoice
+id buttonMarriageCertificate
+id buttonNationalId
+id buttonOfficeStamp
+id buttonPayslip
+id buttonPhoto
+id buttonProofOfEmployment
+id buttonSerialNumber
 id buttonSign
 id buttonWitness1Sign
 id buttonWitness2Sign
@@ -94,6 +102,7 @@ id home_nav
 id imageView
 id include
 id include2
+id invoice
 id is_permanent
 id lastName
 id left_icon
@@ -101,6 +110,7 @@ id loanPeriod
 id loanPurpose
 id logimage
 id maiden_surname
+id marriageCertificate
 id miss
 id mobile_number
 id monthlyRate
@@ -108,6 +118,7 @@ id mr
 id mrs
 id name
 id name_of_employer
+id nationalId
 id national_id
 id nav_graph
 id netSalary
@@ -127,6 +138,7 @@ id nxtOfKin2Relationship
 id nxtOfKin2ResidentialAddress
 id nxtOfKin2Surname
 id nxtOfKin2TitleGroup
+id officeStamp
 id other
 id other_account_type
 id other_bank_name
@@ -134,13 +146,16 @@ id owned
 id passport_number
 id password
 id payeeCode
+id payslip
 id phoneNumber
+id photo
 id physicalAddress
 id placeOfBorrowerSignature
 id placeOfWitness1Signature
 id placeOfWitness2Signature
 id position_held
 id profession
+id proofOfEmployment
 id quantity
 id radioGroupAddressType
 id recycler
@@ -151,6 +166,7 @@ id residential_address
 id right_icon
 id saveProfile
 id saveSignature
+id serialNumber
 id sign_in
 id signature_pad
 id staff_quarters
@@ -276,10 +292,12 @@ layout activity_splash_screen
 layout activity_test
 layout back_next
 layout fragment_bank_details
+layout fragment_blank
 layout fragment_complete_application
 layout fragment_contact_details
 layout fragment_declaration_and_acceptance
 layout fragment_deduction_ssb_form
+layout fragment_documents
 layout fragment_employment
 layout fragment_home
 layout fragment_loan_details

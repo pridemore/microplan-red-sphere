@@ -1,10 +1,6 @@
 package com.example.microplanredsphereandroid;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +8,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.microplanredsphereandroid.adapter.ProductsAdapter;
 import com.example.microplanredsphereandroid.models.LoanApplicationModel;
-import com.example.microplanredsphereandroid.models.LoanApplications;
 import com.example.microplanredsphereandroid.models.Product;
 import com.example.microplanredsphereandroid.models.ProductEntry;
 import com.example.microplanredsphereandroid.utils.Utils;
@@ -35,6 +33,7 @@ public class Products extends Fragment {
     public static Products newInstance() {
         return new Products();
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -132,4 +131,46 @@ public class Products extends Fragment {
 
         return view;
     }
+
+//    @Nullable
+//    @Override
+//    public VerificationError verifyStep() {
+//        try {
+//            boolean isProductsSelected = model.products != null && !model.products.isEmpty();
+//            if (isProductsSelected) {
+//                isProductsSelected = false;
+//                for (ProductEntry entry : model.products) {
+//                    if (entry.getQuantity() > 0) {
+//                        isProductsSelected = true;
+//                        break;
+//                    }
+//                }
+//            }
+//            boolean isTopupSelected = editTextTopup.getText().length() != 0 && Double.parseDouble(editTextTopup.getText().toString()) != 0;
+//            if (!isProductsSelected && !isTopupSelected) {
+//                return new VerificationError("Please select at least one product");
+//            } else if (isTopupSelected && isProductsSelected) {
+//                return new VerificationError("You cant select both top-up and products");
+//            }
+//            model.topUp = Double.parseDouble(editTextTopup.getText().toString());
+//            model.agent_id = Utils.getUserModel(getContext()).getId();
+//            Utils.saveApplicationModel(requireContext(), model);
+//        } catch (Exception e) {
+//            new AlertDialog.Builder(getActivity())
+//                    .setTitle("Error")
+//                    .setMessage(e.getMessage())
+//                    .show();
+//        }
+//        return null;
+//    }
+//
+//    @Override
+//    public void onSelected() {
+//        editTextTopup.setText("" + model.topUp);
+//    }
+//
+//    @Override
+//    public void onError(@NonNull VerificationError error) {
+//        Snackbar.make(view, error.getErrorMessage(), BaseTransientBottomBar.LENGTH_LONG).show();
+//    }
 }

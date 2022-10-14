@@ -36,7 +36,7 @@ public class NxtOfKin1DetailsFragment extends Fragment {
         btn_previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((NewApplicationActivity) getActivity()).replaceFragment(new BankDetailsFragment());
+                ((NewApplicationActivity) getActivity()).replaceFragment(new DocumentsFragment());
 //                Intent intent=new Intent(getActivity(),HomeActivity.class);
 //                startActivity(intent);
             }

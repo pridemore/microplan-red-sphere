@@ -2710,7 +2710,15 @@ id btn_new_application
 id btn_nxt
 id btn_previous
 id buttonBorrowerSign
+id buttonInvoice
+id buttonMarriageCertificate
+id buttonNationalId
+id buttonOfficeStamp
 id buttonPanel
+id buttonPayslip
+id buttonPhoto
+id buttonProofOfEmployment
+id buttonSerialNumber
 id buttonSign
 id buttonWitness1Sign
 id buttonWitness2Sign
@@ -2878,6 +2886,7 @@ id include2
 id included
 id info
 id invisible
+id invoice
 id inward
 id is_permanent
 id italic
@@ -2902,6 +2911,7 @@ id locale
 id logimage
 id ltr
 id maiden_surname
+id marriageCertificate
 id masked
 id match_constraint
 id match_parent
@@ -2966,6 +2976,7 @@ id mtrl_view_tag_bottom_padding
 id multiply
 id name
 id name_of_employer
+id nationalId
 id national_id
 id nav_controller_view_tag
 id nav_graph
@@ -3006,6 +3017,7 @@ id nxtOfKin2ResidentialAddress
 id nxtOfKin2Surname
 id nxtOfKin2TitleGroup
 id off
+id officeStamp
 id on
 id onInterceptTouchReturnSwipe
 id other
@@ -3027,9 +3039,11 @@ id password_toggle
 id path
 id pathRelative
 id payeeCode
+id payslip
 id peekHeight
 id percent
 id phoneNumber
+id photo
 id physicalAddress
 id pin
 id placeOfBorrowerSignature
@@ -3041,6 +3055,7 @@ id postLayout
 id profession
 id progress_circular
 id progress_horizontal
+id proofOfEmployment
 id quantity
 id radio
 id radioGroupAddressType
@@ -3084,6 +3099,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id serialNumber
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3430,10 +3446,12 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_bank_details
+layout fragment_blank
 layout fragment_complete_application
 layout fragment_contact_details
 layout fragment_declaration_and_acceptance
 layout fragment_deduction_ssb_form
+layout fragment_documents
 layout fragment_employment
 layout fragment_home
 layout fragment_loan_details
