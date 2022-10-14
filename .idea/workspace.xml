@@ -9,8 +9,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5969ec-deed-47c8-b62e-94ca91d59916" name="Changes" comment="Added code cleaning on NextOfKin2Details">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/DeclarationAndAcceptanceFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/DeclarationAndAcceptanceFragment.java" afterDir="false" />
+    <list default="true" id="bb5969ec-deed-47c8-b62e-94ca91d59916" name="Changes" comment="Added code cleaning on DeclarationAndAcceptance">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/DeductionSsbFormFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/DeductionSsbFormFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -510,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665733929742</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Added code cleaning on DeclarationAndAcceptance">
+      <created>1665735113990</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1665735113990</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -526,7 +534,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Loan details pages interface done." />
     <MESSAGE value="New Application page interface done." />
     <MESSAGE value="Declaration and Acceptance page done on TextEditFields" />
     <MESSAGE value="Adding signature buttons and adding signature activity" />
@@ -551,6 +558,7 @@
     <MESSAGE value="Added code cleaning on DocumentsDetails and added ImageActivity" />
     <MESSAGE value="Added code cleaning on NextOfKin1Details" />
     <MESSAGE value="Added code cleaning on NextOfKin2Details" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added code cleaning on NextOfKin2Details" />
+    <MESSAGE value="Added code cleaning on DeclarationAndAcceptance" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added code cleaning on DeclarationAndAcceptance" />
   </component>
 </project>
