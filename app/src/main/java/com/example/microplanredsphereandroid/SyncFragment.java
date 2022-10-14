@@ -1,5 +1,6 @@
 package com.example.microplanredsphereandroid;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,14 +16,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.microplanredsphereandroid.adapter.RecyclerAdapter;
 import com.example.microplanredsphereandroid.models.LoanApplications;
-import com.example.microplanredsphereandroid.models.Product;
 
 import java.util.ArrayList;
 
 public class SyncFragment extends Fragment {
     private ImageView backIcon, menu;
     private TextView title;
-    private Button btn_previous;
+    private Button btn_previous,btn_sync;
     private RecyclerView recyclerView;
     private ArrayList<LoanApplications> applicationsList;
 
@@ -31,23 +31,42 @@ public class SyncFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sync, container, false);
+
+        //instantiating views
         backIcon = view.findViewById(R.id.left_icon);
         menu = view.findViewById(R.id.right_icon);
         title = view.findViewById(R.id.title);
         btn_previous=view.findViewById(R.id.btn_previous);
+        btn_sync=view.findViewById(R.id.btn_sync);
         recyclerView = view.findViewById(R.id.recyclerView);
         applicationsList = new ArrayList<>();
+
+        //setting static text
         title.setText("Sync Applications");
 
-        setSyncLoanApplicationsList();//loading loan applications to our list
-        setAdapter();//load the list to adapter
-
+        //Buttons logic
         btn_previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ((HomeActivity)getActivity()).replaceFragment(new HomeFragment());
+                if (Activity.class.equals(HomeActivity.class)){
+                    ((HomeActivity) getActivity()).replaceFragment(new HomeFragment());
+                }else {
+                    ((NewApplicationActivity) getActivity()).replaceFragment(new HomeFragment());
+                }
             }
         });
+        btn_sync.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        //loading loan applications to our list
+        setSyncLoanApplicationsList();
+
+        //load the list to adapter
+        setAdapter();
 
         return view;
     }

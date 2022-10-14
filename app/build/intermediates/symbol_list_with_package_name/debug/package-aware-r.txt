@@ -2587,6 +2587,7 @@ drawable design_snackbar_background
 drawable home_nav_image
 drawable ic_baseline_arrow_back_24
 drawable ic_baseline_menu_24
+drawable ic_baseline_sync_24
 drawable ic_clock_black_24dp
 drawable ic_dashboard_black_24dp
 drawable ic_keyboard_black_24dp
@@ -2764,7 +2765,6 @@ id animateToStart
 id antiClockwise
 id anticipate
 id applicantFullName
-id applicationDate
 id approverName
 id arc
 id asConfigured
@@ -2793,6 +2793,7 @@ id btnCheck
 id btn_new_application
 id btn_nxt
 id btn_previous
+id btn_sync
 id buttonBorrowerSign
 id buttonCancel
 id buttonCapture
@@ -2860,7 +2861,6 @@ id current_citizenship
 id custom
 id customPanel
 id cut
-id date
 id dateAuthorised
 id dateOfBirth
 id dateOfBorrowerSignature
@@ -2989,7 +2989,6 @@ id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
 id labeled
-id lastName
 id layout
 id layout_aspect_ratio
 id layout_rotate_wheel
@@ -3357,14 +3356,14 @@ id textStart
 id textSyncedToServer
 id textTop
 id textTotalApplications
-id textView
 id textView1
 id textView19
 id textView2
 id textView20
 id textView21
 id textView22
-id textView4
+id textViewApplicantName
+id textViewApplicationDate
 id textViewClientName
 id textViewClientSignature
 id textViewDateOfBirth
@@ -3372,9 +3371,11 @@ id textViewEcNumber
 id textViewEmailAddress
 id textViewFullNameOfApplicant
 id textViewGender
+id textViewInstallment
 id textViewName
 id textViewPhoneNumber
 id textViewPhysicalAddress
+id textViewProducts
 id textViewReference
 id textViewSurname
 id textViewType

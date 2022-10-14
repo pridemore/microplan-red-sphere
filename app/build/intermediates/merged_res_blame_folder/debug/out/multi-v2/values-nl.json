@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-40:/values-nl/values-nl.xml",
+            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-41:/values-nl/values-nl.xml",
             "map": [
                 {
                     "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\172d699a3cea385b2d3041d306f4ec45\\transformed\\navigation-ui-2.5.1\\res\\values-nl\\values-nl.xml",
@@ -18,6 +18,23 @@
                         "startOffsets": "7279,7390",
                         "endColumns": "110,108",
                         "endOffsets": "7385,7494"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\03f1c8f0893845f14f3b9230e669a43d\\transformed\\ucrop-2.2.6-native\\res\\values-nl\\values-nl.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,120,179",
+                        "endColumns": "64,58,54",
+                        "endOffsets": "115,174,229"
+                    },
+                    "to": {
+                        "startLines": "91,92,93",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "7764,7829,7888",
+                        "endColumns": "64,58,54",
+                        "endOffsets": "7824,7883,7938"
                     }
                 },
                 {

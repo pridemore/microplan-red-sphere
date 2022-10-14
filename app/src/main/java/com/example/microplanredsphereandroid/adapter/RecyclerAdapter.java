@@ -51,7 +51,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         holder.textViewApplicantName.setText(new StringBuilder().append(name).append(" ").append(surname).toString());
         holder.textViewProducts.setText(product);
         holder.textViewApplicationDate.setText(date);
-        holder.textViewInstallment.setText(installment);
+        holder.textViewInstallment.setText("$"+installment);
     }
 
     @Override

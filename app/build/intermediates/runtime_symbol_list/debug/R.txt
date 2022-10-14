@@ -2586,6 +2586,7 @@ int drawable design_snackbar_background 0x7f080065
 int drawable home_nav_image 0x7f080066
 int drawable ic_baseline_arrow_back_24 0x7f080067
 int drawable ic_baseline_menu_24 0x7f080068
+int drawable ic_baseline_sync_24 0x7f0800bf
 int drawable ic_clock_black_24dp 0x7f080069
 int drawable ic_dashboard_black_24dp 0x7f08006a
 int drawable ic_keyboard_black_24dp 0x7f08006b
@@ -2763,7 +2764,6 @@ int id animateToStart 0x7f090057
 int id antiClockwise 0x7f090058
 int id anticipate 0x7f090059
 int id applicantFullName 0x7f09005a
-int id applicationDate 0x7f09005b
 int id approverName 0x7f09005c
 int id arc 0x7f09005d
 int id asConfigured 0x7f09005e
@@ -2792,6 +2792,7 @@ int id btnCheck 0x7f090074
 int id btn_new_application 0x7f090075
 int id btn_nxt 0x7f090076
 int id btn_previous 0x7f090077
+int id btn_sync 0x7f09030a
 int id buttonBorrowerSign 0x7f090078
 int id buttonCancel 0x7f090079
 int id buttonCapture 0x7f09007a
@@ -2859,7 +2860,6 @@ int id current_citizenship 0x7f0900b7
 int id custom 0x7f0900b8
 int id customPanel 0x7f0900b9
 int id cut 0x7f0900ba
-int id date 0x7f0900bb
 int id dateAuthorised 0x7f0900bc
 int id dateOfBirth 0x7f0900bd
 int id dateOfBorrowerSignature 0x7f0900be
@@ -2988,7 +2988,6 @@ int id item_touch_helper_previous_elevation 0x7f090138
 int id jumpToEnd 0x7f090139
 int id jumpToStart 0x7f09013a
 int id labeled 0x7f09013b
-int id lastName 0x7f09013c
 int id layout 0x7f09013d
 int id layout_aspect_ratio 0x7f09013e
 int id layout_rotate_wheel 0x7f09013f
@@ -3356,14 +3355,14 @@ int id textStart 0x7f0902a8
 int id textSyncedToServer 0x7f0902a9
 int id textTop 0x7f0902aa
 int id textTotalApplications 0x7f0902ab
-int id textView 0x7f0902ac
 int id textView1 0x7f0902ad
 int id textView19 0x7f0902ae
 int id textView2 0x7f0902af
 int id textView20 0x7f0902b0
 int id textView21 0x7f0902b1
 int id textView22 0x7f0902b2
-int id textView4 0x7f0902b3
+int id textViewApplicantName 0x7f090306
+int id textViewApplicationDate 0x7f090307
 int id textViewClientName 0x7f0902b4
 int id textViewClientSignature 0x7f0902b5
 int id textViewDateOfBirth 0x7f0902b6
@@ -3371,9 +3370,11 @@ int id textViewEcNumber 0x7f0902b7
 int id textViewEmailAddress 0x7f0902b8
 int id textViewFullNameOfApplicant 0x7f0902b9
 int id textViewGender 0x7f0902ba
+int id textViewInstallment 0x7f090308
 int id textViewName 0x7f0902bb
 int id textViewPhoneNumber 0x7f0902bc
 int id textViewPhysicalAddress 0x7f0902bd
+int id textViewProducts 0x7f090309
 int id textViewReference 0x7f0902be
 int id textViewSurname 0x7f0902bf
 int id textViewType 0x7f0902c0

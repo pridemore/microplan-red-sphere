@@ -17,6 +17,12 @@
 <!--        <include-->
 <!--            android:id="@+id/include2"-->
 <!--            layout="@layout/back_next" />-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginStart="0dp"
+            android:padding="5dp">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,6 +33,19 @@
             android:id="@+id/btn_previous"
             android:layout_centerVertical="true"
             />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Sync"
+            android:textColor="@color/blue"
+            android:drawableRight="@drawable/ic_baseline_sync_24"
+            android:id="@+id/btn_sync"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent">
+        </Button>
+        </RelativeLayout>
         <LinearLayout
             android:id="@+id/textInputLayoutListView"
             android:layout_width="match_parent"
