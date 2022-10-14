@@ -57,12 +57,16 @@ id btn_new_application
 id btn_nxt
 id btn_previous
 id buttonBorrowerSign
+id buttonCancel
+id buttonCapture
 id buttonInvoice
 id buttonMarriageCertificate
 id buttonNationalId
 id buttonOfficeStamp
+id buttonOkay
 id buttonPayslip
 id buttonPhoto
+id buttonPickImage
 id buttonProofOfEmployment
 id buttonSerialNumber
 id buttonSign
@@ -74,7 +78,6 @@ id clientName
 id complete
 id country_of_birth
 id current_citizenship
-id customerName
 id date
 id dateAuthorised
 id dateOfBirth
@@ -103,11 +106,13 @@ id imageView
 id include
 id include2
 id invoice
+id isEmployeePermanent
 id is_permanent
 id lastName
 id left_icon
 id loanPeriod
 id loanPurpose
+id loanType
 id logimage
 id maiden_surname
 id marriageCertificate
@@ -284,6 +289,7 @@ id witness1Signature
 id witness2FullName
 id witness2Signature
 layout activity_home
+layout activity_image_capture
 layout activity_login
 layout activity_main
 layout activity_new_application
@@ -336,3 +342,4 @@ style Theme.MicroPlanRedSphereAndroid.NoActionBar
 style Theme.MicroPlanRedSphereAndroid.PopupOverlay
 xml backup_rules
 xml data_extraction_rules
+xml file_paths

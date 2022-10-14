@@ -22,13 +22,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        private TextView nameText,surnameText,dateText;
+        private TextView textViewApplicantName,textViewProducts,textViewApplicationDate,textViewInstallment;
 
         public MyViewHolder(final View view) {
             super(view);
-            nameText = view.findViewById(R.id.textView4);
-            surnameText=view.findViewById(R.id.lastName);
-            dateText=view.findViewById(R.id.date);
+            textViewApplicantName = view.findViewById(R.id.textViewApplicantName);
+            textViewProducts=view.findViewById(R.id.textViewProducts);
+            textViewApplicationDate=view.findViewById(R.id.textViewApplicationDate);
+            textViewInstallment=view.findViewById(R.id.textViewInstallment);
         }
     }
 
@@ -44,9 +45,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         String name = applicationsArrayList.get(position).getName();
         String surname=applicationsArrayList.get(position).getSurname();
         String date=applicationsArrayList.get(position).getApplicationDate();
-        holder.nameText.setText(name);
-        holder.surnameText.setText(surname);
-        holder.dateText.setText(date);
+        String product=applicationsArrayList.get(position).getProduct();
+        int installment=applicationsArrayList.get(position).getInstallment();
+
+        holder.textViewApplicantName.setText(new StringBuilder().append(name).append(" ").append(surname).toString());
+        holder.textViewProducts.setText(product);
+        holder.textViewApplicationDate.setText(date);
+        holder.textViewInstallment.setText(installment);
     }
 
     @Override
