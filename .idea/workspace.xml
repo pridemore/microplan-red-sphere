@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5969ec-deed-47c8-b62e-94ca91d59916" name="Changes" comment="Added code cleaning on DocumentsDetails and added ImageActivity">
+    <list default="true" id="bb5969ec-deed-47c8-b62e-94ca91d59916" name="Changes" comment="Added code cleaning on NextOfKin1Details">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/NxtOfKin1DetailsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/NxtOfKin1DetailsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/NxtOfKin2DetailsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/microplanredsphereandroid/NxtOfKin2DetailsFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -497,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665730516889</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Added code cleaning on NextOfKin1Details">
+      <created>1665732156916</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1665732156916</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -513,7 +520,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Bank details page interface done." />
     <MESSAGE value="NxtOfKin1 and NxtOfKin2 details pages interface done." />
     <MESSAGE value="Loan details pages interface done." />
     <MESSAGE value="New Application page interface done." />
@@ -538,6 +544,7 @@
     <MESSAGE value="Added code cleaning on EmploymentDetails" />
     <MESSAGE value="Added code cleaning on BankDetails" />
     <MESSAGE value="Added code cleaning on DocumentsDetails and added ImageActivity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added code cleaning on DocumentsDetails and added ImageActivity" />
+    <MESSAGE value="Added code cleaning on NextOfKin1Details" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added code cleaning on NextOfKin1Details" />
   </component>
 </project>
