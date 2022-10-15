@@ -179,4 +179,30 @@ public class Utils {
         SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
         return preferences.getString("yyy", "077422629");
     }
+
+    @SuppressLint("ApplySharedPref")
+    public static void clearLoans(Context context) {
+        List<LoanApplicationModel> loanApplicationModels = new ArrayList<>();
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(SAVED_LOANS, new Gson().toJson(loanApplicationModels));
+        editor.commit();
+    }
+
+    @SuppressLint("ApplySharedPref")
+    public static void updateModel(Context context, LoanApplicationModel model) {
+        List<LoanApplicationModel> loanApplicationModels = getSavedLoans(context);
+        LoanApplicationModel updatedModel = null;
+        for (LoanApplicationModel loanApplicationModel:loanApplicationModels) {
+            if (model.uniqueRef.equals(loanApplicationModel.uniqueRef)) {
+                updatedModel = loanApplicationModel;
+            }
+        }
+        loanApplicationModels.remove(updatedModel);
+        loanApplicationModels.add(model);
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(SAVED_LOANS, new Gson().toJson(loanApplicationModels));
+        editor.commit();
+    }
 }

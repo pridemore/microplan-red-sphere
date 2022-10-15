@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
@@ -25,6 +26,7 @@ public class HomeFragment extends Fragment {
     private static final String TAG = "Home Fragment";
     private ArrayList<LoanApplicationModel> applicationsList;
     private RecyclerView recyclerView;
+    TextView textTotalApplications, textSyncedToServer;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,16 +34,21 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         Log.d(TAG, "ON HOME");
-        recyclerView=view.findViewById(R.id.recyclerView);
+
+        //instantiating views
+        recyclerView = view.findViewById(R.id.recyclerView);
+        textSyncedToServer = view.findViewById(R.id.textSyncedToServer);
+        textTotalApplications = view.findViewById(R.id.textTotalApplications);
+
         applicationsList = new ArrayList<>();
-        setUserInfo();
+        setLoanApplicationList();
         setAdapter();
-        FloatingActionButton newApplicationBtn=view.findViewById(R.id.btn_new_application);
+        FloatingActionButton newApplicationBtn = view.findViewById(R.id.btn_new_application);
 
         newApplicationBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getActivity(),NewApplicationActivity.class);
+                Intent intent = new Intent(getActivity(), NewApplicationActivity.class);
                 startActivity(intent);
             }
         });
@@ -51,24 +58,29 @@ public class HomeFragment extends Fragment {
     }
 
     private void setAdapter() {
-        RecyclerAdapter adapter=new RecyclerAdapter(applicationsList);
-        RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(getContext());
+        RecyclerAdapter adapter = new RecyclerAdapter(applicationsList);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
 
     }
-    private void setUserInfo() {
-        final List<LoanApplicationModel> modelList= Utils.getSavedLoans(getContext());
-        for (LoanApplicationModel loanApplication:modelList){
-            Log.d(TAG,"LoanObject-----:"+loanApplication.firstName);
-            Log.d(TAG,"LoanObject-----:"+loanApplication.lastName);
-            Log.d(TAG,"LoanObject-----:"+loanApplication.loanApplicationFee);
+
+    private void setLoanApplicationList() {
+        final List<LoanApplicationModel> modelList = Utils.getSavedLoans(getContext());
+        for (LoanApplicationModel loanApplication : modelList) {
+            Log.d(TAG, "LoanObject-----:" + loanApplication.firstName);
+            Log.d(TAG, "LoanObject-----:" + loanApplication.lastName);
+            Log.d(TAG, "LoanObject-----:" + loanApplication.loanApplicationFee);
+            Log.d(TAG,"Is Synced to server---------:"+loanApplication.isSubmitted);
         }
-        for (LoanApplicationModel loanApplication:modelList
-             ) {
+        for (LoanApplicationModel loanApplication : modelList
+        ) {
             applicationsList.add(loanApplication);
         }
+
+        textTotalApplications.setText(String.valueOf(modelList.size()));
+        textSyncedToServer.setText(String.valueOf(modelList.size()));
 //        applicationsList.add(new LoanApplications("Belinda","Viriri",276,"2 P/GAS STOVE","28/01/22"));
 //        applicationsList.add(new LoanApplications("Anotida","Magara",5476,"UNIVESAL 4 PLATE STOVE","04/03/22"));
 //        applicationsList.add(new LoanApplications("Pridemore","Rugara",576,"LENOVO LAPTOP","05/05/22"));

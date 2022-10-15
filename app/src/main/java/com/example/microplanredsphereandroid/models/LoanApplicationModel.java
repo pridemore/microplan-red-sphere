@@ -32,17 +32,15 @@ public class LoanApplicationModel {
             otherAddressTownOrCity, otherPreviousAddressTownOrCity;
 
     public double grossSalary, currentNetSalary;
+
     //public boolean employerMailingSameAsPhysical;
     public String nameOfEmployer,employerPhysicalAddress,positionHeld,employersEmail,employersPhoneNumber, employeeContactPerson, employeeNumber, dateJoined, employerTelNumber,
             districtAndPayrollCode, profession, expiryOfEmployment, employerPhysicalStreetName,
             employerPhysicalTownOrCity, employerPhysicalCountry, employerMailingSameAsPhysical, employerMailingStreetName,
             employerMailingTownOrCity, employerMailingCountry, otherNameOfEmployer, otherEmployerTownOrCity, otherEmployerMilAddressTownOrCity;
 
-//    public String nextOfKinTitle, nextOfKinFirstName, nextOfKinLastName, nextOfKinMaidenName,
-//            nextOfKinNationalId, nextOfKinDateOfBirth, nextOfKinRelationship, nextOfKinEmployer,
-//            nextOfKinProfession, nextOfKinWorkTelNum, nextOfKinMobileNum, nextOfKinStreetName,
-//            nextOfKinTownOrCity, nextOfKinCountry, otherNextOfKinRelationship, otherNextOfKinTownOrCity;
-//
+
+
     public String  nxtOfKin1Relation,nxtOfKin1TitleGroup,nxtOfKin1FirstName, nxtOfKin1Surname, nxtOfKin1ResidentialAddress,
     nxtOfKin1PhoneNumber, nxtOfKin1NameOfEmployer, nxtOfKin1EmployerAddress;
 
