@@ -97,4 +97,15 @@ public class Utils {
                 return i;
         return 0;
     }
+
+    public static String bitmapToBase64String(Bitmap bitmap) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 20, baos); //bm is the bitmap object
+        byte[] b = baos.toByteArray();
+        return Base64.encodeToString(b, Base64.DEFAULT);
+    }
+    public static Bitmap base64ImageToBitmap(String base64Image) {
+        byte[] imageAsBytes = Base64.decode(base64Image.getBytes(), Base64.DEFAULT);
+        return BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length);
+    }
 }
