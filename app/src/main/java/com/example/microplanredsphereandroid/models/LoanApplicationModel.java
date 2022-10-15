@@ -49,17 +49,19 @@ public class LoanApplicationModel {
     public String  nxtOfKin2Relation,nxtOfKin2TitleGroup,nxtOfKin2FirstName, nxtOfKin2Surname, nxtOfKin2ResidentialAddress,
             nxtOfKin2PhoneNumber, nxtOfKin2NameOfEmployer, nxtOfKin2EmployerAddress;
 
-    public String  borrowerSignatureBase64, witnessSignatureBase64, witnessSignatureBase642;
+    public String  borrowerSignatureBase64, witnessSignatureBase64, witnessSignatureBase642,authorizerSignatureBase64;
     public String borrowerFullName, placeOfSignature, dateSignBorrower,
     witnessFullName, witnessPlaceOfSignature, dateSignWitness, borrowerSignature, witnessSignature,
     witnessFullName2, witnessPlaceOfSignature2, dateSignWitness2, witnessSignature2;
 
-    public String officeSignature, authorisedBy, dateAndTime;
+    public String authoriserSignature, authorisedBy, dateAndTime;
 
     public String documentNationalIdBase64, documentPhotoBase64, documentPayslipBase64, documentProofOfEmploymentBase64,
             officeStampBase64, documentMarriageCertificateBase64, documentSerialNumberBase64, documentInvoiceBase64;
+
     public String documentNationalId, documentPhoto, documentPayslip, documentProofOfEmployment, officeStamp,
     documentMarriageCertificate, documentSerialNumber, documentInvoice;
+
     public String nationalIdUpload, payslipUpload, clientPictureUpload, proofOfEmployemntUpload, invoiceupload,
     marriageCertificateUpload, serialNumberUpload,
     mariage_cert, serial_num, invoicepic;
