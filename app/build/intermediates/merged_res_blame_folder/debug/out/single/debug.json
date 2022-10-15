@@ -1,15 +1,15 @@
 [
     {
-        "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-44:\\layout_fragment_products.xml.flat",
-        "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-46:\\layout\\fragment_products.xml"
+        "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-44:\\drawable-v24_home_nav_image.png.flat",
+        "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-46:\\drawable-v24\\home_nav_image.png"
     },
     {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-44:\\navigation_nav_graph.xml.flat",
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-46:\\navigation\\nav_graph.xml"
     },
     {
-        "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-44:\\drawable-v24_home_nav_image.png.flat",
-        "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-46:\\drawable-v24\\home_nav_image.png"
+        "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-44:\\layout_fragment_products.xml.flat",
+        "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-46:\\layout\\fragment_products.xml"
     },
     {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-44:\\layout_activity_home.xml.flat",
@@ -18,6 +18,10 @@
     {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-44:\\drawable-v24_new_application_image.png.flat",
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-46:\\drawable-v24\\new_application_image.png"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-merged_res-44:/layout_fragment_deduction_ssb_form.xml.flat",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_deduction_ssb_form.xml"
     },
     {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-44:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
@@ -250,10 +254,6 @@
     {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-44:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-main-46:\\mipmap-mdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "com.example.microplanredsphereandroid.app-merged_res-44:/layout_fragment_employment.xml.flat",
-        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_employment.xml"
     },
     {
         "merged": "C:\\Users\\pridemore.vhiriri\\.gradle\\daemon\\7.3.3\\com.example.microplanredsphereandroid.app-merged_res-44:\\layout_fragment_complete_application.xml.flat",

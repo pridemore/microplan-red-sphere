@@ -17,7 +17,15 @@
         <include
             android:id="@+id/include2"
             layout="@layout/back_next" />
-
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Client Name"/>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutFistName"
             android:layout_width="match_parent"
@@ -37,6 +45,15 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:id="@+id/textViewSurname"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Surname"/>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutSurname"
             android:layout_width="match_parent"
@@ -56,7 +73,15 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
+        <TextView
+            android:id="@+id/textViewEmployeeNumber"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="EC Number"/>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutEmployeeNumber"
             android:layout_width="match_parent"
@@ -76,7 +101,15 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
+        <TextView
+            android:id="@+id/textViewPayeeCode"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Payee Code"/>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutPayeeCode"
             android:layout_width="match_parent"
@@ -84,7 +117,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="10dp"
-            android:hint="Employee Code Number">
+            android:hint="Payee Code">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/payeeCode"
@@ -96,7 +129,15 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
+        <TextView
+            android:id="@+id/textViewMonthlyRate"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Monthly Rate"/>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutMonthlyRate"
             android:layout_width="match_parent"
@@ -116,6 +157,15 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:id="@+id/textViewFromDate"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="From"/>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutFromDate"
             android:layout_width="match_parent"
@@ -133,7 +183,15 @@
                 android:inputType="date" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
+        <TextView
+            android:id="@+id/textViewToDate"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="To"/>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutToDate"
             android:layout_width="match_parent"
@@ -151,7 +209,15 @@
                 android:inputType="date" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
+        <TextView
+            android:id="@+id/textViewAuthorisedBy"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Authorised By"/>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutApproverName"
             android:layout_width="match_parent"
@@ -173,7 +239,7 @@
 
         <LinearLayout
             android:orientation="horizontal"
-            android:id="@+id/textInputLayoutPassportNumber"
+            android:id="@+id/textInputLayoutAuthoriserSignature"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginStart="10dp"
@@ -182,7 +248,7 @@
             android:hint="Signature">
 
             <ImageView
-                android:id="@+id/borrowerSignature"
+                android:id="@+id/authoriserSignature"
                 android:layout_width="0dp"
                 android:background="@color/grey"
                 android:layout_height="match_parent"
@@ -197,7 +263,15 @@
                 android:layout_gravity="center_vertical"/>
 
         </LinearLayout>
-
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date"/>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutDateAuthorised"
             android:layout_width="match_parent"

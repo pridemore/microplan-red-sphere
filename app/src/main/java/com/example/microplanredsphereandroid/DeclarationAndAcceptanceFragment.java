@@ -99,7 +99,7 @@ public class DeclarationAndAcceptanceFragment extends Fragment {
                 witness2Signature.setImageBitmap(bitmapWitnessSignature2);
             }
             //if (model.borrowerFullName!=null) { borrowerFullName.setText(model.borrowerFullName); }
-            if (model.placeOfSignature!=null) { dateOfBorrowerSignature.setText(model.placeOfSignature); }
+            if (model.placeOfSignature!=null) { placeOfBorrowerSignature.setText(model.placeOfSignature); }
             //if (model.dateSignBorrower!=null) { dateSignBorrower.setText(model.dateSignBorrower); }
             if (model.witnessFullName!=null) { witness1FullName.setText(model.witnessFullName); }
             if (model.witnessPlaceOfSignature!=null) { placeOfWitness1Signature.setText(model.witnessPlaceOfSignature); }

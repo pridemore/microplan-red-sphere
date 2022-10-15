@@ -53,9 +53,9 @@ public class DocumentsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        model = Utils.getApplicationModel(requireContext());
         // Inflate the layout for this fragment
        view= inflater.inflate(R.layout.fragment_documents, container, false);
+        model = Utils.getApplicationModel(requireContext());
 
        //instantiating views
         backIcon=view.findViewById(R.id.left_icon);

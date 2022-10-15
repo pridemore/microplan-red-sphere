@@ -5,18 +5,25 @@ import static com.example.microplanredsphereandroid.utils.Constants.LATEST_SIGNA
 import static com.example.microplanredsphereandroid.utils.Constants.PREFS_KEY;
 import static com.example.microplanredsphereandroid.utils.Constants.USER;
 
+import static java.util.Calendar.getInstance;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
+import android.util.Log;
 
 import com.example.microplanredsphereandroid.models.LoanApplicationModel;
 import com.example.microplanredsphereandroid.models.UserModel;
 import com.google.gson.Gson;
 
 import java.io.ByteArrayOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -107,5 +114,30 @@ public class Utils {
     public static Bitmap base64ImageToBitmap(String base64Image) {
         byte[] imageAsBytes = Base64.decode(base64Image.getBytes(), Base64.DEFAULT);
         return BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length);
+    }
+
+    public static Date firstDayOfNext(Calendar calendar,String TAG) {
+        SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy", Locale.UK);
+        Date oldDate = calendar.getTime();
+        String oldDateFormart=df.format(oldDate);
+        Log.d(TAG,"Old Date-------:"+oldDateFormart);
+
+        calendar.add(Calendar.MONTH, 1);
+        calendar.set(Calendar.DATE, calendar.getActualMinimum(Calendar.DAY_OF_MONTH));
+        Date nextMonthFirstDay = calendar.getTime();
+        String formattedDate = df.format(nextMonthFirstDay);
+        Log.d(TAG,"New Date-------:"+formattedDate);
+        return nextMonthFirstDay;
+    }
+
+    public static Date lastDayOfLoanPayment(int repaymentPeriodInMonths, String TAG) {
+        SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy", Locale.UK);
+        Calendar calendar = getInstance();
+        calendar.add(Calendar.MONTH, repaymentPeriodInMonths);
+        calendar.set(Calendar.DATE, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
+        Date nextMonthLastDay = calendar.getTime();
+        String formattedDate = df.format(nextMonthLastDay);
+        Log.d(TAG, "Loan Payment up to-------:" + formattedDate);
+        return nextMonthLastDay;
     }
 }
