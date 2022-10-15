@@ -46,6 +46,9 @@ public class LoanApplicationModel {
     public String  nxtOfKin1Relation,nxtOfKin1TitleGroup,nxtOfKin1FirstName, nxtOfKin1Surname, nxtOfKin1ResidentialAddress,
     nxtOfKin1PhoneNumber, nxtOfKin1NameOfEmployer, nxtOfKin1EmployerAddress;
 
+    public String  nxtOfKin2Relation,nxtOfKin2TitleGroup,nxtOfKin2FirstName, nxtOfKin2Surname, nxtOfKin2ResidentialAddress,
+            nxtOfKin2PhoneNumber, nxtOfKin2NameOfEmployer, nxtOfKin2EmployerAddress;
+
     public String  borrowerSignatureBase64, witnessSignatureBase64, witnessSignatureBase642;
     public String borrowerFullName, placeOfSignature, dateSignBorrower,
     witnessFullName, witnessPlaceOfSignature, dateSignWitness, borrowerSignature, witnessSignature,

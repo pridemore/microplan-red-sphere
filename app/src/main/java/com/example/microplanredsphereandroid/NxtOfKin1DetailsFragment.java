@@ -73,16 +73,16 @@ public class NxtOfKin1DetailsFragment extends Fragment {
         nxtOfKin1TitleGroup.setOnCheckedChangeListener((group, checkedId) -> {
             switch (checkedId) {
                 case R.id.mr:
-                    model.title = "Mr";
+                    model.nxtOfKin1TitleGroup = "Mr";
                     break;
                 case R.id.mrs:
-                    model.title = "Mrs";
+                    model.nxtOfKin1TitleGroup = "Mrs";
                     break;
                 case R.id.miss:
-                    model.title = "Miss";
+                    model.nxtOfKin1TitleGroup = "Miss";
                     break;
                 case R.id.other:
-                    model.title = "Other";
+                    model.nxtOfKin1TitleGroup = "Other";
             }
         });
         btn_previous.setOnClickListener(new View.OnClickListener() {
@@ -117,7 +117,7 @@ public class NxtOfKin1DetailsFragment extends Fragment {
 
     private VerificationError nxtOfKin1DetailsValidation(){
         try {
-            if (model.title == null || model.title.isEmpty()||nxtOfKin1FirstName.length()==0||nxtOfKin1Surname.length()==0||
+            if (model.nxtOfKin1TitleGroup==null||model.nxtOfKin1TitleGroup.isEmpty()||nxtOfKin1FirstName.length()==0||nxtOfKin1Surname.length()==0||
                     nxtOfKin1ResidentialAddress.length()==0||nxtOfKin1PhoneNumber.length()==0 ) {
                 return new VerificationError("Please fill in required fields");
             }
