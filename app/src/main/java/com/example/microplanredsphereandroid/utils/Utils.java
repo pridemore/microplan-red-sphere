@@ -3,6 +3,7 @@ package com.example.microplanredsphereandroid.utils;
 import static com.example.microplanredsphereandroid.utils.Constants.CURRENT_LOAN_APP;
 import static com.example.microplanredsphereandroid.utils.Constants.LATEST_SIGNATURE;
 import static com.example.microplanredsphereandroid.utils.Constants.PREFS_KEY;
+import static com.example.microplanredsphereandroid.utils.Constants.SAVED_LOANS;
 import static com.example.microplanredsphereandroid.utils.Constants.USER;
 
 import static java.util.Calendar.getInstance;
@@ -18,11 +19,15 @@ import android.util.Log;
 import com.example.microplanredsphereandroid.models.LoanApplicationModel;
 import com.example.microplanredsphereandroid.models.UserModel;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.ByteArrayOutputStream;
+import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -139,5 +144,39 @@ public class Utils {
         String formattedDate = df.format(nextMonthLastDay);
         Log.d(TAG, "Loan Payment up to-------:" + formattedDate);
         return nextMonthLastDay;
+    }
+
+    public static List<LoanApplicationModel> getSavedLoans(Context context) {
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        String loansString = preferences.getString(SAVED_LOANS, null);
+        if (loansString==null) {
+            return new ArrayList<>();
+        } else {
+            Type type = new TypeToken<List<LoanApplicationModel>>(){}.getType();
+            return new Gson().fromJson(loansString, type);
+        }
+    }
+
+    @SuppressLint("ApplySharedPref")
+    public static void saveLoanApplicationPermanently(Context context, LoanApplicationModel model) {
+        List<LoanApplicationModel> loanApplicationModels = getSavedLoans(context);
+        loanApplicationModels.add(model);
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(SAVED_LOANS, new Gson().toJson(loanApplicationModels));
+        editor.commit();
+    }
+
+    @SuppressLint("ApplySharedPref")
+    public static void deleteApplicationModel(Context context) {
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.remove(CURRENT_LOAN_APP);
+        editor.commit();
+    }
+
+    public static String getNumber(Context context) {
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        return preferences.getString("yyy", "077422629");
     }
 }

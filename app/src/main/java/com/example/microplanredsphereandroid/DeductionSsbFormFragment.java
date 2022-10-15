@@ -131,6 +131,7 @@ public class DeductionSsbFormFragment extends Fragment {
             }
             model.authorizerSignatureBase64 = Utils.bitmapToBase64String(bitmapAuthorizerSignature);
             model.authorisedBy = approverName.getText().toString();
+            model.loanType="New";
             Utils.saveApplicationModel(requireContext(), model);
 
         } catch (Exception e) {

@@ -15,24 +15,27 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.microplanredsphereandroid.adapter.RecyclerAdapter;
-import com.example.microplanredsphereandroid.models.LoanApplications;
+import com.example.microplanredsphereandroid.models.LoanApplicationModel;
+import com.example.microplanredsphereandroid.utils.Utils;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class ViewFragment extends Fragment {
     private ImageView backIcon, menu;
     private TextView title;
     private Button btn_previous;
-    private ArrayList<LoanApplications> applicationsList;
+    private ArrayList<LoanApplicationModel> applicationsList;
     private RecyclerView recyclerView;
-
+    private List<LoanApplicationModel> modelList;
     @Override
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_view, container, false);
+        modelList = Utils.getSavedLoans(getContext());
 
         //instantiating views
         backIcon = view.findViewById(R.id.left_icon);
@@ -77,18 +80,23 @@ public class ViewFragment extends Fragment {
     }
 
     private void setViewLoanApplicationsList() {
-        applicationsList.add(new LoanApplications("Belinda", "Viriri", 800, "ITEL LAPTOP", "28/01/22"));
-        applicationsList.add(new LoanApplications("Anotida", "Magara", 400, "SAMSUNG M02", "04/03/22"));
-        applicationsList.add(new LoanApplications("Pridemore", "Rugara", 500, "ITEL P37", "05/05/22"));
-        applicationsList.add(new LoanApplications("Taonga", "Tore", 600, "D LIGHT 200", "13/06/22"));
-        applicationsList.add(new LoanApplications("Takudzwa", "Magada", 8300, "DLIGHT D100", "06/06/22"));
-        applicationsList.add(new LoanApplications("Tinashe", "Meki", 8040, "ITEL SPEAKER", "05/03/22"));
-        applicationsList.add(new LoanApplications("Anna", "Mabari", 600, "CREATIVE 42'' TV", "06/03/22"));
-        applicationsList.add(new LoanApplications("Dereck", "Marambanyika", 100, "ORAIMO SPEAKER", "07/04/22"));
-        applicationsList.add(new LoanApplications("Tafadzwa", "Tereki", 900, "LENOVO TAB 7", "06/04/22"));
-        applicationsList.add(new LoanApplications("Terence", "Rugare", 2000, "ITEL KIDS TABLE", "08/03/22"));
-        applicationsList.add(new LoanApplications("Evah", "Tinarwe", 1000, "ITEL KIDS TABLET", "05/03/22"));
-        applicationsList.add(new LoanApplications("Brenda", "Ticharwa", 400, "SOUND SYSTEMS", "23/04/22"));
+
+        for (LoanApplicationModel loanApplication:modelList
+        ) {
+            applicationsList.add(loanApplication);
+        }
+//        applicationsList.add(new LoanApplications("Belinda", "Viriri", 800, "ITEL LAPTOP", "28/01/22"));
+//        applicationsList.add(new LoanApplications("Anotida", "Magara", 400, "SAMSUNG M02", "04/03/22"));
+//        applicationsList.add(new LoanApplications("Pridemore", "Rugara", 500, "ITEL P37", "05/05/22"));
+//        applicationsList.add(new LoanApplications("Taonga", "Tore", 600, "D LIGHT 200", "13/06/22"));
+//        applicationsList.add(new LoanApplications("Takudzwa", "Magada", 8300, "DLIGHT D100", "06/06/22"));
+//        applicationsList.add(new LoanApplications("Tinashe", "Meki", 8040, "ITEL SPEAKER", "05/03/22"));
+//        applicationsList.add(new LoanApplications("Anna", "Mabari", 600, "CREATIVE 42'' TV", "06/03/22"));
+//        applicationsList.add(new LoanApplications("Dereck", "Marambanyika", 100, "ORAIMO SPEAKER", "07/04/22"));
+//        applicationsList.add(new LoanApplications("Tafadzwa", "Tereki", 900, "LENOVO TAB 7", "06/04/22"));
+//        applicationsList.add(new LoanApplications("Terence", "Rugare", 2000, "ITEL KIDS TABLE", "08/03/22"));
+//        applicationsList.add(new LoanApplications("Evah", "Tinarwe", 1000, "ITEL KIDS TABLET", "05/03/22"));
+//        applicationsList.add(new LoanApplications("Brenda", "Ticharwa", 400, "SOUND SYSTEMS", "23/04/22"));
 
     }
 }

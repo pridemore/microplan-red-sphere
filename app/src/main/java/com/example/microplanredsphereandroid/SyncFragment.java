@@ -15,22 +15,25 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.microplanredsphereandroid.adapter.RecyclerAdapter;
-import com.example.microplanredsphereandroid.models.LoanApplications;
+import com.example.microplanredsphereandroid.models.LoanApplicationModel;
+import com.example.microplanredsphereandroid.utils.Utils;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SyncFragment extends Fragment {
     private ImageView backIcon, menu;
     private TextView title;
     private Button btn_previous,btn_sync;
     private RecyclerView recyclerView;
-    private ArrayList<LoanApplications> applicationsList;
-
+    private ArrayList<LoanApplicationModel> applicationsList;
+    private List<LoanApplicationModel> modelList;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sync, container, false);
+        modelList = Utils.getSavedLoans(getContext());
 
         //instantiating views
         backIcon = view.findViewById(R.id.left_icon);
@@ -40,6 +43,7 @@ public class SyncFragment extends Fragment {
         btn_sync=view.findViewById(R.id.btn_sync);
         recyclerView = view.findViewById(R.id.recyclerView);
         applicationsList = new ArrayList<>();
+
 
         //setting static text
         title.setText("Sync Applications");
@@ -82,12 +86,17 @@ public class SyncFragment extends Fragment {
 
 
     private void setSyncLoanApplicationsList() {
-        applicationsList.add(new LoanApplications("Anna", "Mabari",200,"LENOVO LAPTOP" ,"06/03/22"));
-        applicationsList.add(new LoanApplications("Dereck", "Marambanyika", 4000,"SOLAR PANEL 265 WATTS","07/04/22"));
-        applicationsList.add(new LoanApplications("Tafadzwa", "Tereki",700,"ITEL KIDS TABLET", "06/04/22"));
-        applicationsList.add(new LoanApplications("Terence", "Rugare", 500,"ITEL S16","08/03/22"));
-        applicationsList.add(new LoanApplications("Evah", "Tinarwe", 75,"BOOM","05/03/22"));
-        applicationsList.add(new LoanApplications("Brenda", "Ticharwa", 9000,"DLIGHT S3 X 3","23/04/22"));
+
+        for (LoanApplicationModel loanApplication:modelList
+        ) {
+            applicationsList.add(loanApplication);
+        }
+//        applicationsList.add(new LoanApplications("Anna", "Mabari",200,"LENOVO LAPTOP" ,"06/03/22"));
+//        applicationsList.add(new LoanApplications("Dereck", "Marambanyika", 4000,"SOLAR PANEL 265 WATTS","07/04/22"));
+//        applicationsList.add(new LoanApplications("Tafadzwa", "Tereki",700,"ITEL KIDS TABLET", "06/04/22"));
+//        applicationsList.add(new LoanApplications("Terence", "Rugare", 500,"ITEL S16","08/03/22"));
+//        applicationsList.add(new LoanApplications("Evah", "Tinarwe", 75,"BOOM","05/03/22"));
+//        applicationsList.add(new LoanApplications("Brenda", "Ticharwa", 9000,"DLIGHT S3 X 3","23/04/22"));
 
     }
 }

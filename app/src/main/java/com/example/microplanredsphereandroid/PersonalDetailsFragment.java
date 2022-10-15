@@ -54,14 +54,16 @@ public class PersonalDetailsFragment extends Fragment {
         page_title.setText("Personal Details");
 
         if (Utils.isLoanInProgress(requireContext())) {
-            if(model.title.equalsIgnoreCase("mr")){
-                radioGroupTitle.check(R.id.mr);
-            }else if(model.title.equalsIgnoreCase("mrs")){
-                radioGroupTitle.check(R.id.mrs);
-            }else if(model.title.equalsIgnoreCase("miss")){
-                radioGroupTitle.check(R.id.miss);
-            }else{
-                radioGroupTitle.check(R.id.other);
+            if (model.title!=null && !model.title.isEmpty()) {
+                if (model.title.equalsIgnoreCase("mr")) {
+                    radioGroupTitle.check(R.id.mr);
+                } else if (model.title.equalsIgnoreCase("mrs")) {
+                    radioGroupTitle.check(R.id.mrs);
+                } else if (model.title.equalsIgnoreCase("miss")) {
+                    radioGroupTitle.check(R.id.miss);
+                } else {
+                    radioGroupTitle.check(R.id.other);
+                }
             }
             first_name.setText(model.firstName);
             surname.setText(model.lastName);
