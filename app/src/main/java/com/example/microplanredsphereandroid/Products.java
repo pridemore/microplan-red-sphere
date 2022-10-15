@@ -25,13 +25,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class Products extends Fragment  {
+public class Products extends Fragment {
     private RecyclerView recycler;
     private LoanApplicationModel model;
     private View view;
     TextView title;
     private EditText editTextTopup;
-    Button btn_next,btn_prev;
+    Button btn_next, btn_prev;
     private static final String TAG = "Products";
 
     public static Products newInstance() {
@@ -42,42 +42,18 @@ public class Products extends Fragment  {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-       view= inflater.inflate(R.layout.fragment_products, container, false);
-
-       //instantiating views
-       editTextTopup = view.findViewById(R.id.editTextTopup);
+        view = inflater.inflate(R.layout.fragment_products, container, false);
         model = Utils.getApplicationModel(requireContext());
-        btn_next=view.findViewById(R.id.btn_nxt);
-        btn_prev=view.findViewById(R.id.btn_previous);
+
+        //instantiating views
+        editTextTopup = view.findViewById(R.id.editTextTopup);
+        btn_next = view.findViewById(R.id.btn_nxt);
+        btn_prev = view.findViewById(R.id.btn_previous);
         recycler = view.findViewById(R.id.recycler);
-        title=view.findViewById(R.id.title);
+        title = view.findViewById(R.id.title);
 
         //setting static text
         title.setText("Product");
-
-        //Buttons logic
-        btn_next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                VerificationError verificationError = productFormValidation();
-                if(verificationError==null) {
-                    editTextTopup.setText("" + model.topUp);
-                    Log.d(TAG,"Top up value-------------"+model.topUp);
-                    ((NewApplicationActivity) getActivity()).replaceFragment(new LoanDetailsFragment());
-                }else {
-                    String errorMessage = verificationError.getErrorMessage();
-                    Toast.makeText((NewApplicationActivity)getActivity(), errorMessage, Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-        btn_prev.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ((NewApplicationActivity)getActivity()).replaceFragment(new NewApplicationFragment());
-            }
-        });
-
-
         ArrayList<ProductEntry> products = new ArrayList<>(Arrays.asList(
                 new ProductEntry(new Product("ITEL LAPTOP", 120600.00)),
                 new ProductEntry(new Product("UNIVESAL 4 PLATE STOVE", 64800.00)),
@@ -142,60 +118,41 @@ public class Products extends Fragment  {
                 new ProductEntry(new Product("CANOM 15", 57600.00)),
                 new ProductEntry(new Product("TECNO POVOIUR", 66600.00))
         ));
+
         if (model.products == null || model.products.isEmpty()) {
             model.products = products;
         }
         Collections.sort(model.products);
         recycler.setAdapter(new ProductsAdapter(model.products));
 
+        //Buttons logic
+        btn_next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                VerificationError verificationError = productFormValidation();
+                if (verificationError == null) {
+                    editTextTopup.setText("" + model.topUp);
+                    Log.d(TAG, "Top up value-------------" + model.topUp);
+                    ((NewApplicationActivity) getActivity()).replaceFragment(new LoanDetailsFragment());
+                } else {
+                    String errorMessage = verificationError.getErrorMessage();
+                    Toast.makeText((NewApplicationActivity) getActivity(), errorMessage, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        btn_prev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((NewApplicationActivity) getActivity()).replaceFragment(new NewApplicationFragment());
+            }
+        });
+
 
 
         return view;
     }
 
-//    @Nullable
-//    @Override
-//    public VerificationError verifyStep() {
-//        try {
-//            boolean isProductsSelected = model.products != null && !model.products.isEmpty();
-//            if (isProductsSelected) {
-//                isProductsSelected = false;
-//                for (ProductEntry entry : model.products) {
-//                    if (entry.getQuantity() > 0) {
-//                        isProductsSelected = true;
-//                        break;
-//                    }
-//                }
-//            }
-//            boolean isTopupSelected = editTextTopup.getText().length() != 0 && Double.parseDouble(editTextTopup.getText().toString()) != 0;
-//            if (!isProductsSelected && !isTopupSelected) {
-//                return new VerificationError("Please select at least one product");
-//            } else if (isTopupSelected && isProductsSelected) {
-//                return new VerificationError("You cant select both top-up and products");
-//            }
-//            model.topUp = Double.parseDouble(editTextTopup.getText().toString());
-//            model.agent_id = Utils.getUserModel(getContext()).getId();
-//            Utils.saveApplicationModel(requireContext(), model);
-//        } catch (Exception e) {
-//            new AlertDialog.Builder(getActivity())
-//                    .setTitle("Error")
-//                    .setMessage(e.getMessage())
-//                    .show();
-//        }
-//        return null;
-//    }
-
-//    @Override
-//    public void onSelected() {
-//        editTextTopup.setText("" + model.topUp);
-//    }
-
-//    @Override
-//    public void onError(@NonNull VerificationError error) {
-//        Snackbar.make(view, error.getErrorMessage(), BaseTransientBottomBar.LENGTH_LONG).show();
-//    }
-
-    private VerificationError productFormValidation(){
+    private VerificationError productFormValidation() {
         try {
             boolean isProductsSelected = model.products != null && !model.products.isEmpty();
             if (isProductsSelected) {

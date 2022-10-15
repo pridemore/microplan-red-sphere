@@ -78,6 +78,20 @@ public class LoanDetailsFragment extends Fragment {
 
         //setting static text
         title.setText("Loan Details");
+        model = Utils.getApplicationModel(requireContext());
+        if (model.products==null || model.products.size()==0) {
+            loanPurpose.setText("Top-Up");
+        } else {
+            StringBuilder builder = new StringBuilder();
+            for (ProductEntry productEntry : model.products) {
+                if (productEntry.getQuantity()>0) builder.append(productEntry.getQuantity()).append(" X ").append(productEntry.getProduct().getName()).append("; ");
+            }
+            if (builder.length()==0){
+                loanPurpose.setText("Top-Up");
+            }else {
+                loanPurpose.setText(builder.toString());
+            }
+        }
 
         //Buttons logic
         btn_previous.setOnClickListener(new View.OnClickListener() {
@@ -91,22 +105,7 @@ public class LoanDetailsFragment extends Fragment {
             public void onClick(View view) {
                 VerificationError verificationError =loanDetailsValidation();
                 if(verificationError==null) {
-
                     //on success validation
-                    model = Utils.getApplicationModel(requireContext());
-                    if (model.products==null || model.products.size()==0) {
-                        loanPurpose.setText("Top-Up");
-                    } else {
-                        StringBuilder builder = new StringBuilder();
-                        for (ProductEntry productEntry : model.products) {
-                            if (productEntry.getQuantity()>0) builder.append(productEntry.getQuantity()).append(" X ").append(productEntry.getProduct().getName()).append("; ");
-                        }
-                        if (builder.length()==0){
-                            loanPurpose.setText("Top-Up");
-                        }else {
-                            loanPurpose.setText(builder.toString());
-                        }
-                    }
                     //logging
                     Log.d(TAG,"LoanApplication Topup ---:"+model.topUp);
                     List<ProductEntry> products = model.products;
@@ -199,19 +198,5 @@ public class LoanDetailsFragment extends Fragment {
         return null;
     }
 
-//    @Nullable
-//    @Override
-//    public VerificationError verifyStep() {
-//        return null;
-//    }
 
-//    @Override
-//    public void onSelected() {
-//
-//    }
-
-//    @Override
-//    public void onError(@NonNull VerificationError error) {
-//
-//    }
 }
