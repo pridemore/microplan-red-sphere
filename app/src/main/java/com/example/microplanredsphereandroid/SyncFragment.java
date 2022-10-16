@@ -1,9 +1,11 @@
 package com.example.microplanredsphereandroid;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -274,7 +276,19 @@ public class SyncFragment extends Fragment {
                                 //updateViews();
                             }
                         } else {
-                            progressDialog.setMessage("Error occurred "+response.body().toString());
+                            progressDialog.setMessage("Error occurred");
+                            //progressDialog.setMessage("Error occurred "+response.body().toString());
+                            new Handler().postDelayed(()->{
+                                progressDialog.dismiss();
+                                new AlertDialog.Builder(view.getContext())
+                                        .setTitle("Error")
+                                        .setMessage("Error occurred on submitting "+loanApplicationModel.firstName+" "+loanApplicationModel.lastName+"'s "+"Loan Application")
+                                        .setCancelable(false)
+                                        .setPositiveButton("OKAY", (d,i)-> {
+                                            d.dismiss();
+                                        })
+                                        .show();
+                            }, 3000);
                         }
                     }
 
@@ -291,7 +305,25 @@ public class SyncFragment extends Fragment {
             }
         });
 
+        progressDialog.setOnCancelListener(dialog -> thread.interrupt());
 
+        boolean loanFound = false;
+        for (LoanApplicationModel model: modelList) {
+            if(model.isSubmitted.equalsIgnoreCase("false")) {
+                loanFound = true;
+                break;
+            }
+        }
+
+        if (loanFound) {
+            thread.start();
+        } else {
+            progressDialog.dismiss();
+            Snackbar snackbar = Snackbar.make(view, "No Pending Loan Applications found", BaseTransientBottomBar.LENGTH_INDEFINITE)
+                    .setBackgroundTint(Color.DKGRAY).setTextColor(Color.WHITE);
+            snackbar.setAction("OKAY", v1 -> snackbar.dismiss()).show();
+        }
+         //updateViews();
     }
 
 
