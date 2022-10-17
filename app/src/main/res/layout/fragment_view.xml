@@ -38,6 +38,9 @@
             android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayoutBorroweSignature">
 
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="409dp"
@@ -46,6 +49,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+            </ScrollView>
         </LinearLayout>
 
     </LinearLayout>
