@@ -29,10 +29,15 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Utils {
+
+    private static final String ALLOWED_CHARACTERS ="0123456789QWERTYUIOPASDFGHJKLZXCVBNM";
+
+
     @SuppressLint("ApplySharedPref")
     public static void saveLatestSignature(Context context, Bitmap bitmap) {
         SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
@@ -204,5 +209,17 @@ public class Utils {
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(SAVED_LOANS, new Gson().toJson(loanApplicationModels));
         editor.commit();
+    }
+
+    public static String generateUniqueRef(LoanApplicationModel model) {
+        return model.agent_id+"-"+System.currentTimeMillis()+"-"+Utils.getRandomString(8);
+    }
+    public static String getRandomString(final int sizeOfRandomString)
+    {
+        final Random random=new Random();
+        final StringBuilder sb=new StringBuilder(sizeOfRandomString);
+        for(int i=0;i<sizeOfRandomString;++i)
+            sb.append(ALLOWED_CHARACTERS.charAt(random.nextInt(ALLOWED_CHARACTERS.length())));
+        return sb.toString();
     }
 }

@@ -21,10 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.microplanredsphereandroid.adapter.RecyclerAdapter;
 import com.example.microplanredsphereandroid.models.CommonResponse;
-import com.example.microplanredsphereandroid.models.ImageUploadItem;
 import com.example.microplanredsphereandroid.models.LoanApplicationModel;
-import com.example.microplanredsphereandroid.models.ProductEntry;
-import com.example.microplanredsphereandroid.models.SaleItem;
 import com.example.microplanredsphereandroid.retrofit.LoanService;
 import com.example.microplanredsphereandroid.retrofit.RetrofitService;
 import com.example.microplanredsphereandroid.utils.NullSerializer;
@@ -34,10 +31,12 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.DefaultSerializerProvider;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.gson.Gson;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import retrofit2.Call;
@@ -51,6 +50,7 @@ public class SyncFragment extends Fragment {
     private Button btn_previous,btn_sync;
     private RecyclerView recyclerView;
     private ArrayList<LoanApplicationModel> applicationsList;
+    LoanApplicationModel model;
     private List<LoanApplicationModel> modelList;
     int uploaded=0;
     @Override
@@ -58,6 +58,7 @@ public class SyncFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sync, container, false);
+        model = Utils.getApplicationModel(requireContext());
         modelList = Utils.getSavedLoans(getContext());
 
         //instantiating views
@@ -138,6 +139,13 @@ public class SyncFragment extends Fragment {
         Thread thread = new Thread(() -> {
             uploaded = 0;
             for (final LoanApplicationModel loanApplicationModel : modelList) {
+                ///////////////////////////to be removed
+                loanApplicationModel.application_title = loanApplicationModel.firstName + " "+ loanApplicationModel.lastName;
+                //loanApplicationModel.agent_id = Utils.getUserModel(this).getId();
+                loanApplicationModel.uniqueRef = Utils.generateUniqueRef(loanApplicationModel);
+                SimpleDateFormat format = new SimpleDateFormat("dd MMM yyyy HH:mm", Locale.UK);
+                loanApplicationModel.dateAndTime = format.format(new Date());
+               //////////////////to be removed
                 if (loanApplicationModel.isSubmitted.equalsIgnoreCase("true")) {
                     uploaded++;
                     if (uploaded == modelList.size()) {
@@ -155,47 +163,47 @@ public class SyncFragment extends Fragment {
                 boolean isError = false;
 
                 //upload items
-                List<ImageUploadItem> uploadItems = new ArrayList<>();
-                if (loanApplicationModel.documentNationalIdBase64!=null
-                        && !loanApplicationModel.documentNationalIdBase64.isEmpty()) {
-                    uploadItems.add(new ImageUploadItem("documentNationalId", loanApplicationModel.documentNationalIdBase64, false));
-                }
-                if (loanApplicationModel.documentPhotoBase64!=null
-                        && !loanApplicationModel.documentPhotoBase64.isEmpty()) {
-                    uploadItems.add(new ImageUploadItem("documentPhoto", loanApplicationModel.documentPhotoBase64, false));
-                }
-                if (loanApplicationModel.documentPayslipBase64!=null
-                        && !loanApplicationModel.documentPayslipBase64.isEmpty()) {
-                    uploadItems.add(new ImageUploadItem("documentPayslip", loanApplicationModel.documentPayslipBase64, false));
-                }
-                if (loanApplicationModel.documentProofOfEmploymentBase64!=null
-                        && !loanApplicationModel.documentProofOfEmploymentBase64.isEmpty()) {
-                    uploadItems.add(new ImageUploadItem("documentProofOfEmployment", loanApplicationModel.documentProofOfEmploymentBase64, false));
-                }
-                if (loanApplicationModel.borrowerSignatureBase64!=null
-                        && !loanApplicationModel.borrowerSignatureBase64.isEmpty()) {
-                    uploadItems.add(new ImageUploadItem("borrowerSignature", loanApplicationModel.borrowerSignatureBase64, true));
-                }
-                if (loanApplicationModel.witnessSignatureBase64!=null
-                        && !loanApplicationModel.witnessSignatureBase64.isEmpty()) {
-                    uploadItems.add(new ImageUploadItem("witnessSignature", loanApplicationModel.witnessSignatureBase64, true));
-                }
-                if (loanApplicationModel.witnessSignatureBase642!=null
-                        && !loanApplicationModel.witnessSignatureBase642.isEmpty()) {
-                    uploadItems.add(new ImageUploadItem("witnessSignature2", loanApplicationModel.witnessSignatureBase642, true));
-                }
-                if (loanApplicationModel.documentMarriageCertificateBase64!=null
-                        && !loanApplicationModel.documentMarriageCertificateBase64.isEmpty()) {
-                    uploadItems.add(new ImageUploadItem("documentMarriageCertificate", loanApplicationModel.documentMarriageCertificateBase64, false));
-                }
-                if (loanApplicationModel.documentSerialNumberBase64!=null
-                        && !loanApplicationModel.documentSerialNumberBase64.isEmpty()) {
-                    uploadItems.add(new ImageUploadItem("documentSerialNumber", loanApplicationModel.documentSerialNumberBase64, false));
-                }
-                if (loanApplicationModel.documentInvoiceBase64!=null
-                        && !loanApplicationModel.documentInvoiceBase64.isEmpty()) {
-                    uploadItems.add(new ImageUploadItem("documentInvoice", loanApplicationModel.documentInvoiceBase64, false));
-                }
+//                List<ImageUploadItem> uploadItems = new ArrayList<>();
+//                if (loanApplicationModel.documentNationalIdBase64!=null
+//                        && !loanApplicationModel.documentNationalIdBase64.isEmpty()) {
+//                    uploadItems.add(new ImageUploadItem("documentNationalId", loanApplicationModel.documentNationalIdBase64, false));
+//                }
+//                if (loanApplicationModel.documentPhotoBase64!=null
+//                        && !loanApplicationModel.documentPhotoBase64.isEmpty()) {
+//                    uploadItems.add(new ImageUploadItem("documentPhoto", loanApplicationModel.documentPhotoBase64, false));
+//                }
+//                if (loanApplicationModel.documentPayslipBase64!=null
+//                        && !loanApplicationModel.documentPayslipBase64.isEmpty()) {
+//                    uploadItems.add(new ImageUploadItem("documentPayslip", loanApplicationModel.documentPayslipBase64, false));
+//                }
+//                if (loanApplicationModel.documentProofOfEmploymentBase64!=null
+//                        && !loanApplicationModel.documentProofOfEmploymentBase64.isEmpty()) {
+//                    uploadItems.add(new ImageUploadItem("documentProofOfEmployment", loanApplicationModel.documentProofOfEmploymentBase64, false));
+//                }
+//                if (loanApplicationModel.borrowerSignatureBase64!=null
+//                        && !loanApplicationModel.borrowerSignatureBase64.isEmpty()) {
+//                    uploadItems.add(new ImageUploadItem("borrowerSignature", loanApplicationModel.borrowerSignatureBase64, true));
+//                }
+//                if (loanApplicationModel.witnessSignatureBase64!=null
+//                        && !loanApplicationModel.witnessSignatureBase64.isEmpty()) {
+//                    uploadItems.add(new ImageUploadItem("witnessSignature", loanApplicationModel.witnessSignatureBase64, true));
+//                }
+//                if (loanApplicationModel.witnessSignatureBase642!=null
+//                        && !loanApplicationModel.witnessSignatureBase642.isEmpty()) {
+//                    uploadItems.add(new ImageUploadItem("witnessSignature2", loanApplicationModel.witnessSignatureBase642, true));
+//                }
+//                if (loanApplicationModel.documentMarriageCertificateBase64!=null
+//                        && !loanApplicationModel.documentMarriageCertificateBase64.isEmpty()) {
+//                    uploadItems.add(new ImageUploadItem("documentMarriageCertificate", loanApplicationModel.documentMarriageCertificateBase64, false));
+//                }
+//                if (loanApplicationModel.documentSerialNumberBase64!=null
+//                        && !loanApplicationModel.documentSerialNumberBase64.isEmpty()) {
+//                    uploadItems.add(new ImageUploadItem("documentSerialNumber", loanApplicationModel.documentSerialNumberBase64, false));
+//                }
+//                if (loanApplicationModel.documentInvoiceBase64!=null
+//                        && !loanApplicationModel.documentInvoiceBase64.isEmpty()) {
+//                    uploadItems.add(new ImageUploadItem("documentInvoice", loanApplicationModel.documentInvoiceBase64, false));
+//                }
 
                 //TODO File Upload
 
@@ -247,17 +255,19 @@ public class SyncFragment extends Fragment {
                         if (map.get(x).length() > 150) map.put(x, "n/A");
                     } catch (Exception e){}
                 }
-                List<SaleItem> saleItemList = new ArrayList<>();
-                for (ProductEntry productEntry:loanApplicationModel.products) {
-                    if (productEntry.getQuantity()>0) {
-                        saleItemList.add(new SaleItem(productEntry.getProduct().getPrice(),
-                                productEntry.getProduct().getName(), productEntry.getQuantity()));
-                    }
-                }
-                if (saleItemList.isEmpty()) {
-                    saleItemList.add(new SaleItem(loanApplicationModel.topUp, "Top-Up", 1));
-                }
-                map.put("product_items", new Gson().toJson(saleItemList));
+//                List<SaleItem> saleItemList = new ArrayList<>();
+//                for (ProductEntry productEntry:loanApplicationModel.products) {
+//                    if (productEntry.getQuantity()>0) {
+//                        saleItemList.add(new SaleItem(productEntry.getProduct().getPrice(),
+//                                productEntry.getProduct().getName(), productEntry.getQuantity()));
+//                    }
+//                }
+//                if (saleItemList.isEmpty()) {
+//                    saleItemList.add(new SaleItem(loanApplicationModel.topUp, "Top-Up", 1));
+//                }
+//                map.put("product_items", new Gson().toJson(saleItemList));
+
+
                 Log.d(TAG,"Object to post to backend--------------:"+map);
                 loanService.submitLoan(map).enqueue(new Callback<CommonResponse>() {
                     @Override
@@ -276,7 +286,7 @@ public class SyncFragment extends Fragment {
                                 //updateViews();
                             }
                         } else {
-                            progressDialog.setMessage("Error occurred");
+                            progressDialog.setMessage("Error occurred "+response.message());
                             //progressDialog.setMessage("Error occurred "+response.body().toString());
                             new Handler().postDelayed(()->{
                                 progressDialog.dismiss();
@@ -288,7 +298,7 @@ public class SyncFragment extends Fragment {
                                             d.dismiss();
                                         })
                                         .show();
-                            }, 3000);
+                            }, 30000);
                         }
                     }
 

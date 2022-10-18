@@ -21,7 +21,7 @@ public interface LoanService {
     @POST("")
     Call<LoanApplications>save(@Body LoanApplications loanApplications);
 
-    @POST("post-data")
+    @POST("/api/application/createApplication")
     @FormUrlEncoded
     Call<CommonResponse> submitLoan(@FieldMap Map<String,String> params);
 }

@@ -1,16 +1,15 @@
 package com.example.microplanredsphereandroid.models;
 
 public class LoanApplications {
-    public String uniqueRef;
-    public String application_title;
-    public long agent_id = 7;
-    public long id;
-    public String isSubmitted = "false";
+    private String uniqueRef;
+    private String application_title;
+    private long agent_id = 7;
+    private String isSubmitted = "false";
     private String dateAndTime;
 
     //Loan Details
-    public int loanPeriod;
-    public double netSalary;
+    private int loanPeriod;
+    private double netSalary;
     private String loanPurpose;
     private String approvedLoanAmount;
     private String establishmentFees;

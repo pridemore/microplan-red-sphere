@@ -21,9 +21,12 @@ import com.example.microplanredsphereandroid.models.ProductEntry;
 import com.example.microplanredsphereandroid.utils.Utils;
 import com.stepstone.stepper.VerificationError;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Date;
+import java.util.Locale;
 
 public class Products extends Fragment {
     private RecyclerView recycler;
@@ -171,7 +174,12 @@ public class Products extends Fragment {
                 return new VerificationError("You cant select both top-up and products");
             }
             model.topUp = Double.parseDouble(editTextTopup.getText().toString());
-            model.agent_id = Utils.getUserModel(getContext()).getId();
+            //model.agent_id = Utils.getUserModel(getContext()).getId();
+            model.application_title = model.firstName + " "+ model.lastName;
+            //model.agent_id = Utils.getUserModel(this).getId();
+            model.uniqueRef = Utils.generateUniqueRef(model);
+            SimpleDateFormat format = new SimpleDateFormat("dd MMM yyyy HH:mm", Locale.UK);
+            model.dateAndTime = format.format(new Date());
             Utils.saveApplicationModel(requireContext(), model);
         } catch (Exception e) {
             new AlertDialog.Builder(getActivity())
