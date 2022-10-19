@@ -9,6 +9,7 @@ public class Constants {
     public static final String LATEST_IMAGE = "latestImage";
     public static final String SAVED_LOANS = "savedLoans";
     public static final String USER = "user";
+    public static final String PRODUCTS="products";
     private static final int MILLIS_IN_SECOND = 1000;
     private static final int SECONDS_IN_MINUTE = 60;
     private static final int MINUTES_IN_HOUR = 60;

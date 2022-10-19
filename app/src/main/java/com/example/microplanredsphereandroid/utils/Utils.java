@@ -3,9 +3,9 @@ package com.example.microplanredsphereandroid.utils;
 import static com.example.microplanredsphereandroid.utils.Constants.CURRENT_LOAN_APP;
 import static com.example.microplanredsphereandroid.utils.Constants.LATEST_SIGNATURE;
 import static com.example.microplanredsphereandroid.utils.Constants.PREFS_KEY;
+import static com.example.microplanredsphereandroid.utils.Constants.PRODUCTS;
 import static com.example.microplanredsphereandroid.utils.Constants.SAVED_LOANS;
 import static com.example.microplanredsphereandroid.utils.Constants.USER;
-
 import static java.util.Calendar.getInstance;
 
 import android.annotation.SuppressLint;
@@ -15,9 +15,15 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
 import android.util.Log;
+import android.view.View;
 
+import com.example.microplanredsphereandroid.models.CommonResponse;
 import com.example.microplanredsphereandroid.models.LoanApplicationModel;
+import com.example.microplanredsphereandroid.models.Product;
+import com.example.microplanredsphereandroid.models.ProductEntry;
 import com.example.microplanredsphereandroid.models.UserModel;
+import com.example.microplanredsphereandroid.retrofit.ProductService;
+import com.example.microplanredsphereandroid.retrofit.RetrofitService;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -33,9 +39,13 @@ import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class Utils {
 
-    private static final String ALLOWED_CHARACTERS ="0123456789QWERTYUIOPASDFGHJKLZXCVBNM";
+    private static final String ALLOWED_CHARACTERS = "0123456789QWERTYUIOPASDFGHJKLZXCVBNM";
 
 
     @SuppressLint("ApplySharedPref")
@@ -121,22 +131,23 @@ public class Utils {
         byte[] b = baos.toByteArray();
         return Base64.encodeToString(b, Base64.DEFAULT);
     }
+
     public static Bitmap base64ImageToBitmap(String base64Image) {
         byte[] imageAsBytes = Base64.decode(base64Image.getBytes(), Base64.DEFAULT);
         return BitmapFactory.decodeByteArray(imageAsBytes, 0, imageAsBytes.length);
     }
 
-    public static Date firstDayOfNext(Calendar calendar,String TAG) {
+    public static Date firstDayOfNext(Calendar calendar, String TAG) {
         SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy", Locale.UK);
         Date oldDate = calendar.getTime();
-        String oldDateFormart=df.format(oldDate);
-        Log.d(TAG,"Old Date-------:"+oldDateFormart);
+        String oldDateFormart = df.format(oldDate);
+        Log.d(TAG, "Old Date-------:" + oldDateFormart);
 
         calendar.add(Calendar.MONTH, 1);
         calendar.set(Calendar.DATE, calendar.getActualMinimum(Calendar.DAY_OF_MONTH));
         Date nextMonthFirstDay = calendar.getTime();
         String formattedDate = df.format(nextMonthFirstDay);
-        Log.d(TAG,"New Date-------:"+formattedDate);
+        Log.d(TAG, "New Date-------:" + formattedDate);
         return nextMonthFirstDay;
     }
 
@@ -154,10 +165,11 @@ public class Utils {
     public static List<LoanApplicationModel> getSavedLoans(Context context) {
         SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
         String loansString = preferences.getString(SAVED_LOANS, null);
-        if (loansString==null) {
+        if (loansString == null) {
             return new ArrayList<>();
         } else {
-            Type type = new TypeToken<List<LoanApplicationModel>>(){}.getType();
+            Type type = new TypeToken<List<LoanApplicationModel>>() {
+            }.getType();
             return new Gson().fromJson(loansString, type);
         }
     }
@@ -198,7 +210,7 @@ public class Utils {
     public static void updateModel(Context context, LoanApplicationModel model) {
         List<LoanApplicationModel> loanApplicationModels = getSavedLoans(context);
         LoanApplicationModel updatedModel = null;
-        for (LoanApplicationModel loanApplicationModel:loanApplicationModels) {
+        for (LoanApplicationModel loanApplicationModel : loanApplicationModels) {
             if (model.uniqueRef.equals(loanApplicationModel.uniqueRef)) {
                 updatedModel = loanApplicationModel;
             }
@@ -212,14 +224,81 @@ public class Utils {
     }
 
     public static String generateUniqueRef(LoanApplicationModel model) {
-        return model.agent_id+"-"+System.currentTimeMillis()+"-"+Utils.getRandomString(8);
+        return model.agent_id + "-" + System.currentTimeMillis() + "-" + Utils.getRandomString(8);
     }
-    public static String getRandomString(final int sizeOfRandomString)
-    {
-        final Random random=new Random();
-        final StringBuilder sb=new StringBuilder(sizeOfRandomString);
-        for(int i=0;i<sizeOfRandomString;++i)
+
+    public static String getRandomString(final int sizeOfRandomString) {
+        final Random random = new Random();
+        final StringBuilder sb = new StringBuilder(sizeOfRandomString);
+        for (int i = 0; i < sizeOfRandomString; ++i)
             sb.append(ALLOWED_CHARACTERS.charAt(random.nextInt(ALLOWED_CHARACTERS.length())));
         return sb.toString();
+    }
+
+    public static void loadProductsFromBackend(View view) {
+        RetrofitService retrofitService = new RetrofitService();
+        ProductService productService = retrofitService.getRetrofit().create(ProductService.class);
+        ;
+
+        productService.getAllProduct().enqueue(new Callback<CommonResponse>() {
+            @Override
+            public void onResponse(Call<CommonResponse> call, Response<CommonResponse> response) {
+                List<Product> products = (ArrayList<Product>) response.body().getResult();
+                Log.d("Product List", "" + products);
+//                Gson gson = new Gson();
+//                Type productListType = new TypeToken<ArrayList<Product>>() {}.getType();
+//                List<Product> productList = gson.fromJson(productListJson, productListType);
+//                Log.d("Product List", "" + productList);
+//                for (Product product :
+//                        productList) {
+//                    saveListOfProductsModel(view.getContext(),productListJson);
+//                }
+
+            }
+
+            @Override
+            public void onFailure(Call<CommonResponse> call, Throwable t) {
+                ArrayList<ProductEntry> products = new ArrayList<>();
+                products.add(new ProductEntry(new Product("ITEL LAPTOP", 120600.00)));
+                products.add(new ProductEntry(new Product("UNIVESAL 4 PLATE STOVE", 64800.00)));
+                products.add(new ProductEntry(new Product("2 P/GAS STOVE (5kg tank)", 22860.00)));
+                products.add(new ProductEntry(new Product("2 P/GAS STOVE (3KG TANK)", 21060.00)));
+                products.add(new ProductEntry(new Product("2 P/GAS STOVE ONLY", 13860.00)));
+                products.add(new ProductEntry(new Product("5KG GAS TANK ONLY", 9000.00)));
+                products.add(new ProductEntry(new Product("19KG TANK", 25200.00)));
+                products.add(new ProductEntry(new Product("9KG TANK", 18000.00)));
+                products.add(new ProductEntry(new Product("3KG TANK", 7200.00)));
+                products.add(new ProductEntry(new Product("OPEN VIEW DECODER", 17280.00)));
+                products.add(new ProductEntry(new Product("SOUND SYSTEMS", 43200.00)));
+                products.add(new ProductEntry(new Product("ITEL A16 PLUS", 14220.00)));
+                products.add(new ProductEntry(new Product("ITEL P37", 28550.00)));
+                products.add(new ProductEntry(new Product("SAMSUNG M02", 46800.00)));
+                products.add(new ProductEntry(new Product("ITEL A56", 21960.00)));
+                //Toast.makeText(view.getContext(), "Network Error occurred,Failing to fetch Products, "+t, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+    }
+
+    @SuppressLint("ApplySharedPref")
+    public static void saveListOfProductsModel(Context context, String model) {
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(PRODUCTS, model);
+        editor.commit();
+    }
+
+    public static ArrayList<Product> getSavedProducts(Context context) {
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        String productString = preferences.getString(PRODUCTS, null);
+        Log.d("ProductString----:", productString);
+        if (productString == null) {
+            return new ArrayList<>();
+        } else {
+            Type type = new TypeToken<ArrayList<Product>>() {
+            }.getType();
+            return new Gson().fromJson(productString, type);
+        }
     }
 }

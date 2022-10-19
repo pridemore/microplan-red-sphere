@@ -170,7 +170,7 @@ public class LoanDetailsFragment extends Fragment {
             double loanInsuranceFees = 0.025 * newLoanAmount;
             double fundsTransferFees = 0.02 * newLoanAmount;
             double totalCashDisbursedLessUpfrontFees = price;
-            double interestRate = 0.15; //15%
+            double interestRate = 0.09; //15%
             double loanRepaymentPerMonth = -FinanceLib.pmt(interestRate, model.loanPeriod, newLoanAmount, 0, false);
             if (loanRepaymentPerMonth > (model.netSalary / 2)) {
                 return new VerificationError("Monthly payment will be greater than 50% of income");

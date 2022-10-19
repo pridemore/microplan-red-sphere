@@ -18,7 +18,6 @@
         <include
             android:id="@+id/include2"
             layout="@layout/back_next" />
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

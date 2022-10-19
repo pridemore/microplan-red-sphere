@@ -17,6 +17,7 @@
         <include
             android:id="@+id/include2"
             layout="@layout/back_next" />
+
         <TextView
             android:id="@+id/textViewName"
             android:layout_marginStart="10dp"
@@ -289,5 +290,6 @@
                 android:inputType="date" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
 </ScrollView>

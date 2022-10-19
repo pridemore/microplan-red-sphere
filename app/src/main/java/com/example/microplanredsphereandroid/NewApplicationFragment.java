@@ -2,15 +2,16 @@ package com.example.microplanredsphereandroid;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
+
+import com.example.microplanredsphereandroid.utils.Utils;
 
 public class NewApplicationFragment extends Fragment {
     private static final String TAG = "New Application";
@@ -30,7 +31,7 @@ public class NewApplicationFragment extends Fragment {
         btn_previous=view.findViewById(R.id.btn_previous);
         btn_nxt=view.findViewById(R.id.btn_nxt);
         title.setText("New Application");
-
+        Utils.loadProductsFromBackend(view);
         btn_previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
