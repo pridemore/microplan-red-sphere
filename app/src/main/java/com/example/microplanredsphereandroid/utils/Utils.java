@@ -1,6 +1,7 @@
 package com.example.microplanredsphereandroid.utils;
 
 import static com.example.microplanredsphereandroid.utils.Constants.CURRENT_LOAN_APP;
+import static com.example.microplanredsphereandroid.utils.Constants.DOCUMENTS;
 import static com.example.microplanredsphereandroid.utils.Constants.LATEST_SIGNATURE;
 import static com.example.microplanredsphereandroid.utils.Constants.PREFS_KEY;
 import static com.example.microplanredsphereandroid.utils.Constants.PRODUCTS;
@@ -18,6 +19,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.microplanredsphereandroid.models.CommonResponse;
+import com.example.microplanredsphereandroid.models.DocumentUploadModal;
 import com.example.microplanredsphereandroid.models.LoanApplicationModel;
 import com.example.microplanredsphereandroid.models.Product;
 import com.example.microplanredsphereandroid.models.ProductEntry;
@@ -83,6 +85,15 @@ public class Utils {
         }
     }
 
+    public static DocumentUploadModal getDocumentUploadModel(Context context) {
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        if (preferences.getString(DOCUMENTS, "").isEmpty()) {
+            return new DocumentUploadModal();
+        } else {
+            return new Gson().fromJson(preferences.getString(DOCUMENTS, ""), DocumentUploadModal.class);
+        }
+    }
+
     @SuppressLint("ApplySharedPref")
     public static void saveUserModel(Context context, UserModel model) {
         SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
@@ -101,6 +112,14 @@ public class Utils {
         SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(CURRENT_LOAN_APP, new Gson().toJson(model));
+        editor.commit();
+    }
+
+    @SuppressLint("ApplySharedPref")
+    public static void saveDocumentUploadModal(Context context, LoanApplicationModel model) {
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(DOCUMENTS, new Gson().toJson(model));
         editor.commit();
     }
 
