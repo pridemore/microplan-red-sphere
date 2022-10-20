@@ -67,20 +67,16 @@ public class HomeFragment extends Fragment {
     }
 
     private void setLoanApplicationList() {
-        final List<LoanApplicationModel> modelList = Utils.getSavedLoans(getContext());
-        for (LoanApplicationModel loanApplication : modelList) {
-            Log.d(TAG, "LoanObject-----:" + loanApplication.firstName);
-            Log.d(TAG, "LoanObject-----:" + loanApplication.lastName);
-            Log.d(TAG, "LoanObject-----:" + loanApplication.loanApplicationFee);
-            Log.d(TAG,"Is Synced to server---------:"+loanApplication.isSubmitted);
-        }
-        for (LoanApplicationModel loanApplication : modelList
+        final List<LoanApplicationModel> toBeSyncedModelList = Utils.getSavedLoans(getContext());
+        final List<LoanApplicationModel> yourHistoryModellList = Utils.getSavedLoansFromDb(getContext());
+
+        for (LoanApplicationModel loanApplication : yourHistoryModellList
         ) {
             applicationsList.add(loanApplication);
         }
 
-        textTotalApplications.setText(String.valueOf(modelList.size()));
-        textSyncedToServer.setText(String.valueOf(modelList.size()));
+        textTotalApplications.setText(String.valueOf(yourHistoryModellList.size()));
+        textSyncedToServer.setText(String.valueOf(toBeSyncedModelList.size()));
 //        applicationsList.add(new LoanApplications("Belinda","Viriri",276,"2 P/GAS STOVE","28/01/22"));
 //        applicationsList.add(new LoanApplications("Anotida","Magara",5476,"UNIVESAL 4 PLATE STOVE","04/03/22"));
 //        applicationsList.add(new LoanApplications("Pridemore","Rugara",576,"LENOVO LAPTOP","05/05/22"));

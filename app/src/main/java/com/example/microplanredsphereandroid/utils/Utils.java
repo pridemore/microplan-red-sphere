@@ -1,6 +1,7 @@
 package com.example.microplanredsphereandroid.utils;
 
 import static com.example.microplanredsphereandroid.utils.Constants.CURRENT_LOAN_APP;
+import static com.example.microplanredsphereandroid.utils.Constants.DB_LOANS;
 import static com.example.microplanredsphereandroid.utils.Constants.DOCUMENTS;
 import static com.example.microplanredsphereandroid.utils.Constants.LATEST_SIGNATURE;
 import static com.example.microplanredsphereandroid.utils.Constants.PREFS_KEY;
@@ -24,10 +25,13 @@ import com.example.microplanredsphereandroid.models.LoanApplicationModel;
 import com.example.microplanredsphereandroid.models.Product;
 import com.example.microplanredsphereandroid.models.ProductEntry;
 import com.example.microplanredsphereandroid.models.UserModel;
+import com.example.microplanredsphereandroid.retrofit.LoanService;
 import com.example.microplanredsphereandroid.retrofit.ProductService;
 import com.example.microplanredsphereandroid.retrofit.RetrofitService;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+
+import org.json.JSONArray;
 
 import java.io.ByteArrayOutputStream;
 import java.lang.reflect.Type;
@@ -263,15 +267,10 @@ public class Utils {
             @Override
             public void onResponse(Call<CommonResponse> call, Response<CommonResponse> response) {
                 List<Product> products = (ArrayList<Product>) response.body().getResult();
-                Log.d("Product List", "" + products);
-//                Gson gson = new Gson();
-//                Type productListType = new TypeToken<ArrayList<Product>>() {}.getType();
-//                List<Product> productList = gson.fromJson(productListJson, productListType);
-//                Log.d("Product List", "" + productList);
-//                for (Product product :
-//                        productList) {
-//                    saveListOfProductsModel(view.getContext(),productListJson);
-//                }
+                JSONArray jsArray = new JSONArray(products);
+                String productListJson= jsArray.toString();
+                Log.d("Product List", "" + productListJson);
+                    saveListOfProductsModel(view.getContext(),productListJson);
 
             }
 
@@ -320,4 +319,51 @@ public class Utils {
             return new Gson().fromJson(productString, type);
         }
     }
+
+    public static void loadLoanHistoryFromBackend(Context context) {
+        RetrofitService retrofitService = new RetrofitService();
+        LoanService loanService = retrofitService.getRetrofit().create(LoanService.class);
+        ;
+
+        loanService.getAllLoans("7").enqueue(new Callback<CommonResponse>() {
+            @Override
+            public void onResponse(Call<CommonResponse> call, Response<CommonResponse> response) {
+                List<LoanApplicationModel> loanApplicationModels = (ArrayList<LoanApplicationModel>) response.body().getResult();
+                JSONArray jsArray = new JSONArray(loanApplicationModels);
+                String loanApplicationListJson= jsArray.toString();
+                Log.d("Loan Applications List", "" + loanApplicationListJson);
+                saveListOfLoanApplicationModel(context,loanApplicationListJson);
+
+            }
+
+            @Override
+            public void onFailure(Call<CommonResponse> call, Throwable t) {
+
+            }
+        });
+
+
+    }
+
+    @SuppressLint("ApplySharedPref")
+    public static void saveListOfLoanApplicationModel(Context context, String model) {
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(DB_LOANS, model);
+        editor.commit();
+    }
+
+    public static ArrayList<LoanApplicationModel> getSavedLoansFromDb(Context context) {
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        String productString = preferences.getString(DB_LOANS, null);
+        Log.d("ProductString----:", productString);
+        if (productString == null) {
+            return new ArrayList<>();
+        } else {
+            Type type = new TypeToken<ArrayList<LoanApplicationModel>>() {
+            }.getType();
+            return new Gson().fromJson(productString, type);
+        }
+    }
+
 }

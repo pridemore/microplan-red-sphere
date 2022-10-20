@@ -10,6 +10,7 @@ public class Constants {
     public static final String SAVED_LOANS = "savedLoans";
     public static final String USER = "user";
     public static final String PRODUCTS="products";
+    public static final String DB_LOANS="dbLoans";
     public static final String DOCUMENTS="documents";
     private static final int MILLIS_IN_SECOND = 1000;
     private static final int SECONDS_IN_MINUTE = 60;

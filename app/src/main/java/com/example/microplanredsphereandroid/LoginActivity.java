@@ -1,30 +1,20 @@
 package com.example.microplanredsphereandroid;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import com.example.microplanredsphereandroid.models.CommonResponse;
-import com.example.microplanredsphereandroid.models.LoginModal;
-import com.example.microplanredsphereandroid.models.UserModel;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.microplanredsphereandroid.retrofit.AuthService;
 import com.example.microplanredsphereandroid.retrofit.RetrofitService;
 import com.example.microplanredsphereandroid.utils.Utils;
-import com.google.android.material.textfield.TextInputEditText;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
     Button login;
-    EditText email,password;
+    EditText email, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,11 +22,11 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         login = findViewById(R.id.sign_in);
-        email=findViewById(R.id.username);
-        password=findViewById(R.id.password);
+        email = findViewById(R.id.username);
+        password = findViewById(R.id.password);
 
-        RetrofitService retrofitService=new RetrofitService();
-        AuthService authService=retrofitService.getRetrofit().create(AuthService.class);
+        RetrofitService retrofitService = new RetrofitService();
+        AuthService authService = retrofitService.getRetrofit().create(AuthService.class);
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +53,7 @@ public class LoginActivity extends AppCompatActivity {
 //                                    if (response.body().getStatusCode()==400) {
 //                                        Toast.makeText(LoginActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
 //                                    } else {
+                Utils.loadLoanHistoryFromBackend(LoginActivity.this);
 //                                        Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
 //                                        Utils.saveUserModel(LoginActivity.this, response.body().getResult());
 //                                        startActivity(new Intent(getApplicationContext(), HomeActivity.class));

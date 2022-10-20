@@ -44,7 +44,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         String name = applicationsArrayList.get(position).firstName;
         String surname=applicationsArrayList.get(position).lastName;
-        String date=applicationsArrayList.get(position).dateSignBorrower;
+        String date=applicationsArrayList.get(position).dateAndTime;
         String product = applicationsArrayList.get(position).loanPurpose;
         String installment=applicationsArrayList.get(position).newLoanAmount.toString();
 
