@@ -119,7 +119,7 @@ public class ContactDetailsFragment extends Fragment {
     private VerificationError contactDetailsValidation() {
         try {
             if (model.addressType==null||model.addressType.isEmpty()|| residential_address.length() == 0
-            || current_citizenship.length()==0 || mobile_number.length() == 0 ||email_address.length()==0) {
+            || current_citizenship.length()==0 || mobile_number.length() == 0) {
                 return new VerificationError("Please fill in required fields");
             }
             if (email_address.length()>0 && !Utils.validEmail(email_address.getText().toString())) {

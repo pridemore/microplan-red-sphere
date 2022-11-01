@@ -16,7 +16,8 @@ public class LoanApplicationModel {
 
     public String price, newLoanAmount, fiftyPercentOfSalary, approvedLoanAmount, establishmentFees,
     loanApplicationFee, loanInsuranceFees, fundsTransferFees, totalCashDisbursedLessUpfrontFees,
-    interestRate, loanRepaymentPerMonth,loanType;
+    interestRate, loanRepaymentPerMonth,loanType, loanFromDate, loanToDate,monthlyRate;
+    public String payeeCode;
 
     public String title, gender, maritalStatus, firstName, lastName, maidenName, nationalId,
             countryOfBirth, numOfDependants;

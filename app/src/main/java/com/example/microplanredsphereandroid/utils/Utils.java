@@ -167,7 +167,7 @@ public class Utils {
         Log.d(TAG, "Old Date-------:" + oldDateFormart);
 
         calendar.add(Calendar.MONTH, 1);
-        calendar.set(Calendar.DATE, calendar.getActualMinimum(Calendar.DAY_OF_MONTH));
+        calendar.set(Calendar.DATE, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
         Date nextMonthFirstDay = calendar.getTime();
         String formattedDate = df.format(nextMonthFirstDay);
         Log.d(TAG, "New Date-------:" + formattedDate);
@@ -356,7 +356,7 @@ public class Utils {
     public static ArrayList<LoanApplicationModel> getSavedLoansFromDb(Context context) {
         SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
         String productString = preferences.getString(DB_LOANS, null);
-        Log.d("ProductString----:", productString);
+        //Log.d("ProductString----:", productString);
         if (productString == null) {
             return new ArrayList<>();
         } else {

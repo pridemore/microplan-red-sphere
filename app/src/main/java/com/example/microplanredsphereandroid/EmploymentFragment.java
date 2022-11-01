@@ -89,6 +89,7 @@ public class EmploymentFragment extends Fragment {
             gross_monthly_salary.setText(String.valueOf(model.grossSalary));
             employer_email_address.setText(model.employersEmail);
             employer_phone_number.setText(model.employersPhoneNumber);
+            other_name_of_employer.setText(model.otherNameOfEmployer);
         }
 
 
@@ -139,7 +140,7 @@ public class EmploymentFragment extends Fragment {
         try {
             if (profession.length() == 0 || name_of_employer== null || address_of_employer.length() == 0
                     || position_held.length() == 0 || ec_number.length() == 0 || date_of_employment.length() == 0 ||
-                    gross_monthly_salary.length() == 0 || employer_email_address.length() == 0 || employer_phone_number.length() == 0) {
+                    gross_monthly_salary.length() == 0 || employer_phone_number.length() == 0) {
                 return new VerificationError("Please enter required fields");
             }
             if (!ec_number.getText().toString().matches("\\d{7}[A-Z]")) {
@@ -166,6 +167,7 @@ public class EmploymentFragment extends Fragment {
             model.grossSalary = Double.parseDouble(gross_monthly_salary.getText().toString());
             model.employersEmail = employer_email_address.getText().toString();
             model.employersPhoneNumber = employer_phone_number.getText().toString();
+            model.otherNameOfEmployer=other_name_of_employer.getText().toString();
             Utils.saveApplicationModel(requireContext(), model);
         } catch (Exception e) {
             new AlertDialog.Builder(getActivity())

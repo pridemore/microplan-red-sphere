@@ -35,7 +35,7 @@ public class LoanDetailsFragment extends Fragment {
     TextView title;
     Button btn_previous, btn_nxt;
     private LoanApplicationModel model;
-    TextInputEditText dob, netSalary, loanPurpose, loanPeriod;
+    TextInputEditText dob, netSalary, loanPurpose, loanPeriod,loanCreditAmount;
     final Calendar myCalendar = Calendar.getInstance();
 
     @Override
@@ -55,8 +55,14 @@ public class LoanDetailsFragment extends Fragment {
         netSalary = view.findViewById(R.id.netSalary);
         loanPurpose = view.findViewById(R.id.loanPurpose);
         loanPeriod = view.findViewById(R.id.loanPeriod);
+        loanCreditAmount=view.findViewById(R.id.loanCreditAmount);
 
         if (Utils.isLoanInProgress(requireContext())) {
+            if(model.topUp!=0.0){
+                loanCreditAmount.setText(String.valueOf(model.topUp));
+            }else{
+                loanCreditAmount.setText(model.price);
+            }
             dob.setText(model.dateOfBirth);
             loanPurpose.setText(model.loanPurpose);
             netSalary.setText(String.valueOf(model.netSalary));
@@ -81,15 +87,20 @@ public class LoanDetailsFragment extends Fragment {
         model = Utils.getApplicationModel(requireContext());
         if (model.products==null || model.products.size()==0) {
             loanPurpose.setText("Top-Up");
+            loanCreditAmount.setText(String.valueOf(model.topUp));
         } else {
+            double price=0.0;
             StringBuilder builder = new StringBuilder();
             for (ProductEntry productEntry : model.products) {
                 if (productEntry.getQuantity()>0) builder.append(productEntry.getQuantity()).append(" X ").append(productEntry.getProduct().getName()).append("; ");
+                 price += (productEntry.getProduct().getPrice()*productEntry.getQuantity());
             }
             if (builder.length()==0){
                 loanPurpose.setText("Top-Up");
+                loanCreditAmount.setText(String.valueOf(price));
             }else {
                 loanPurpose.setText(builder.toString());
+                loanCreditAmount.setText(String.valueOf(price));
             }
         }
 
@@ -143,6 +154,10 @@ public class LoanDetailsFragment extends Fragment {
             if (dob.length() == 0 || netSalary.length() == 0 || loanPurpose.length() == 0 || loanPeriod.length() == 0) {
                 return new VerificationError("Please fill in all fields");
             }
+
+            if(Double.parseDouble(loanCreditAmount.getText().toString())>=200.00){
+                return new VerificationError("Credit Loan Amount should not exceed 200.00 USD.");
+            }
             //Deny if :::
             //if age > 60
             if (((((double) (System.currentTimeMillis() - myCalendar.getTimeInMillis())) / Constants.MILLISECONDS_IN_YEAR)) >= 60) {
@@ -162,7 +177,7 @@ public class LoanDetailsFragment extends Fragment {
             double price = 0;
             for (ProductEntry productEntry : model.products) if (productEntry.getQuantity()>0) price += (productEntry.getProduct().getPrice()*productEntry.getQuantity());
             if (price == 0) price = model.topUp;
-            double newLoanAmount = price / 0.84;
+            double newLoanAmount = price; /// 0.84;
             double fiftyPercentOfSalary = 0.5 * model.netSalary;
             double approvedLoanAmount = newLoanAmount;
             double establishmentFees = 0.05 * newLoanAmount;
@@ -170,7 +185,7 @@ public class LoanDetailsFragment extends Fragment {
             double loanInsuranceFees = 0.025 * newLoanAmount;
             double fundsTransferFees = 0.02 * newLoanAmount;
             double totalCashDisbursedLessUpfrontFees = price;
-            double interestRate = 0.09; //15%
+            double interestRate = 0.12; //0.09; //15%
             double loanRepaymentPerMonth = -FinanceLib.pmt(interestRate, model.loanPeriod, newLoanAmount, 0, false);
             if (loanRepaymentPerMonth > (model.netSalary / 2)) {
                 return new VerificationError("Monthly payment will be greater than 50% of income");

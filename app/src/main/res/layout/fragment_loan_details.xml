@@ -18,25 +18,6 @@
         <include
             android:id="@+id/include2"
             layout="@layout/back_next" />
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            android:id="@+id/textInputLayoutCreditFacilityAmountRequired"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="10dp"-->
-<!--            android:layout_marginTop="10dp"-->
-<!--            android:layout_marginEnd="10dp"-->
-<!--            android:hint="Credit Facility Amount Required(in USD)">-->
-
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:id="@+id/amountRequired"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:lines="1"-->
-<!--                android:maxLines="1"-->
-<!--                android:inputType="numberDecimal"/>-->
-
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
-
 
 <!--        <TextView-->
 <!--            android:id="@+id/textInputLayoutRepaymentPeriodRequired"-->
@@ -157,6 +138,23 @@
                 android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutCreditFacilityAmountRequired"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Credit Facility Amount Required">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loanCreditAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>.material.textfield.TextInputLayout>-->
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutPeriod"

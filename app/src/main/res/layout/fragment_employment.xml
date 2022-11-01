@@ -185,7 +185,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            android:hint="Employers Email Address">
+            android:hint="Employers Email Address(Optional)">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/employer_email_address"

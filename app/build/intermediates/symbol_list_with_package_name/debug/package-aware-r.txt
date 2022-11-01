@@ -2863,11 +2863,9 @@ id animateToStart
 id antiClockwise
 id anticipate
 id applicantFullName
-id approverName
 id arc
 id asConfigured
 id async
-id authoriserSignature
 id auto
 id autoComplete
 id autoCompleteToEnd
@@ -2907,7 +2905,6 @@ id buttonPhoto
 id buttonPickImage
 id buttonProofOfEmployment
 id buttonSerialNumber
-id buttonSign
 id buttonWitness1Sign
 id buttonWitness2Sign
 id cache_measures
@@ -2963,7 +2960,6 @@ id current_citizenship
 id custom
 id customPanel
 id cut
-id dateAuthorised
 id dateOfBirth
 id dateOfBorrowerSignature
 id dateOfWitness1Signature
@@ -3107,6 +3103,7 @@ id line3
 id linear
 id listMode
 id list_item
+id loanCreditAmount
 id loanPeriod
 id loanPurpose
 id loanType
@@ -3407,16 +3404,14 @@ id textInputLayoutAccountNumber
 id textInputLayoutAccountType
 id textInputLayoutApplicantFullName
 id textInputLayoutApplication
-id textInputLayoutApproverName
-id textInputLayoutAuthoriserSignature
 id textInputLayoutBorroweSignature
 id textInputLayoutBorrowerName
 id textInputLayoutBranchName
 id textInputLayoutClientName
 id textInputLayoutCountryOfBirth
+id textInputLayoutCreditFacilityAmountRequired
 id textInputLayoutCurrentCitizenship
 id textInputLayoutDOB
-id textInputLayoutDateAuthorised
 id textInputLayoutDateOfBirth
 id textInputLayoutDateOfBorrowerSignature
 id textInputLayoutDateOfEmployment
@@ -3495,10 +3490,8 @@ id textView21
 id textView22
 id textViewApplicantName
 id textViewApplicationDate
-id textViewAuthorisedBy
 id textViewClientName
 id textViewClientSignature
-id textViewDate
 id textViewDateOfBirth
 id textViewEcNumber
 id textViewEmailAddress

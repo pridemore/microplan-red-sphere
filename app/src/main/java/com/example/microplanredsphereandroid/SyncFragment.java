@@ -35,11 +35,8 @@ import com.fasterxml.jackson.databind.ser.DefaultSerializerProvider;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 
 import retrofit2.Call;
@@ -145,13 +142,6 @@ public class SyncFragment extends Fragment {
         Thread thread = new Thread(() -> {
             uploaded = 0;
             for (final LoanApplicationModel loanApplicationModel : modelList) {
-                ///////////////////////////to be removed
-                loanApplicationModel.application_title = loanApplicationModel.firstName + " " + loanApplicationModel.lastName;
-                //loanApplicationModel.agent_id = Utils.getUserModel(this).getId();
-                loanApplicationModel.uniqueRef = Utils.generateUniqueRef(loanApplicationModel);
-                SimpleDateFormat format = new SimpleDateFormat("dd MMM yyyy HH:mm", Locale.UK);
-                loanApplicationModel.dateAndTime = format.format(new Date());
-                //////////////////to be removed
                 if (loanApplicationModel.isSubmitted.equalsIgnoreCase("true")) {
                     uploaded++;
                     if (uploaded == modelList.size()) {

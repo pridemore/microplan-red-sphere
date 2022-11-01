@@ -132,6 +132,7 @@ public class PersonalDetailsFragment extends Fragment {
             model.nationalId = national_id.getText().toString();
             model.passportNumber = passport_number.getText().toString();
             model.countryOfBirth = country_of_birth.getText().toString();
+            model.application_title = model.firstName + " "+ model.lastName;
             Utils.saveApplicationModel(requireContext(), model);
         } catch (Exception e) {
             new AlertDialog.Builder(getActivity())

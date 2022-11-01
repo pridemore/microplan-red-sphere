@@ -2,7 +2,6 @@ package com.example.microplanredsphereandroid;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -143,8 +142,8 @@ public class Products extends Fragment {
             public void onClick(View view) {
                 VerificationError verificationError = productFormValidation();
                 if (verificationError == null) {
-                    editTextTopup.setText("" + model.topUp);
-                    Log.d(TAG, "Top up value-------------" + model.topUp);
+//                    editTextTopup.setText("" + model.topUp);
+//                    Log.d(TAG, "Top up value-------------" + model.topUp);
                     ((NewApplicationActivity) getActivity()).replaceFragment(new LoanDetailsFragment());
                 } else {
                     String errorMessage = verificationError.getErrorMessage();
@@ -182,12 +181,12 @@ public class Products extends Fragment {
             } else if (isTopupSelected && isProductsSelected) {
                 return new VerificationError("You cant select both top-up and products");
             }
-            model.topUp = Double.parseDouble(editTextTopup.getText().toString());
+            model.topUp = Double.valueOf(editTextTopup.getText().toString());
             //model.agent_id = Utils.getUserModel(getContext()).getId();
-            model.application_title = model.firstName + " "+ model.lastName;
             //model.agent_id = Utils.getUserModel(this).getId();
             model.uniqueRef = Utils.generateUniqueRef(model);
             SimpleDateFormat format = new SimpleDateFormat("dd MMM yyyy HH:mm", Locale.UK);
+            model.payeeCode="84008";
             model.dateAndTime = format.format(new Date());
             Utils.saveApplicationModel(requireContext(), model);
         } catch (Exception e) {

@@ -41,7 +41,8 @@ public class FileUploadUtils {
         Retrofit fileUpload = new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(httpClient.build())
-                .baseUrl("https://01ea-197-221-253-158.in.ngrok.io")
+                //.baseUrl("https://01ea-197-221-253-158.in.ngrok.io")
+                .baseUrl("https://bcc0-197-221-253-164.in.ngrok.io")
                 .build();
         FileService fileService = fileUpload.create(FileService.class);
 

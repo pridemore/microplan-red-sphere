@@ -47,8 +47,6 @@ id action_SecondFragment_to_FirstFragment
 id add
 id address_of_employer
 id applicantFullName
-id approverName
-id authoriserSignature
 id bankName
 id borrowerName
 id borrowerSignature
@@ -72,7 +70,6 @@ id buttonPhoto
 id buttonPickImage
 id buttonProofOfEmployment
 id buttonSerialNumber
-id buttonSign
 id buttonWitness1Sign
 id buttonWitness2Sign
 id cancelSignature
@@ -81,7 +78,6 @@ id clientName
 id complete
 id country_of_birth
 id current_citizenship
-id dateAuthorised
 id dateOfBirth
 id dateOfBorrowerSignature
 id dateOfWitness1Signature
@@ -111,6 +107,7 @@ id include2
 id invoice
 id isEmployeePermanent
 id left_icon
+id loanCreditAmount
 id loanPeriod
 id loanPurpose
 id loanType
@@ -186,16 +183,14 @@ id textInputLayoutAccountNumber
 id textInputLayoutAccountType
 id textInputLayoutApplicantFullName
 id textInputLayoutApplication
-id textInputLayoutApproverName
-id textInputLayoutAuthoriserSignature
 id textInputLayoutBorroweSignature
 id textInputLayoutBorrowerName
 id textInputLayoutBranchName
 id textInputLayoutClientName
 id textInputLayoutCountryOfBirth
+id textInputLayoutCreditFacilityAmountRequired
 id textInputLayoutCurrentCitizenship
 id textInputLayoutDOB
-id textInputLayoutDateAuthorised
 id textInputLayoutDateOfBirth
 id textInputLayoutDateOfBorrowerSignature
 id textInputLayoutDateOfEmployment
@@ -270,10 +265,8 @@ id textView21
 id textView22
 id textViewApplicantName
 id textViewApplicationDate
-id textViewAuthorisedBy
 id textViewClientName
 id textViewClientSignature
-id textViewDate
 id textViewDateOfBirth
 id textViewEcNumber
 id textViewEmailAddress

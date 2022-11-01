@@ -1,6 +1,5 @@
 package com.example.microplanredsphereandroid;
 
-import static android.app.Activity.RESULT_OK;
 import static java.util.Calendar.getInstance;
 
 import android.app.AlertDialog;
@@ -32,7 +31,7 @@ public class DeductionSsbFormFragment extends Fragment {
     public final int REQ_CODE = 859;
     private static final String TAG = "Deduction SSB Form";
     ImageView backIcon;
-    ImageView menu, authoriserSignature;
+    ImageView menu;
     private Bitmap bitmapAuthorizerSignature;
     TextView title;
     private LoanApplicationModel model;
@@ -53,7 +52,7 @@ public class DeductionSsbFormFragment extends Fragment {
         title = view.findViewById(R.id.title);
         btn_previous = view.findViewById(R.id.btn_previous);
         btn_nxt = view.findViewById(R.id.btn_nxt);
-        authoriserSignature = view.findViewById(R.id.authoriserSignature);
+//        authoriserSignature = view.findViewById(R.id.authoriserSignature);
         first_name = view.findViewById(R.id.firstName);
         surname = view.findViewById(R.id.surname);
         employeeCode = view.findViewById(R.id.employeeCode);
@@ -61,37 +60,40 @@ public class DeductionSsbFormFragment extends Fragment {
         monthlyRate = view.findViewById(R.id.monthlyRate);
         fromDate = view.findViewById(R.id.fromDate);
         toDate = view.findViewById(R.id.toDate);
-        approverName = view.findViewById(R.id.approverName);
-        dateAuthorised = view.findViewById(R.id.dateAuthorised);
-        buttonSign=view.findViewById(R.id.buttonSign);
+//        approverName = view.findViewById(R.id.approverName);
+//        dateAuthorised = view.findViewById(R.id.dateAuthorised);
+//        buttonSign=view.findViewById(R.id.buttonSign);
 
         //setting static text
         title.setText("Allowance/Deduction SSB-Form");
         Date c = getInstance().getTime();
         SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy", Locale.UK);
-        String authorizationDate = df.format(c);
+//        String authorizationDate = df.format(c);
         first_name.setText(String.format("%s", model.firstName));
         surname.setText(String.format("%s", model.lastName));
         employeeCode.setText(model.employeeNumber);
-        payeeCode.setText("84008");
-        dateAuthorised.setText(authorizationDate);
+        payeeCode.setText(model.payeeCode);
+//        dateAuthorised.setText(authorizationDate);
         Calendar calendar = getInstance();
         calendar.setTime(c);
         Date fromLoanPaymentDate = Utils.firstDayOfNext(calendar, TAG);
         String loanPaymentFromDate = df.format(fromLoanPaymentDate);
         fromDate.setText(loanPaymentFromDate);
+        model.loanFromDate=loanPaymentFromDate;
         Date toLoanPaymentDate = Utils.lastDayOfLoanPayment(model.loanPeriod, TAG);
         String loanPaymentToDate = df.format(toLoanPaymentDate);
         toDate.setText(loanPaymentToDate);
+        model.loanToDate=loanPaymentToDate;
+        model.monthlyRate=model.loanRepaymentPerMonth;
 
-        if (Utils.isLoanInProgress(requireContext())) {
-            approverName.setText(model.authorisedBy);
-            if (model.authorizerSignatureBase64 != null) {
-                bitmapAuthorizerSignature = Utils.base64ImageToBitmap(model.authorizerSignatureBase64);
-                authoriserSignature.setImageBitmap(bitmapAuthorizerSignature);
-            }
-
-        }
+//        if (Utils.isLoanInProgress(requireContext())) {
+//            approverName.setText(model.authorisedBy);
+//            if (model.authorizerSignatureBase64 != null) {
+//                bitmapAuthorizerSignature = Utils.base64ImageToBitmap(model.authorizerSignatureBase64);
+//                authoriserSignature.setImageBitmap(bitmapAuthorizerSignature);
+//            }
+//
+//        }
 
         //Buttons logic
         btn_previous.setOnClickListener(new View.OnClickListener() {
@@ -126,11 +128,11 @@ public class DeductionSsbFormFragment extends Fragment {
 
     private VerificationError contactDetailsValidation() {
         try {
-            if (bitmapAuthorizerSignature == null || approverName.length() == 0) {
-                return new VerificationError("Please fill in required fields");
-            }
-            model.authorizerSignatureBase64 = Utils.bitmapToBase64String(bitmapAuthorizerSignature);
-            model.authorisedBy = approverName.getText().toString();
+//            if (bitmapAuthorizerSignature == null || approverName.length() == 0) {
+//                return new VerificationError("Please fill in required fields");
+//            }
+//            model.authorizerSignatureBase64 = Utils.bitmapToBase64String(bitmapAuthorizerSignature);
+//            model.authorisedBy = approverName.getText().toString();
             model.loanType="New";
             Utils.saveApplicationModel(requireContext(), model);
 
@@ -146,10 +148,10 @@ public class DeductionSsbFormFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQ_CODE && resultCode == RESULT_OK) {
-            bitmapAuthorizerSignature = Utils.getLatestSignature(requireContext());
-            authoriserSignature.setImageBitmap(bitmapAuthorizerSignature);
-        }
+//        if (requestCode == REQ_CODE && resultCode == RESULT_OK) {
+//            bitmapAuthorizerSignature = Utils.getLatestSignature(requireContext());
+//            authoriserSignature.setImageBitmap(bitmapAuthorizerSignature);
+//        }
     }
 
 }
