@@ -42,7 +42,7 @@ public class FileUploadUtils {
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(httpClient.build())
                 //.baseUrl("https://01ea-197-221-253-158.in.ngrok.io")
-                .baseUrl("https://bcc0-197-221-253-164.in.ngrok.io")
+                .baseUrl("https://c1a7-77-246-50-222.in.ngrok.io")
                 .build();
         FileService fileService = fileUpload.create(FileService.class);
 

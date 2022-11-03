@@ -1,7 +1,9 @@
 package com.example.microplanredsphereandroid;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +27,7 @@ import java.util.List;
 public class ViewFragment extends Fragment {
     private ImageView backIcon, menu;
     private TextView title;
-    private Button btn_previous;
+    private Button btn_previous,btn_refresh;
     private ArrayList<LoanApplicationModel> applicationsList;
     private RecyclerView recyclerView;
     private List<LoanApplicationModel> modelList;
@@ -44,6 +46,7 @@ public class ViewFragment extends Fragment {
         title = view.findViewById(R.id.title);
         btn_previous = view.findViewById(R.id.btn_previous);
         recyclerView = view.findViewById(R.id.recyclerView);
+        btn_refresh=view.findViewById(R.id.btn_refresh);
         applicationsList = new ArrayList<>();
 
         //setting static text
@@ -60,6 +63,27 @@ public class ViewFragment extends Fragment {
                 }
             }
         });
+
+        btn_refresh.setOnClickListener(new View.OnClickListener() {
+                                           @Override
+                                           public void onClick(View view) {
+                                               //dialog for showing processing
+                                               ProgressDialog progressDialog = new ProgressDialog(requireActivity());
+                                               progressDialog.setMessage("Refreshing Applications. Please wait...");
+                                               progressDialog.show();
+                                               Thread thread = new Thread(() -> {
+                                                   Utils.loadLoanHistoryFromBackend(getContext());
+                                               });
+                                               thread.start();
+
+                                               new Handler().postDelayed(() -> {
+                                                   getActivity().getSupportFragmentManager().beginTransaction().detach(ViewFragment.this).attach(ViewFragment.this).commit();
+                                                   progressDialog.dismiss();
+
+                                               }, 3000);
+
+                                           }
+                                       });
 
         //load data to our arraylist
         setViewLoanApplicationsList();

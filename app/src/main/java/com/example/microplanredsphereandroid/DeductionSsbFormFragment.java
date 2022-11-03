@@ -35,7 +35,7 @@ public class DeductionSsbFormFragment extends Fragment {
     private Bitmap bitmapAuthorizerSignature;
     TextView title;
     private LoanApplicationModel model;
-    Button btn_previous, btn_nxt,buttonSign;
+    Button btn_previous, btn_nxt ;// ,buttonSign;
     private TextInputEditText first_name, surname, employeeCode, payeeCode, monthlyRate, fromDate, toDate, approverName,
             dateAuthorised;
 
@@ -84,6 +84,7 @@ public class DeductionSsbFormFragment extends Fragment {
         String loanPaymentToDate = df.format(toLoanPaymentDate);
         toDate.setText(loanPaymentToDate);
         model.loanToDate=loanPaymentToDate;
+        monthlyRate.setText(model.loanRepaymentPerMonth);
         model.monthlyRate=model.loanRepaymentPerMonth;
 
 //        if (Utils.isLoanInProgress(requireContext())) {
@@ -114,12 +115,12 @@ public class DeductionSsbFormFragment extends Fragment {
                 }
             }
         });
-        buttonSign.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivityForResult(new Intent(requireContext(), Signature.class), REQ_CODE);
-            }
-        });
+//        buttonSign.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivityForResult(new Intent(requireContext(), Signature.class), REQ_CODE);
+//            }
+//        });
 
 
         return view;

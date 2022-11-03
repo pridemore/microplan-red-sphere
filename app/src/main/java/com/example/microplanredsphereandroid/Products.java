@@ -64,6 +64,10 @@ public class Products extends Fragment {
             products.add(new ProductEntry(new Product(product.getName(), product.getPrice())));
         }
 
+        if(products.size()==0){
+            Toast.makeText(view.getContext(), "Connect on Internet to load available Products", Toast.LENGTH_SHORT).show();
+        }
+
 
 //        ArrayList<ProductEntry> products = new ArrayList<>(Arrays.asList(
 //                new ProductEntry(new Product("ITEL LAPTOP", 120600.00)),

@@ -36,24 +36,6 @@
                 android:inputType="textCapWords"/>
 
         </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutPlaceOfBorrowerSignature"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:hint="Place Of Signature">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/placeOfBorrowerSignature"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:lines="1"
-                android:maxLines="1"
-                android:inputType="textCapWords"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -83,25 +65,6 @@
         </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutDateOfBorrowerSignature"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:hint="Date">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/dateOfBorrowerSignature"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:focusable="false"
-                android:inputType="date" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutWitness1FullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -112,25 +75,6 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/witness1FullName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:lines="1"
-                android:maxLines="1"
-                android:inputType="textCapWords"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutPlaceOfWitness1Signature"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:hint="Place Of Signature">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/placeOfWitness1Signature"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lines="1"
@@ -167,25 +111,6 @@
         </LinearLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutDateOfWitness1Signature"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:hint="Date">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/dateOfWitness1Signature"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:focusable="false"
-                android:inputType="date" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutWitness2FullName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -204,24 +129,6 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutPlaceOfWitness2Signature"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:hint="Place Of Signature">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/placeOfWitness2Signature"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:lines="1"
-                android:maxLines="1"
-                android:inputType="textCapWords"/>
-
-        </com.google.android.material.textfield.TextInputLayout>
         <LinearLayout
             android:orientation="horizontal"
             android:id="@+id/textInputLayoutWitness2Signature"
@@ -249,7 +156,26 @@
 
         </LinearLayout>
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayoutDateOfWitness2Signature"
+            android:id="@+id/textInputLayoutPlaceOfBorrowerSignature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Place Of Signature">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/placeOfBorrowerSignature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:inputType="textCapWords"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutDateOfBorrowerSignature"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -258,13 +184,12 @@
             android:hint="Date">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/dateOfWitness2Signature"
+                android:id="@+id/dateOfBorrowerSignature"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:focusable="false"
                 android:inputType="date" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
     </LinearLayout>
 </ScrollView>

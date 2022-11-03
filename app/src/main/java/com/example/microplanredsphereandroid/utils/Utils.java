@@ -18,6 +18,7 @@ import android.graphics.BitmapFactory;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.microplanredsphereandroid.models.CommonResponse;
 import com.example.microplanredsphereandroid.models.DocumentUploadModal;
@@ -266,11 +267,15 @@ public class Utils {
         productService.getAllProduct().enqueue(new Callback<CommonResponse>() {
             @Override
             public void onResponse(Call<CommonResponse> call, Response<CommonResponse> response) {
-                List<Product> products = (ArrayList<Product>) response.body().getResult();
-                JSONArray jsArray = new JSONArray(products);
-                String productListJson= jsArray.toString();
-                Log.d("Product List", "" + productListJson);
-                    saveListOfProductsModel(view.getContext(),productListJson);
+                if (response.body() != null) {
+                    List<Product> products = (ArrayList<Product>) response.body().getResult();
+                    JSONArray jsArray = new JSONArray(products);
+                    String productListJson = jsArray.toString();
+                    Log.d("Product List", "" + productListJson);
+                    saveListOfProductsModel(view.getContext(), productListJson);
+                } else {
+                    Toast.makeText(view.getContext(), "Network Error occurred,Failing to fetch Products, ", Toast.LENGTH_SHORT).show();
+                }
 
             }
 
@@ -310,7 +315,7 @@ public class Utils {
     public static ArrayList<Product> getSavedProducts(Context context) {
         SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
         String productString = preferences.getString(PRODUCTS, null);
-        Log.d("ProductString----:", productString);
+        //Log.d("ProductString----:", productString);
         if (productString == null) {
             return new ArrayList<>();
         } else {
@@ -328,11 +333,14 @@ public class Utils {
         loanService.getAllLoans("7").enqueue(new Callback<CommonResponse>() {
             @Override
             public void onResponse(Call<CommonResponse> call, Response<CommonResponse> response) {
-                List<LoanApplicationModel> loanApplicationModels = (ArrayList<LoanApplicationModel>) response.body().getResult();
-                JSONArray jsArray = new JSONArray(loanApplicationModels);
-                String loanApplicationListJson= jsArray.toString();
-                Log.d("Loan Applications List", "" + loanApplicationListJson);
-                saveListOfLoanApplicationModel(context,loanApplicationListJson);
+                Log.d("Response ", "Response " + response.body());
+                if (response.body() != null) {
+                    List<LoanApplicationModel> loanApplicationModels = (ArrayList<LoanApplicationModel>) response.body().getResult();
+                    JSONArray jsArray = new JSONArray(loanApplicationModels);
+                    String loanApplicationListJson = jsArray.toString();
+                    Log.d("Loan Applications List", "" + loanApplicationListJson);
+                    saveListOfLoanApplicationModel(context, loanApplicationListJson);
+                }
 
             }
 

@@ -2671,6 +2671,7 @@ drawable design_snackbar_background
 drawable home_nav_image
 drawable ic_baseline_arrow_back_24
 drawable ic_baseline_menu_24
+drawable ic_baseline_refresh_24
 drawable ic_baseline_sync_24
 drawable ic_clock_black_24dp
 drawable ic_dashboard_black_24dp
@@ -2890,6 +2891,7 @@ id btnCheck
 id btn_new_application
 id btn_nxt
 id btn_previous
+id btn_refresh
 id btn_sync
 id buttonBorrowerSign
 id buttonCancel
@@ -2962,8 +2964,6 @@ id customPanel
 id cut
 id dateOfBirth
 id dateOfBorrowerSignature
-id dateOfWitness1Signature
-id dateOfWitness2Signature
 id date_of_birth
 id date_of_employment
 id date_picker_actions
@@ -3271,8 +3271,6 @@ id photo
 id physicalAddress
 id pin
 id placeOfBorrowerSignature
-id placeOfWitness1Signature
-id placeOfWitness2Signature
 id position
 id position_held
 id postLayout
@@ -3415,8 +3413,6 @@ id textInputLayoutDOB
 id textInputLayoutDateOfBirth
 id textInputLayoutDateOfBorrowerSignature
 id textInputLayoutDateOfEmployment
-id textInputLayoutDateOfWitness1Signature
-id textInputLayoutDateOfWitness2Signature
 id textInputLayoutECNumber
 id textInputLayoutEditProfile
 id textInputLayoutEmailAddress
@@ -3463,8 +3459,6 @@ id textInputLayoutPhoneNumber
 id textInputLayoutPhysicalAddress
 id textInputLayoutPhysicalAddressOfEmployer
 id textInputLayoutPlaceOfBorrowerSignature
-id textInputLayoutPlaceOfWitness1Signature
-id textInputLayoutPlaceOfWitness2Signature
 id textInputLayoutPositionHeld
 id textInputLayoutProfession
 id textInputLayoutReference

@@ -48,10 +48,10 @@ public class LoanApplicationModel {
     public String  nxtOfKin2Relation,nxtOfKin2TitleGroup,nxtOfKin2FirstName, nxtOfKin2Surname, nxtOfKin2ResidentialAddress,
             nxtOfKin2PhoneNumber, nxtOfKin2NameOfEmployer, nxtOfKin2EmployerAddress;
 
-    public String  borrowerSignatureBase64, witnessSignatureBase64, witnessSignatureBase642,authorizerSignatureBase64;
+    public String  borrowerSignatureBase64, witnessSignatureBase64, witnessSignatureBase642;
     public String borrowerFullName, placeOfSignature, dateSignBorrower,
-    witnessFullName, witnessPlaceOfSignature, dateSignWitness, borrowerSignature, witnessSignature,
-    witnessFullName2, witnessPlaceOfSignature2, dateSignWitness2, witnessSignature2;
+    witnessFullName, borrowerSignature, witnessSignature,
+    witnessFullName2, witnessSignature2;
 
     public String authoriserSignature, authorisedBy, dateAndTime;
 

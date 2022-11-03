@@ -33,6 +33,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
         Log.d(TAG, "ON HOME");
 
         //instantiating views
@@ -40,7 +41,7 @@ public class HomeFragment extends Fragment {
         textSyncedToServer = view.findViewById(R.id.textSyncedToServer);
         textTotalApplications = view.findViewById(R.id.textTotalApplications);
 
-        applicationsList = new ArrayList<>();
+        applicationsList = Utils.getSavedLoansFromDb(getContext());
         setLoanApplicationList();
         setAdapter();
         FloatingActionButton newApplicationBtn = view.findViewById(R.id.btn_new_application);
@@ -67,6 +68,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void setLoanApplicationList() {
+       // Utils.loadLoanHistoryFromBackend( getContext());
         final List<LoanApplicationModel> toBeSyncedModelList = Utils.getSavedLoans(getContext());
         final List<LoanApplicationModel> yourHistoryModellList = Utils.getSavedLoansFromDb(getContext());
 

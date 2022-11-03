@@ -43,9 +43,9 @@ public class DeclarationAndAcceptanceFragment extends Fragment {
     private Bitmap bitmapBorrowerSignature, bitmapWitnessSignature, bitmapWitnessSignature2;
     private ImageView borrowerSignature, witness1Signature, witness2Signature;
     Button btn_previous, btn_nxt,buttonBorrowerSignature,buttonWitness1Signature,buttonWitness2Signature;
-    private TextInputEditText dateOfBorrowerSignature,dateOfWitness1Signature,dateOfWitness2Signature,
-            borrowerName,placeOfBorrowerSignature,witness1FullName, placeOfWitness1Signature,
-            witness2FullName,placeOfWitness2Signature;
+    private TextInputEditText dateOfBorrowerSignature,
+            borrowerName,placeOfBorrowerSignature,witness1FullName,
+            witness2FullName;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -60,8 +60,6 @@ public class DeclarationAndAcceptanceFragment extends Fragment {
         btn_previous=view.findViewById(R.id.btn_previous);
         btn_nxt=view.findViewById(R.id.btn_nxt);
         dateOfBorrowerSignature=view.findViewById(R.id.dateOfBorrowerSignature);
-        dateOfWitness1Signature=view.findViewById(R.id.dateOfWitness1Signature);
-        dateOfWitness2Signature=view.findViewById(R.id.dateOfWitness2Signature);
         buttonBorrowerSignature=view.findViewById(R.id.buttonBorrowerSign);
         buttonWitness1Signature=view.findViewById(R.id.buttonWitness1Sign);
         buttonWitness2Signature=view.findViewById(R.id.buttonWitness2Sign);
@@ -71,9 +69,7 @@ public class DeclarationAndAcceptanceFragment extends Fragment {
         borrowerName=view.findViewById(R.id.borrowerName);
         placeOfBorrowerSignature=view.findViewById(R.id.placeOfBorrowerSignature);
         witness1FullName=view.findViewById(R.id.witness1FullName);
-        placeOfWitness1Signature=view.findViewById(R.id.placeOfWitness1Signature);
         witness2FullName=view.findViewById(R.id.witness2FullName);
-        placeOfWitness2Signature=view.findViewById(R.id.placeOfWitness2Signature);
 
         //setting static text
         title.setText("Declaration and Acceptance");
@@ -82,8 +78,6 @@ public class DeclarationAndAcceptanceFragment extends Fragment {
         String formattedDate = df.format(c);
         borrowerName.setText(String.format("%s %s", model.firstName, model.lastName));
         dateOfBorrowerSignature.setText(formattedDate);
-        dateOfWitness1Signature.setText(formattedDate);
-        dateOfWitness2Signature.setText(formattedDate);
 
         if (Utils.isLoanInProgress(requireContext())) {
             if ( model.borrowerSignatureBase64!=null) {
@@ -102,10 +96,10 @@ public class DeclarationAndAcceptanceFragment extends Fragment {
             if (model.placeOfSignature!=null) { placeOfBorrowerSignature.setText(model.placeOfSignature); }
             //if (model.dateSignBorrower!=null) { dateSignBorrower.setText(model.dateSignBorrower); }
             if (model.witnessFullName!=null) { witness1FullName.setText(model.witnessFullName); }
-            if (model.witnessPlaceOfSignature!=null) { placeOfWitness1Signature.setText(model.witnessPlaceOfSignature); }
+
             //if (model.dateSignWitness!=null) { dateSignWitness.setText(model.dateSignWitness); }
             if (model.witnessFullName2!=null) { witness2FullName.setText(model.witnessFullName2); }
-            if (model.witnessPlaceOfSignature2!=null) { placeOfWitness2Signature.setText(model.witnessPlaceOfSignature2); }
+
             //if (model.dateSignWitness2!=null) { dateSignWitness2.setText(model.dateSignWitness2); }
         }
 
@@ -134,18 +128,7 @@ public class DeclarationAndAcceptanceFragment extends Fragment {
                 new DatePickerDialog(getActivity(),getDate(dateOfBorrowerSignature),myCalendar.get(Calendar.YEAR),myCalendar.get(Calendar.MONTH),myCalendar.get(Calendar.DAY_OF_MONTH)).show();
             }
         });
-        dateOfWitness1Signature.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                new DatePickerDialog(getActivity(),getDate(dateOfWitness1Signature),myCalendar.get(Calendar.YEAR),myCalendar.get(Calendar.MONTH),myCalendar.get(Calendar.DAY_OF_MONTH)).show();
-            }
-        });
-        dateOfWitness2Signature.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                new DatePickerDialog(getActivity(),getDate(dateOfWitness2Signature),myCalendar.get(Calendar.YEAR),myCalendar.get(Calendar.MONTH),myCalendar.get(Calendar.DAY_OF_MONTH)).show();
-            }
-        });
+
         buttonBorrowerSignature.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -201,9 +184,7 @@ public class DeclarationAndAcceptanceFragment extends Fragment {
                     || bitmapWitnessSignature==null
                     || bitmapWitnessSignature2==null
                     || placeOfBorrowerSignature.length()==0
-                    || placeOfWitness1Signature.length()==0
                     || witness1FullName.length()==0
-                    || placeOfWitness2Signature.length()==0
                     || witness2FullName.length()==0
                     ||borrowerName.length()==0
             ) {
@@ -216,11 +197,8 @@ public class DeclarationAndAcceptanceFragment extends Fragment {
             model.placeOfSignature = placeOfBorrowerSignature.getText().toString();
             model.dateSignBorrower = dateOfBorrowerSignature.getText().toString();
             model.witnessFullName = witness1FullName.getText().toString();
-            model.witnessPlaceOfSignature = placeOfWitness1Signature.getText().toString();
-            model.dateSignWitness = dateOfWitness1Signature.getText().toString();
             model.witnessFullName2 = witness2FullName.getText().toString();
-            model.witnessPlaceOfSignature2 = placeOfWitness2Signature.getText().toString();
-            model.dateSignWitness2 = dateOfWitness2Signature.getText().toString();
+
 
             Utils.saveApplicationModel(requireContext(), model);
         } catch (Exception e) {
