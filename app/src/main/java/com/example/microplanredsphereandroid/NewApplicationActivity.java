@@ -1,6 +1,8 @@
 package com.example.microplanredsphereandroid;
 
 import android.Manifest;
+import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
@@ -48,6 +50,10 @@ public class NewApplicationActivity extends AppCompatActivity {
                     Log.d(TAG,"Sync Fragment called");
                     replaceFragment(new SyncFragment());
                     break;
+                case R.id.logout_nav:
+                    Log.d(TAG, "Logout Fragment called");
+                    logOut();
+                    break;
 //                case R.id.profile_nav:
 //                    Log.d(TAG,"Profile Fragment called");
 //                    replaceFragment(new ProfileFragment());
@@ -66,5 +72,13 @@ public class NewApplicationActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frame_layout,fragment);
         fragmentTransaction.commit();
+    }
+
+    public void logOut() {
+
+        Intent intent = new Intent((Activity)NewApplicationActivity.this, LoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+        finish();
     }
 }

@@ -1,6 +1,5 @@
 package com.example.microplanredsphereandroid;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.graphics.Color;
@@ -81,9 +80,10 @@ public class SyncFragment extends Fragment {
         btn_previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Activity.class.equals(HomeActivity.class)) {
+                //if (Activity.class.equals(HomeActivity.class)) {
+                try{
                     ((HomeActivity) getActivity()).replaceFragment(new HomeFragment());
-                } else {
+                }catch (Exception ex){
                     ((NewApplicationActivity) getActivity()).replaceFragment(new HomeFragment());
                 }
             }

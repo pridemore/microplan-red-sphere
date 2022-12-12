@@ -6,7 +6,7 @@ import java.util.List;
 public class LoanApplicationModel {
     public String uniqueRef;
     public String application_title;
-    public long agent_id = 7;
+    public long agent_id;
     public long id;
     public String isSubmitted = "false";
 

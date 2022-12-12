@@ -154,7 +154,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="numberDecimal" />
 
-        </com.google.android.material.textfield.TextInputLayout>.material.textfield.TextInputLayout>-->
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayoutPeriod"

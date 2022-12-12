@@ -46,12 +46,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         String surname=applicationsArrayList.get(position).lastName;
         String date=applicationsArrayList.get(position).dateAndTime;
         String product = applicationsArrayList.get(position).loanPurpose;
-        String installment=applicationsArrayList.get(position).newLoanAmount.toString();
+        String price=applicationsArrayList.get(position).price.toString();
+        String monthlyImstallment=applicationsArrayList.get(position).loanRepaymentPerMonth;
 
         holder.textViewApplicantName.setText(new StringBuilder().append(name).append(" ").append(surname).toString());
         holder.textViewProducts.setText(product);
         holder.textViewApplicationDate.setText(date);
-        holder.textViewInstallment.setText("$"+installment);
+        holder.textViewInstallment.setText("$"+price+", Paying $"+monthlyImstallment+" per Month");
     }
 
     @Override

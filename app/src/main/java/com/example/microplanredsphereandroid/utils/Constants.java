@@ -9,6 +9,7 @@ public class Constants {
     public static final String LATEST_IMAGE = "latestImage";
     public static final String SAVED_LOANS = "savedLoans";
     public static final String USER = "user";
+    public static final String INTEREST_CONFIGS = "interestConfigs";
     public static final String PRODUCTS="products";
     public static final String DB_LOANS="dbLoans";
     public static final String DOCUMENTS="documents";

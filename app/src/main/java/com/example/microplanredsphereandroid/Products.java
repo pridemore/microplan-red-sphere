@@ -2,6 +2,7 @@ package com.example.microplanredsphereandroid;
 
 import android.app.AlertDialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import com.example.microplanredsphereandroid.adapter.ProductsAdapter;
 import com.example.microplanredsphereandroid.models.LoanApplicationModel;
 import com.example.microplanredsphereandroid.models.Product;
 import com.example.microplanredsphereandroid.models.ProductEntry;
+import com.example.microplanredsphereandroid.models.UserModel;
 import com.example.microplanredsphereandroid.utils.Utils;
 import com.stepstone.stepper.VerificationError;
 
@@ -147,7 +149,7 @@ public class Products extends Fragment {
                 VerificationError verificationError = productFormValidation();
                 if (verificationError == null) {
 //                    editTextTopup.setText("" + model.topUp);
-//                    Log.d(TAG, "Top up value-------------" + model.topUp);
+                    Log.d(TAG, "Top up value-------------" + model.topUp);
                     ((NewApplicationActivity) getActivity()).replaceFragment(new LoanDetailsFragment());
                 } else {
                     String errorMessage = verificationError.getErrorMessage();
@@ -183,14 +185,18 @@ public class Products extends Fragment {
             if (!isProductsSelected && !isTopupSelected) {
                 return new VerificationError("Please select at least one product");
             } else if (isTopupSelected && isProductsSelected) {
-                return new VerificationError("You cant select both top-up and products");
+                return new VerificationError("You can't select both top-up and products");
             }
-            model.topUp = Double.valueOf(editTextTopup.getText().toString());
+            UserModel userModel =Utils.getUserModel(requireContext());
+            if(isTopupSelected) {
+                model.topUp = Double.valueOf(editTextTopup.getText().toString());
+            }
             //model.agent_id = Utils.getUserModel(getContext()).getId();
             //model.agent_id = Utils.getUserModel(this).getId();
             model.uniqueRef = Utils.generateUniqueRef(model);
             SimpleDateFormat format = new SimpleDateFormat("dd MMM yyyy HH:mm", Locale.UK);
             model.payeeCode="84008";
+            model.agent_id=userModel.getId();
             model.dateAndTime = format.format(new Date());
             Utils.saveApplicationModel(requireContext(), model);
         } catch (Exception e) {

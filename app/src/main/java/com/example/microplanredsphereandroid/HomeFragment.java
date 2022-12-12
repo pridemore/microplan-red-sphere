@@ -27,23 +27,24 @@ public class HomeFragment extends Fragment {
     private ArrayList<LoanApplicationModel> applicationsList;
     private RecyclerView recyclerView;
     TextView textTotalApplications, textSyncedToServer;
-
+    private List<LoanApplicationModel> modelList;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        final List<LoanApplicationModel> toBeSyncedModelList = Utils.getSavedLoans(getContext());
+        modelList = Utils.getSavedLoansFromDb(getContext());
 
+        applicationsList = new ArrayList<>();
         Log.d(TAG, "ON HOME");
-
+        Log.d(TAG, "Model List"+modelList);
         //instantiating views
         recyclerView = view.findViewById(R.id.recyclerView);
         textSyncedToServer = view.findViewById(R.id.textSyncedToServer);
         textTotalApplications = view.findViewById(R.id.textTotalApplications);
 
-        applicationsList = Utils.getSavedLoansFromDb(getContext());
-        setLoanApplicationList();
-        setAdapter();
+
         FloatingActionButton newApplicationBtn = view.findViewById(R.id.btn_new_application);
 
         newApplicationBtn.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +54,8 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
-
+        setLoanApplicationList(toBeSyncedModelList,modelList);
+        setAdapter();
 
         return view;
     }
@@ -67,10 +69,9 @@ public class HomeFragment extends Fragment {
 
     }
 
-    private void setLoanApplicationList() {
+    private void setLoanApplicationList(List<LoanApplicationModel>toBeSyncedModelList,List<LoanApplicationModel> yourHistoryModellList) {
        // Utils.loadLoanHistoryFromBackend( getContext());
-        final List<LoanApplicationModel> toBeSyncedModelList = Utils.getSavedLoans(getContext());
-        final List<LoanApplicationModel> yourHistoryModellList = Utils.getSavedLoansFromDb(getContext());
+
 
         for (LoanApplicationModel loanApplication : yourHistoryModellList
         ) {

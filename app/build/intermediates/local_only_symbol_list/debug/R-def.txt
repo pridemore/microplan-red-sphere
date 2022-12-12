@@ -21,6 +21,7 @@ dimen fab_margin
 drawable access_account
 drawable home_nav_image
 drawable ic_baseline_arrow_back_24
+drawable ic_baseline_login_24
 drawable ic_baseline_menu_24
 drawable ic_baseline_refresh_24
 drawable ic_baseline_sync_24
@@ -112,6 +113,7 @@ id loanPeriod
 id loanPurpose
 id loanType
 id logimage
+id logout_nav
 id maiden_surname
 id marriageCertificate
 id miss

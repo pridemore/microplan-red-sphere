@@ -10,7 +10,7 @@ public class UserModel {
     private String refNumber;
     private String cellNumber;
     private String gender;
-    private LocalDate date_of_birth;
+    //private LocalDate date_of_birth;
     private String houseAddress;
     private String ipAddress;
     private String role;
@@ -26,7 +26,7 @@ public class UserModel {
         this.refNumber = refNumber;
         this.cellNumber = cellNumber;
         this.gender = gender;
-        this.date_of_birth = date_of_birth;
+        //this.date_of_birth = date_of_birth;
         this.houseAddress = houseAddress;
         this.ipAddress = ipAddress;
         this.role = role;
@@ -88,13 +88,13 @@ public class UserModel {
         this.gender = gender;
     }
 
-    public LocalDate getDate_of_birth() {
-        return date_of_birth;
-    }
-
-    public void setDate_of_birth(LocalDate date_of_birth) {
-        this.date_of_birth = date_of_birth;
-    }
+//    public LocalDate getDate_of_birth() {
+//        return date_of_birth;
+//    }
+//
+//    public void setDate_of_birth(LocalDate date_of_birth) {
+//        this.date_of_birth = date_of_birth;
+//    }
 
     public String getHouseAddress() {
         return houseAddress;

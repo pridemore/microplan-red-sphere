@@ -15,6 +15,7 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 import com.example.microplanredsphereandroid.models.LoanApplicationModel;
+import com.example.microplanredsphereandroid.models.LoanInterestConfigsModel;
 import com.example.microplanredsphereandroid.models.ProductEntry;
 import com.example.microplanredsphereandroid.utils.Constants;
 import com.example.microplanredsphereandroid.utils.Utils;
@@ -35,7 +36,7 @@ public class LoanDetailsFragment extends Fragment {
     TextView title;
     Button btn_previous, btn_nxt;
     private LoanApplicationModel model;
-    TextInputEditText dob, netSalary, loanPurpose, loanPeriod,loanCreditAmount;
+    TextInputEditText dob, netSalary, loanPurpose, loanPeriod, loanCreditAmount;
     final Calendar myCalendar = Calendar.getInstance();
 
     @Override
@@ -43,7 +44,7 @@ public class LoanDetailsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_loan_details, container, false);
-        model=Utils.getApplicationModel(requireContext());
+        model = Utils.getApplicationModel(requireContext());
 
         //instantiating views
         backIcon = view.findViewById(R.id.left_icon);
@@ -55,12 +56,12 @@ public class LoanDetailsFragment extends Fragment {
         netSalary = view.findViewById(R.id.netSalary);
         loanPurpose = view.findViewById(R.id.loanPurpose);
         loanPeriod = view.findViewById(R.id.loanPeriod);
-        loanCreditAmount=view.findViewById(R.id.loanCreditAmount);
+        loanCreditAmount = view.findViewById(R.id.loanCreditAmount);
 
         if (Utils.isLoanInProgress(requireContext())) {
-            if(model.topUp!=0.0){
+            if (model.topUp != 0.0) {
                 loanCreditAmount.setText(String.valueOf(model.topUp));
-            }else{
+            } else {
                 loanCreditAmount.setText(model.price);
             }
             dob.setText(model.dateOfBirth);
@@ -85,20 +86,22 @@ public class LoanDetailsFragment extends Fragment {
         //setting static text
         title.setText("Loan Details");
         model = Utils.getApplicationModel(requireContext());
-        if (model.products==null || model.products.size()==0) {
+        if (model.products == null || model.products.size() == 0) {
             loanPurpose.setText("Top-Up");
+            Log.d(TAG,"Top up In Loan Details "+model.topUp);
             loanCreditAmount.setText(String.valueOf(model.topUp));
         } else {
-            double price=0.0;
+            double price = 0.0;
             StringBuilder builder = new StringBuilder();
             for (ProductEntry productEntry : model.products) {
-                if (productEntry.getQuantity()>0) builder.append(productEntry.getQuantity()).append(" X ").append(productEntry.getProduct().getName()).append("; ");
-                 price += (productEntry.getProduct().getPrice()*productEntry.getQuantity());
+                if (productEntry.getQuantity() > 0)
+                    builder.append(productEntry.getQuantity()).append(" X ").append(productEntry.getProduct().getName()).append("; ");
+                price += (productEntry.getProduct().getPrice() * productEntry.getQuantity());
             }
-            if (builder.length()==0){
+            if (builder.length() == 0) {
                 loanPurpose.setText("Top-Up");
-                loanCreditAmount.setText(String.valueOf(price));
-            }else {
+                loanCreditAmount.setText(String.valueOf(model.topUp));
+            } else {
                 loanPurpose.setText(builder.toString());
                 loanCreditAmount.setText(String.valueOf(price));
             }
@@ -114,27 +117,27 @@ public class LoanDetailsFragment extends Fragment {
         btn_nxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                VerificationError verificationError =loanDetailsValidation();
-                if(verificationError==null) {
+                VerificationError verificationError = loanDetailsValidation();
+                if (verificationError == null) {
                     //on success validation
                     //logging
-                    Log.d(TAG,"LoanApplication Topup ---:"+model.topUp);
+                    Log.d(TAG, "LoanApplication Topup ---:" + model.topUp);
                     List<ProductEntry> products = model.products;
-                    for (ProductEntry product:products
+                    for (ProductEntry product : products
                     ) {
-                        Log.d(TAG,"LoanApplication Products ---:"+product.getProduct().getName());
+                        Log.d(TAG, "LoanApplication Products ---:" + product.getProduct().getName());
                     }
-                    Log.d(TAG,"LoanApplication DateOfBirth ---:"+model.dateOfBirth);
-                    Log.d(TAG,"LoanApplication Loan Purpose ---:"+model.loanPurpose);
-                    Log.d(TAG,"LoanApplication NetSalary ---:"+model.netSalary);
-                    Log.d(TAG,"LoanApplication Loan Period ---:"+model.loanPeriod);
+                    Log.d(TAG, "LoanApplication DateOfBirth ---:" + model.dateOfBirth);
+                    Log.d(TAG, "LoanApplication Loan Purpose ---:" + model.loanPurpose);
+                    Log.d(TAG, "LoanApplication NetSalary ---:" + model.netSalary);
+                    Log.d(TAG, "LoanApplication Loan Period ---:" + model.loanPeriod);
 
                     //moving to next fragment
                     ((NewApplicationActivity) getActivity()).replaceFragment(new PersonalDetailsFragment());
 
-                }else {
+                } else {
                     String errorMessage = verificationError.getErrorMessage();
-                    Toast.makeText((NewApplicationActivity)getActivity(), errorMessage, Toast.LENGTH_SHORT).show();
+                    Toast.makeText((NewApplicationActivity) getActivity(), errorMessage, Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -143,19 +146,20 @@ public class LoanDetailsFragment extends Fragment {
 
         return view;
     }
+
     private void updateLabel() {
         String myFormat = "dd-MMM-yyyy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.UK);
         dob.setText(sdf.format(myCalendar.getTime()));
     }
 
-    private VerificationError loanDetailsValidation(){
+    private VerificationError loanDetailsValidation() {
         try {
             if (dob.length() == 0 || netSalary.length() == 0 || loanPurpose.length() == 0 || loanPeriod.length() == 0) {
                 return new VerificationError("Please fill in all fields");
             }
 
-            if(Double.parseDouble(loanCreditAmount.getText().toString())>=200.00){
+            if (Double.parseDouble(loanCreditAmount.getText().toString()) >= 200.00) {
                 return new VerificationError("Credit Loan Amount should not exceed 200.00 USD.");
             }
             //Deny if :::
@@ -174,8 +178,13 @@ public class LoanDetailsFragment extends Fragment {
             model.loanPurpose = loanPurpose.getText().toString();
             model.loanPeriod = Integer.parseInt(loanPeriod.getText().toString());
 
+            LoanInterestConfigsModel loanInterestConfigsModel = Utils.getLoanInterestConfigsModel(requireContext());
+            double interest =Double.parseDouble(loanInterestConfigsModel.getInterestRate())/100;
+            Log.d(TAG,"Interest Used "+interest);
             double price = 0;
-            for (ProductEntry productEntry : model.products) if (productEntry.getQuantity()>0) price += (productEntry.getProduct().getPrice()*productEntry.getQuantity());
+            for (ProductEntry productEntry : model.products)
+                if (productEntry.getQuantity() > 0)
+                    price += (productEntry.getProduct().getPrice() * productEntry.getQuantity());
             if (price == 0) price = model.topUp;
             double newLoanAmount = price; /// 0.84;
             double fiftyPercentOfSalary = 0.5 * model.netSalary;
@@ -185,7 +194,7 @@ public class LoanDetailsFragment extends Fragment {
             double loanInsuranceFees = 0.025 * newLoanAmount;
             double fundsTransferFees = 0.02 * newLoanAmount;
             double totalCashDisbursedLessUpfrontFees = price;
-            double interestRate = 0.12; //0.09; //15%
+            double interestRate = interest; //0.09; //15%
             double loanRepaymentPerMonth = -FinanceLib.pmt(interestRate, model.loanPeriod, newLoanAmount, 0, false);
             if (loanRepaymentPerMonth > (model.netSalary / 2)) {
                 return new VerificationError("Monthly payment will be greater than 50% of income");
@@ -204,7 +213,7 @@ public class LoanDetailsFragment extends Fragment {
             model.loanRepaymentPerMonth = String.format(Locale.UK, "%.2f", loanRepaymentPerMonth);
 
             Utils.saveApplicationModel(requireContext(), model);
-        }catch (Exception e) {
+        } catch (Exception e) {
             new AlertDialog.Builder(getActivity())
                     .setTitle("Error")
                     .setMessage(e.getMessage())

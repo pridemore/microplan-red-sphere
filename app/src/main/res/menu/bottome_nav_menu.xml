@@ -11,6 +11,9 @@
     <item android:title="Sync"
         android:icon="@drawable/sync_nav_image"
         android:id="@+id/sync_nav"/>
+    <item android:title="Logout"
+        android:icon="@drawable/ic_baseline_login_24"
+        android:id="@+id/logout_nav"/>
 <!--    <item android:title="Profile"-->
 <!--        android:icon="@drawable/profile_nav_image"-->
 <!--        android:id="@+id/profile_nav"/>-->

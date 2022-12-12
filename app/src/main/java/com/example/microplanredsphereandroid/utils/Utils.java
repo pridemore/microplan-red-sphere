@@ -3,6 +3,7 @@ package com.example.microplanredsphereandroid.utils;
 import static com.example.microplanredsphereandroid.utils.Constants.CURRENT_LOAN_APP;
 import static com.example.microplanredsphereandroid.utils.Constants.DB_LOANS;
 import static com.example.microplanredsphereandroid.utils.Constants.DOCUMENTS;
+import static com.example.microplanredsphereandroid.utils.Constants.INTEREST_CONFIGS;
 import static com.example.microplanredsphereandroid.utils.Constants.LATEST_SIGNATURE;
 import static com.example.microplanredsphereandroid.utils.Constants.PREFS_KEY;
 import static com.example.microplanredsphereandroid.utils.Constants.PRODUCTS;
@@ -23,9 +24,11 @@ import android.widget.Toast;
 import com.example.microplanredsphereandroid.models.CommonResponse;
 import com.example.microplanredsphereandroid.models.DocumentUploadModal;
 import com.example.microplanredsphereandroid.models.LoanApplicationModel;
+import com.example.microplanredsphereandroid.models.LoanInterestConfigsModel;
 import com.example.microplanredsphereandroid.models.Product;
 import com.example.microplanredsphereandroid.models.ProductEntry;
 import com.example.microplanredsphereandroid.models.UserModel;
+import com.example.microplanredsphereandroid.retrofit.InterestConfigsService;
 import com.example.microplanredsphereandroid.retrofit.LoanService;
 import com.example.microplanredsphereandroid.retrofit.ProductService;
 import com.example.microplanredsphereandroid.retrofit.RetrofitService;
@@ -109,6 +112,7 @@ public class Utils {
 
     public static UserModel getUserModel(Context context) {
         SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        Log.d("UserModel:","----"+preferences.getString(USER, "{}"));
         return new Gson().fromJson(preferences.getString(USER, "{}"), UserModel.class);
     }
 
@@ -325,12 +329,14 @@ public class Utils {
         }
     }
 
+    @SuppressLint("ApplySharedPref")
     public static void loadLoanHistoryFromBackend(Context context) {
         RetrofitService retrofitService = new RetrofitService();
         LoanService loanService = retrofitService.getRetrofit().create(LoanService.class);
-        ;
 
-        loanService.getAllLoans("7").enqueue(new Callback<CommonResponse>() {
+        UserModel userModel = getUserModel(context);
+        Log.d("User Model date", "" + userModel);
+        loanService.getAllLoans(String.valueOf(userModel.getId())).enqueue(new Callback<CommonResponse>() {
             @Override
             public void onResponse(Call<CommonResponse> call, Response<CommonResponse> response) {
                 Log.d("Response ", "Response " + response.body());
@@ -349,8 +355,6 @@ public class Utils {
 
             }
         });
-
-
     }
 
     @SuppressLint("ApplySharedPref")
@@ -373,5 +377,41 @@ public class Utils {
             return new Gson().fromJson(productString, type);
         }
     }
+
+
+    public static void loadLoanInterestConfigsFromBackend(Context context) {
+        RetrofitService retrofitService = new RetrofitService();
+        InterestConfigsService interestConfigsService = retrofitService.getRetrofit().create(InterestConfigsService.class);
+
+        interestConfigsService.getAllInterestConfigs().enqueue(new Callback<CommonResponse>() {
+            @Override
+            public void onResponse(Call<CommonResponse> call, Response<CommonResponse> response) {
+                Log.d("Response ", "Response " + response.body());
+                if (response.body() != null) {
+                    Log.d("Response ", "Response " + response.body().getResult());
+                    saveLoanInterestConfigsModel(context,response.body().getResult());
+                }
+            }
+            @Override
+            public void onFailure(Call<CommonResponse> call, Throwable t) {
+
+            }
+        });
+    }
+
+    @SuppressLint("ApplySharedPref")
+    public static void saveLoanInterestConfigsModel(Context context, Object model) {
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(INTEREST_CONFIGS, new Gson().toJson(model));
+        editor.commit();
+    }
+
+    public static LoanInterestConfigsModel getLoanInterestConfigsModel(Context context) {
+        SharedPreferences preferences = context.getSharedPreferences(PREFS_KEY, Context.MODE_PRIVATE);
+        Log.d("InterestConfigsModel:","----"+preferences.getString(INTEREST_CONFIGS, "{}"));
+        return new Gson().fromJson(preferences.getString(INTEREST_CONFIGS, "{}"), LoanInterestConfigsModel.class);
+    }
+
 
 }

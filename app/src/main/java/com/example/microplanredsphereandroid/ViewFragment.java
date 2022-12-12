@@ -1,9 +1,9 @@
 package com.example.microplanredsphereandroid;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,10 +27,11 @@ import java.util.List;
 public class ViewFragment extends Fragment {
     private ImageView backIcon, menu;
     private TextView title;
-    private Button btn_previous,btn_refresh;
+    private Button btn_previous, btn_refresh;
     private ArrayList<LoanApplicationModel> applicationsList;
     private RecyclerView recyclerView;
     private List<LoanApplicationModel> modelList;
+
     @Override
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,7 +39,7 @@ public class ViewFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_view, container, false);
         //modelList = Utils.getSavedLoans(getContext());
-        modelList=Utils.getSavedLoansFromDb(getContext());
+        modelList = Utils.getSavedLoansFromDb(getContext());
 
         //instantiating views
         backIcon = view.findViewById(R.id.left_icon);
@@ -46,7 +47,7 @@ public class ViewFragment extends Fragment {
         title = view.findViewById(R.id.title);
         btn_previous = view.findViewById(R.id.btn_previous);
         recyclerView = view.findViewById(R.id.recyclerView);
-        btn_refresh=view.findViewById(R.id.btn_refresh);
+        btn_refresh = view.findViewById(R.id.btn_refresh);
         applicationsList = new ArrayList<>();
 
         //setting static text
@@ -56,34 +57,40 @@ public class ViewFragment extends Fragment {
         btn_previous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Activity.class.equals(HomeActivity.class)){
+                Log.d("Current Activity", "" + getClass().getName());
+                try {
                     ((HomeActivity) getActivity()).replaceFragment(new HomeFragment());
-                }else {
+                }catch (Exception ex){
                     ((NewApplicationActivity) getActivity()).replaceFragment(new HomeFragment());
                 }
+//                if (Activity.class.getSimpleName().equals(HomeActivity.class)) {
+//                    ((HomeActivity) getActivity()).replaceFragment(new HomeFragment());
+//                } else {
+//                    ((NewApplicationActivity) getActivity()).replaceFragment(new HomeFragment());
+//                }
             }
         });
 
         btn_refresh.setOnClickListener(new View.OnClickListener() {
-                                           @Override
-                                           public void onClick(View view) {
-                                               //dialog for showing processing
-                                               ProgressDialog progressDialog = new ProgressDialog(requireActivity());
-                                               progressDialog.setMessage("Refreshing Applications. Please wait...");
-                                               progressDialog.show();
-                                               Thread thread = new Thread(() -> {
-                                                   Utils.loadLoanHistoryFromBackend(getContext());
-                                               });
-                                               thread.start();
+            @Override
+            public void onClick(View view) {
+                //dialog for showing processing
+                ProgressDialog progressDialog = new ProgressDialog(requireActivity());
+                progressDialog.setMessage("Refreshing Applications. Please wait...");
+                progressDialog.show();
+                Thread thread = new Thread(() -> {
+                    Utils.loadLoanHistoryFromBackend(getContext());
+                });
+                thread.start();
 
-                                               new Handler().postDelayed(() -> {
-                                                   getActivity().getSupportFragmentManager().beginTransaction().detach(ViewFragment.this).attach(ViewFragment.this).commit();
-                                                   progressDialog.dismiss();
+                new Handler().postDelayed(() -> {
+                    getActivity().getSupportFragmentManager().beginTransaction().detach(ViewFragment.this).attach(ViewFragment.this).commit();
+                    progressDialog.dismiss();
 
-                                               }, 3000);
+                }, 3000);
 
-                                           }
-                                       });
+            }
+        });
 
         //load data to our arraylist
         setViewLoanApplicationsList();
@@ -106,7 +113,7 @@ public class ViewFragment extends Fragment {
 
     private void setViewLoanApplicationsList() {
 
-        for (LoanApplicationModel loanApplication:modelList
+        for (LoanApplicationModel loanApplication : modelList
         ) {
             applicationsList.add(loanApplication);
         }
