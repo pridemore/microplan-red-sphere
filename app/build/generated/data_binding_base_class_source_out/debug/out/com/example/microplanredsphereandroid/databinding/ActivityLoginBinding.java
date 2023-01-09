@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -19,7 +19,7 @@ import java.lang.String;
 
 public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final ScrollView rootView;
 
   @NonNull
   public final ImageView accessAccount;
@@ -33,7 +33,7 @@ public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   public final EditText username;
 
-  private ActivityLoginBinding(@NonNull RelativeLayout rootView, @NonNull ImageView accessAccount,
+  private ActivityLoginBinding(@NonNull ScrollView rootView, @NonNull ImageView accessAccount,
       @NonNull EditText password, @NonNull Button signIn, @NonNull EditText username) {
     this.rootView = rootView;
     this.accessAccount = accessAccount;
@@ -44,7 +44,7 @@ public final class ActivityLoginBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -93,7 +93,7 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLoginBinding((RelativeLayout) rootView, accessAccount, password, signIn,
+      return new ActivityLoginBinding((ScrollView) rootView, accessAccount, password, signIn,
           username);
     }
     String missingId = rootView.getResources().getResourceName(id);

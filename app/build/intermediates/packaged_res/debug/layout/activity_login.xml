@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".LoginActivity">
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <ImageView
         android:layout_width="305dp"
         android:layout_height="76dp"
@@ -38,6 +40,10 @@
         android:layout_alignParentRight="true"
         android:layout_marginTop="44dp"
         android:layout_marginRight="35dp"
+        android:textCursorDrawable="@drawable/cursor_color"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
         android:hint="@string/username"
         android:text="test@gmail.com"
         android:textSize="20sp"
@@ -51,6 +57,10 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="32dp"
+        android:textCursorDrawable="@drawable/cursor_color"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
         android:ems="10"
         android:hint="@string/password"
         android:text="password"
@@ -71,5 +81,5 @@
         android:text="@string/sign_in"
         />
 
-
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
