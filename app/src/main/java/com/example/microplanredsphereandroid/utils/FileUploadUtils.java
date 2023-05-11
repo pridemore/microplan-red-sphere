@@ -1,5 +1,7 @@
 package com.example.microplanredsphereandroid.utils;
 
+import static com.example.microplanredsphereandroid.utils.Constants.BASE_URL;
+
 import android.graphics.Bitmap;
 
 import com.example.microplanredsphereandroid.models.CommonResponse;
@@ -41,8 +43,7 @@ public class FileUploadUtils {
         Retrofit fileUpload = new Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(httpClient.build())
-                //.baseUrl("https://01ea-197-221-253-158.in.ngrok.io")
-                .baseUrl("https://6d98-197-221-253-100.eu.ngrok.io")
+                .baseUrl(BASE_URL)
                 .build();
         FileService fileService = fileUpload.create(FileService.class);
 

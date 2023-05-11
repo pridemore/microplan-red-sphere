@@ -4,6 +4,23 @@
             "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-42:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\9193a2035dc6fcc9e636fdca9695aa64\\transformed\\jetified-material-stepper-4.3.1\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,98,177",
+                        "endColumns": "42,78,81",
+                        "endOffsets": "93,172,254"
+                    },
+                    "to": {
+                        "startLines": "2,5,6",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,375,454",
+                        "endColumns": "42,78,81",
+                        "endOffsets": "93,449,531"
+                    }
+                },
+                {
                     "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\b6f52d92dea29c0a7f49d4078033a89a\\transformed\\material-1.6.1\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
@@ -18,23 +35,6 @@
                         "startOffsets": "98,234",
                         "endColumns": "135,140",
                         "endOffsets": "229,370"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\pridemore.vhiriri\\.gradle\\caches\\transforms-3\\4cd1a5b7f912568087758da3a6038574\\transformed\\jetified-material-stepper-4.3.1\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,98,177",
-                        "endColumns": "42,78,81",
-                        "endOffsets": "93,172,254"
-                    },
-                    "to": {
-                        "startLines": "2,5,6",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,375,454",
-                        "endColumns": "42,78,81",
-                        "endOffsets": "93,449,531"
                     }
                 }
             ]

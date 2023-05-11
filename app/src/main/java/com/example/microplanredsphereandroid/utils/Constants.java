@@ -1,6 +1,7 @@
 package com.example.microplanredsphereandroid.utils;
 
 public class Constants {
+    public static final String BASE_URL="http://196.43.113.6:8021";
     public static int FAILURE_INT_VALUE = 400;
     public static int SUCCESS_INT_VALUE = 200;
     public static final String CURRENT_LOAN_APP = "currentLoanApp";

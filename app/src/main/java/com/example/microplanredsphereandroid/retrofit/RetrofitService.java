@@ -1,5 +1,7 @@
 package com.example.microplanredsphereandroid.retrofit;
 
+import static com.example.microplanredsphereandroid.utils.Constants.BASE_URL;
+
 import com.google.gson.Gson;
 
 import retrofit2.Retrofit;
@@ -14,7 +16,7 @@ public class RetrofitService {
 
     private void initializeRetrofit() {
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://6d98-197-221-253-100.eu.ngrok.io")
+                .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create(new Gson()))
                 .build();
     }
