@@ -1,0 +1,126 @@
+[
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/fragment_new_application.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_new_application.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/fragment_view.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_view.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/fragment_profile.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/activity_new_application.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/activity_new_application.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/fragment_home.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/page_toolbar.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/page_toolbar.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/fragment_sync.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_sync.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/activity_test.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/activity_test.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/toolbar.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/toolbar.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/activity_signature.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/activity_signature.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/back_next.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/back_next.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/activity_login.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/fragment_products.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_products.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/fragment_documents.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_documents.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/activity_image_capture.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/activity_image_capture.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/fragment_employment.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_employment.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/fragment_bank_details.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_bank_details.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/fragment_loan_details.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_loan_details.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/product_item.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/product_item.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/fragment_contact_details.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_contact_details.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/fragment_nxt_of_kin1_details.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_nxt_of_kin1_details.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/fragment_nxt_of_kin2_details.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_nxt_of_kin2_details.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/fragment_deduction_ssb_form.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_deduction_ssb_form.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/fragment_personal_details.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_personal_details.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/fragment_blank.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_blank.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/fragment_declaration_and_acceptance.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_declaration_and_acceptance.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/fragment_complete_application.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/fragment_complete_application.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/list_items.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/list_items.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/activity_home.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/activity_home.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/activity_splash_screen.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/activity_splash_screen.xml"
+    },
+    {
+        "merged": "com.example.microplanredsphereandroid.app-mergeDebugResources-43:/layout/activity_main.xml",
+        "source": "com.example.microplanredsphereandroid.app-main-46:/layout/activity_main.xml"
+    }
+]

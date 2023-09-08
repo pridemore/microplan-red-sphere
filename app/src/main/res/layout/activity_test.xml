@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PersonalDetailsActivity">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleGroup"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/mr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MR"
+            android:buttonTint="@color/blue"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:textSize="20dp"/>
+        <RadioButton
+            android:id="@+id/mrs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MRS"
+            android:layout_marginStart="15dp"
+            android:buttonTint="@color/blue"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:textSize="20dp"/>
+
+        <RadioButton
+            android:id="@+id/miss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MISS"
+            android:layout_marginStart="15dp"
+            android:buttonTint="@color/blue"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:textSize="20dp"/>
+
+        <RadioButton
+            android:id="@+id/other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OTHER"
+            android:layout_marginStart="15dp"
+            android:buttonTint="@color/blue"
+            android:textColor="@color/blue"
+            android:gravity="center"
+            android:textSize="20dp"/>
+    </RadioGroup>
+    <EditText
+        android:layout_width="390dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/titleGroup"
+        android:hint="First Name"
+        android:id="@+id/first_name"
+        android:ems="10"
+        android:textSize="20sp"
+
+        />
+    <EditText
+        android:layout_width="390dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/first_name"
+        android:id="@+id/surname"
+        android:hint="Surname"
+        android:ems="10"
+        android:textSize="20sp"
+        />
+
+    <EditText
+        android:layout_width="390dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/surname"
+        android:id="@+id/date_of_birth"
+        android:hint="Date Of Birth"
+        android:inputType="date"
+        android:ems="10"
+        android:textSize="20sp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutNetSalaryy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/date_of_birth"
+        android:hint="Net Salary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/netSalary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:textSize="20sp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <!--    <EditText-->
+    <!--        android:layout_width="390dp"-->
+    <!--        android:layout_height="60dp"-->
+    <!--        android:layout_marginStart="10dp"-->
+    <!--        android:layout_marginEnd="10dp"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:layout_below="@+id/date_of_birth"-->
+    <!--        android:id="@+id/national_id"-->
+    <!--        android:hint="National ID(format 65-123455 X63)"-->
+    <!--        android:ems="10"-->
+    <!--        android:textSize="20sp"-->
+    <!--        />-->
+    <!--    <EditText-->
+    <!--        android:layout_width="390dp"-->
+    <!--        android:layout_height="60dp"-->
+    <!--        android:layout_marginStart="10dp"-->
+    <!--        android:layout_marginEnd="10dp"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:layout_below="@+id/national_id"-->
+    <!--        android:id="@+id/passport_number"-->
+    <!--        android:hint="Passport Number"-->
+    <!--        android:ems="10"-->
+    <!--        android:textSize="20sp"-->
+    <!--        />-->
+    <!--    <EditText-->
+    <!--        android:layout_width="390dp"-->
+    <!--        android:layout_height="60dp"-->
+    <!--        android:layout_marginStart="10dp"-->
+    <!--        android:layout_marginEnd="10dp"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:layout_below="@+id/passport_number"-->
+    <!--        android:id="@+id/maiden_name"-->
+    <!--        android:hint="Maiden Surname(Optional)"-->
+    <!--        android:ems="10"-->
+    <!--        android:textSize="20sp"-->
+    <!--        />-->
+
+    <!--    <EditText-->
+    <!--        android:layout_width="390dp"-->
+    <!--        android:layout_height="60dp"-->
+    <!--        android:layout_marginStart="10dp"-->
+    <!--        android:layout_marginEnd="10dp"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:layout_below="@+id/maiden_name"-->
+    <!--        android:id="@+id/country_of_birth"-->
+    <!--        android:hint="Country Of Birth"-->
+    <!--        android:ems="10"-->
+    <!--        android:background="@color/brown"-->
+    <!--        android:textSize="20sp"-->
+    <!--        />-->
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        android:text="Check Value" />
+
+
+</RelativeLayout>

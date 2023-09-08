@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Creative MicroPlan</string>
+    <string name="app_name">Creative</string>
     <string name="title_activity_splash_screen">splash_screen</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -12,4 +12,126 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="sign_in">Sign In</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="bank_names">
+        <item>Agricultural Development Bank of Zimbabwe</item>
+        <item>African Century Bank</item>
+        <item>BancABC Zimbabwe</item>
+        <item>CABS</item>
+        <item>CBZ Bank Limited</item>
+        <item>Ecobank Zimbabwe Limited</item>
+        <item>EmpowerBank</item>
+        <item>FBC Bank Limited</item>
+        <item>FBC Building Society</item>
+        <item>First Capital Bank Limited</item>
+        <item>First Mutual Bank</item>
+        <item>GetBucks</item>
+        <item>Infrastructure Development Bank of Zimbabwe</item>
+        <item>MyCash</item>
+        <item>National Building Society</item>
+        <item>NBS Bank</item>
+        <item>Nedbank Zimbabwe Limited</item>
+        <item>Metbank</item>
+        <item>NMB Bank Limited</item>
+        <item>Peoples Own Savings Bank</item>
+        <item>Small and Medium Enterprises Development Corporation</item>
+        <item>Stanbic Bank Zimbabwe Limited</item>
+        <item>Standard Chartered Bank Zimbabwe Limited</item>
+        <item>Steward Bank</item>
+        <item>Success Bank</item>
+        <item>Tetrad Investment Bank Limited</item>
+        <item>ZB Bank Limited</item>
+        <item>ZB Building Society</item>
+        <item>Other (Specify)</item>
+    </string-array>
+
+    <string-array name="relationship">
+        <item>Father</item>
+        <item>Mother</item>
+        <item>Brother</item>
+        <item>Sister</item>
+        <item>Husband</item>
+        <item>Wife</item>
+        <item>Cousin</item>
+        <item>Uncle</item>
+        <item>Aunt</item>
+        <item>Daughter</item>
+        <item>Son</item>
+        <item>Nephew</item>
+        <item>Niece</item>
+        <item>Grandfather</item>
+        <item>Grandmother</item>
+        <item>Workmate</item>
+        <item>Other (Specify)</item>
+    </string-array>
+
+    <string-array name="employers">
+        <item>Ministry of Agriculture</item>
+        <item>Ministry of Energy and Power Development</item>
+        <item>Ministry of Environment, Water and Climate</item>
+        <item>Ministry of Finance and Economic Planning</item>
+        <item>Ministry of International Trade</item>
+        <item>Ministry of Health and Child Welfare</item>
+        <item>Ministry of Higher Education, Science and Technology</item>
+        <item>Ministry of Home Affairs</item>
+        <item>Ministry of Industry and Commerce</item>
+        <item>Ministry of Justice and Legal Affairs</item>
+        <item>Ministry of Labour and Social Welfare</item>
+        <item>Ministry of Lands and Rural Resettlement</item>
+        <item>Ministry of Media, Information and Broadcasting Services</item>
+        <item>Ministry of Mines and Mining Development</item>
+        <item>Ministry of Primary and Secondary Education</item>
+        <item>Ministry of Public Works</item>
+        <item>Ministry of State for Constitutional Affairs</item>
+        <item>Ministry of State for Government Scholarships</item>
+        <item>Ministry of State for Housing and Local Government</item>
+        <item>Ministry of Sport, Arts and Recreation</item>
+        <item>Ministry of Tourism and Hospitality</item>
+        <item>Ministry of Transport and Infrastructural Development</item>
+        <item>Ministry for Women and Equalities</item>
+        <item>Ministry of Youth Affairs</item>
+        <item>Other (Specify)</item>
+    </string-array>
+
+    <string-array name="city_names">
+        <item>Harare</item>
+        <item>Beitbridge</item>
+        <item>Bindura</item>
+        <item>Bulawayo</item>
+        <item>Chegutu</item>
+        <item>Chinhoyi</item>
+        <item>Chitungwiza</item>
+        <item>Gweru</item>
+        <item>Hwange</item>
+        <item>Kadoma</item>
+        <item>Kariba</item>
+        <item>Kwekwe</item>
+        <item>Marondera</item>
+        <item>Masvingo</item>
+        <item>Mutare</item>
+        <item>Rusape</item>
+        <item>Victoria Falls</item>
+        <item>Other (Specify)</item>
+    </string-array>
+
+    <string-array name="account_types">
+        <item>Current</item>
+        <item>Savings</item>
+        <item>Lite</item>
+        <item>Other (Specify)</item>
+    </string-array>
+
+    <string-array name="repayment_period">
+        <item>3 Months</item>
+        <item>9 Months</item>
+        <item>Other (Specify)</item>
+    </string-array>
+
+    <string-array name="facility_type">
+        <item>Short Term USD Loan</item>
+        <item>Other (Specify)</item>
+    </string-array>
+
 </resources>

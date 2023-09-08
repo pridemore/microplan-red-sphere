@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DeductionSsbFormFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/include"
+            layout="@layout/page_toolbar"
+            />
+
+        <include
+            android:id="@+id/include2"
+            layout="@layout/back_next" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Client Name"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutFistName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="First Name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/firstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:inputType="textCapWords"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textViewSurname"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Surname"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutSurname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Surname">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/surname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:inputType="textCapWords"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textViewEmployeeNumber"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="EC Number"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutEmployeeNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Employee Code Number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/employeeCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:inputType="textCapWords"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textViewPayeeCode"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Payee Code"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutPayeeCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Payee Code">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/payeeCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:inputType="textCapWords"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textViewMonthlyRate"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Monthly Rate"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutMonthlyRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Mothly Rate(USD)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/monthlyRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:maxLines="1"
+                android:inputType="textCapWords"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textViewFromDate"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="From"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutFromDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="From Date">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fromDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:inputType="date" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/textViewToDate"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:textColorHint="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="To"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutToDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="To Date">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/toDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:inputType="date" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+<!--        <TextView-->
+<!--            android:id="@+id/textViewAuthorisedBy"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="0dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:textColorHint="@color/blue"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Authorised By"/>-->
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/textInputLayoutApproverName"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:hint="Authoriser/Approver Name">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/approverName"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:lines="1"-->
+<!--                android:maxLines="1"-->
+<!--                android:inputType="textCapWords"/>-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:orientation="horizontal"-->
+<!--            android:id="@+id/textInputLayoutAuthoriserSignature"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:hint="Signature">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/authoriserSignature"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:background="@color/grey"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"/>-->
+
+<!--            <Button-->
+<!--                android:id="@+id/buttonSign"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="0.5"-->
+<!--                android:text="Sign"-->
+<!--                android:layout_gravity="center_vertical"/>-->
+
+<!--        </LinearLayout>-->
+<!--        <TextView-->
+<!--            android:id="@+id/textViewDate"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="0dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:textColorHint="@color/blue"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Date"/>-->
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:id="@+id/textInputLayoutDateAuthorised"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:hint="Date">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+<!--                android:id="@+id/dateAuthorised"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:focusable="false"-->
+<!--                android:inputType="date" />-->
+
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+    </LinearLayout>
+</ScrollView>
