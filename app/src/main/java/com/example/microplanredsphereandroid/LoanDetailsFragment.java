@@ -159,9 +159,9 @@ public class LoanDetailsFragment extends Fragment {
                 return new VerificationError("Please fill in all fields");
             }
 
-            if (Double.parseDouble(loanCreditAmount.getText().toString()) >= 200.00) {
-                return new VerificationError("Credit Loan Amount should not exceed 200.00 USD.");
-            }
+//            if (Double.parseDouble(loanCreditAmount.getText().toString()) >= 200.00) {
+//                return new VerificationError("Credit Loan Amount should not exceed 200.00 USD.");
+//            }
             //Deny if :::
             //if age > 60
             if (((((double) (System.currentTimeMillis() - myCalendar.getTimeInMillis())) / Constants.MILLISECONDS_IN_YEAR)) >= 60) {
@@ -196,9 +196,9 @@ public class LoanDetailsFragment extends Fragment {
             double totalCashDisbursedLessUpfrontFees = price;
             double interestRate = interest; //0.09; //15%
             double loanRepaymentPerMonth = -FinanceLib.pmt(interestRate, model.loanPeriod, newLoanAmount, 0, false);
-            if (loanRepaymentPerMonth > (model.netSalary / 2)) {
-                return new VerificationError("Monthly payment will be greater than 50% of income");
-            }
+//            if (loanRepaymentPerMonth > (model.netSalary / 2)) {
+//                return new VerificationError("Monthly payment will be greater than 50% of income");
+//            }
 
             model.price = String.format(Locale.UK, "%.2f", price);
             model.newLoanAmount = String.format(Locale.UK, "%.2f", newLoanAmount);
