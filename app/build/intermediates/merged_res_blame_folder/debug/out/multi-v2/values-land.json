@@ -4,7 +4,7 @@
             "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-42:/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Pridemore\\Desktop\\Project\\MicroPlanRedSphereAndroid\\app\\src\\main\\res\\values-land\\dimens.xml",
+                    "source": "D:\\Projects\\microplan-red-sphere\\app\\src\\main\\res\\values-land\\dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",

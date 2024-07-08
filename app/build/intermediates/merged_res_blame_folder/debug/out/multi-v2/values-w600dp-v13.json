@@ -4,7 +4,24 @@
             "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-42:/values-w600dp-v13/values-w600dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Pridemore\\Desktop\\Project\\MicroPlanRedSphereAndroid\\app\\src\\main\\res\\values-w600dp\\styles.xml",
+                    "source": "D:\\Projects\\microplan-red-sphere\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "17",
+                        "endColumns": "41",
+                        "endOffsets": "54"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "41",
+                        "endOffsets": "92"
+                    }
+                },
+                {
+                    "source": "D:\\Projects\\microplan-red-sphere\\app\\src\\main\\res\\values-w600dp\\styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,23 +37,6 @@
                         "endLines": "8",
                         "endColumns": "8",
                         "endOffsets": "408"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Pridemore\\Desktop\\Project\\MicroPlanRedSphereAndroid\\app\\src\\main\\res\\values-w600dp\\dimens.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "17",
-                        "endColumns": "41",
-                        "endOffsets": "54"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "41",
-                        "endOffsets": "92"
                     }
                 }
             ]
