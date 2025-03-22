@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-42:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-44:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Pridemore\\.gradle\\caches\\transforms-3\\4ee49e74ca7696bdf8512f9252b6431d\\transformed\\jetified-material-stepper-4.3.1\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,98,177",
-                        "endColumns": "42,78,81",
-                        "endOffsets": "93,172,254"
-                    },
-                    "to": {
-                        "startLines": "2,5,6",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,375,454",
-                        "endColumns": "42,78,81",
-                        "endOffsets": "93,449,531"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Pridemore\\.gradle\\caches\\transforms-3\\b6f52d92dea29c0a7f49d4078033a89a\\transformed\\material-1.6.1\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "source": "C:\\Users\\Pridemore\\.gradle\\caches\\transforms-3\\bbe21b2c5de13e94c601a536ce29374d\\transformed\\material-1.12.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -35,6 +18,23 @@
                         "startOffsets": "98,234",
                         "endColumns": "135,140",
                         "endOffsets": "229,370"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Pridemore\\.gradle\\caches\\transforms-3\\2103aec915a7a9ec2f9cdfd3bf48b72a\\transformed\\jetified-material-stepper-v4.3.1\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,98,177",
+                        "endColumns": "42,78,81",
+                        "endOffsets": "93,172,254"
+                    },
+                    "to": {
+                        "startLines": "2,5,6",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,375,454",
+                        "endColumns": "42,78,81",
+                        "endOffsets": "93,449,531"
                     }
                 }
             ]

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-42:/values-watch-v21/values-watch-v21.xml",
+            "outputFile": "com.example.microplanredsphereandroid.app-mergeDebugResources-44:/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Pridemore\\.gradle\\caches\\transforms-3\\0a1e1205a4ad55603e56c0d69f6f4244\\transformed\\appcompat-1.5.0\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "source": "C:\\Users\\Pridemore\\.gradle\\caches\\transforms-3\\bd454476da062709203e3ca97edf22fa\\transformed\\appcompat-1.7.0\\res\\values-watch-v21\\values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",
